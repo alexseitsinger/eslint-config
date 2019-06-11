@@ -142,9 +142,13 @@ module.exports = {
      * Prefer named exports to be grouped together in a single export
      * declaration.
      *
+     * NOTES:
+     * - Since we sometimes export functions as we define them throughout a
+     *   module, its probably better to disable this rule.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/group-exports.md
      */
-    "import/group-exports": "error",
+    "import/group-exports": "off",
 
     /**
      * Enforce a leading comment with the webpackChunkName for dynamic imports.
