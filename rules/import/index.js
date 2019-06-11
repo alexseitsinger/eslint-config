@@ -7,11 +7,11 @@ module.exports = {
       ".js",
       ".jsx",
     ],
-    "import/ignore": [
+    "import/ignore": [],
+    "import/core-modules": [],
+    "import/external-module-folders": [
       "node_modules",
     ],
-    "import/core-modules": [],
-    "import/external-module-folders": [],
     "import/parsers": {},
     "import/resolver": {
       // Need to add the resolver on the site config.
