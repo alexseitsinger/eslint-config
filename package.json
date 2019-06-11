@@ -1,6 +1,6 @@
 {
   "name": "@alexseitsinger/eslint-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Custom ESLint config.",
   "main": "dist/main.js",
   "homepage": "https://www.alexseitsinger.com/packages/node/eslint-config",
@@ -24,7 +24,7 @@
     "LICENSE"
   ],
   "keywords": [
-    "eslint", 
+    "eslint",
     "react"
   ],
   "peerDependencies": {
