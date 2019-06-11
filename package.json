@@ -1,6 +1,6 @@
 {
   "name": "@alexseitsinger/eslint-config",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Custom ESLint config.",
   "main": "index.js",
   "homepage": "https://www.alexseitsinger.com/packages/node/eslint-config",
@@ -27,9 +27,9 @@
     "rules/base/lib/strict-mode.js",
     "rules/base/lib/stylistic.js",
     "rules/base/lib/variables.js",
-    "rules/base/react/index.js",
-    "rules/base/react/lib/general.js",
-    "rules/base/react/lib/jsx.js",
+    "rules/react/index.js",
+    "rules/react/lib/general.js",
+    "rules/react/lib/jsx.js",
     "package.json",
     "README.md",
     "LICENSE"
