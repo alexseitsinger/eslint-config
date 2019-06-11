@@ -1,3 +1,19 @@
+<a name="v0.3.0"></a>
+## [v0.3.0](https://github.com/alexseitsinger/eslint-config/compare/v0.2.0...v0.3.0) (2019-06-11)
+
+### Code Refactoring
+- Changes 2 to error, etc. ([d513a79](https://github.com/alexseitsinger/eslint-config/commit/d513a7947e20f58224b1b4b808239e6740294f3f))
+
+### Features
+- Adds import config. ([4e6487b](https://github.com/alexseitsinger/eslint-config/commit/4e6487b75bfbffd243b94e3d2409dd0bd2c2c923))
+- Adds import config. ([8774e3a](https://github.com/alexseitsinger/eslint-config/commit/8774e3ad453aea382ed466ae5da0a2f9cf3a5e66))
+- Allows core-js as unassigned import. ([c890885](https://github.com/alexseitsinger/eslint-config/commit/c8908854af58500c69f79bbd670cc5c85649607c))
+- Changes ignored. Adds externals folder. ([6ea3b88](https://github.com/alexseitsinger/eslint-config/commit/6ea3b88311239afee4c349a5c632d3209cfe93b2))
+- Disables accessor pairs rule. ([b69b814](https://github.com/alexseitsinger/eslint-config/commit/b69b814eca3652a4e636ef98c1b94bdfa47829ee))
+- Disables group-exports rule. ([ec2958c](https://github.com/alexseitsinger/eslint-config/commit/ec2958c8884b0550854bb489168cf00a0c94f717))
+- Updates import order rule. ([70f0756](https://github.com/alexseitsinger/eslint-config/commit/70f0756a58da8e22ec4caf896ae855e7f0d7dafc))
+
+
 <a name="v0.2.0"></a>
 ## [v0.2.0](https://github.com/alexseitsinger/eslint-config/compare/v0.1.5...v0.2.0) (2019-06-11)
 
