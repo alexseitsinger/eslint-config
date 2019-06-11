@@ -1,3 +1,10 @@
+<a name="v0.1.1"></a>
+## [v0.1.1](https://github.com/alexseitsinger/eslint-config/compare/v0.1.0...v0.1.1) (2019-06-11)
+
+### Code Refactoring
+- Updates rules. ([3a7f4a7](https://github.com/alexseitsinger/eslint-config/commit/3a7f4a7d43d363d9107076901fa583ef4480012f))
+
+
 <a name="v0.1.0"></a>
 ## [v0.1.0](https://github.com/alexseitsinger/eslint-config/compare/adde4085b4e867af289d524727abe1e2ee214088...v0.1.0) (2019-06-11)
 
