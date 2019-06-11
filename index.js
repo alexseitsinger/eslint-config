@@ -16,5 +16,6 @@ module.exports = {
   extends: [
     "./rules/react",
     "./rules/base",
+    "./rules/import",
   ].map(require.resolve)
 }
