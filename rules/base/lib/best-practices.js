@@ -5,7 +5,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/accessor-pairs
      */
-    "accessor-pairs": ["error", {
+    "accessor-pairs": ["off", {
       "setWithoutGet": true,
       "getWithoutSet": true,
     }],
