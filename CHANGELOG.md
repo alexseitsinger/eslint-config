@@ -1,3 +1,10 @@
+<a name="v0.2.0"></a>
+## [v0.2.0](https://github.com/alexseitsinger/eslint-config/compare/v0.1.5...v0.2.0) (2019-06-11)
+
+### Code Refactoring
+- Moves modules to lib dirs. ([4ecae55](https://github.com/alexseitsinger/eslint-config/commit/4ecae55af78cc8c2c0982aa6f7f17748895fe080))
+
+
 <a name="v0.1.5"></a>
 ## [v0.1.5](https://github.com/alexseitsinger/eslint-config/compare/v0.1.4...v0.1.5) (2019-06-11)
 
