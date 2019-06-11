@@ -5,7 +5,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/accessor-pairs
      */
-    "accessor-pairs": [2, {
+    "accessor-pairs": ["error", {
       "setWithoutGet": true,
       "getWithoutSet": true,
     }],
@@ -15,7 +15,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/array-callback-return
      */
-    "array-callback-return": [2, {
+    "array-callback-return": ["error", {
       "allowImplicit": true,
     }],
 
@@ -24,14 +24,14 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/block-scoped-var
      */
-    "block-scoped-var": 2,
+    "block-scoped-var": "error",
 
     /**
      * Enforce that class methods utilize this.
      *
      * https://eslint.org/docs/rules/class-methods-use-this
      */
-    "class-methods-use-this": [2, {
+    "class-methods-use-this": ["error", {
       "exceptMethods": [],
     }],
 
@@ -40,7 +40,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/complexity
      */
-    "complexity": [2, {
+    "complexity": ["error", {
       "max": 30,
     }],
 
@@ -49,7 +49,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/consistent-return
      */
-    "consistent-return": [2, {
+    "consistent-return": ["error", {
       "treatUndefinedAsUnspecified": false,
     }],
    
@@ -60,14 +60,14 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/curly
      */
-    "curly": [2, "all"],
+    "curly": ["error", "all"],
 
     /**
      * Require default cases in switch statements.
      *
      * https://eslint.org/docs/rules/default-case
      */
-    "default-case": [2, {
+    "default-case": ["error", {
       "commentPattern": "^no\\sdefault$",
     }],
 
@@ -78,7 +78,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/dot-location
      */
-    "dot-location": [2, "property"],
+    "dot-location": ["error", "property"],
 
     /**
      * Enforce dot notation whenever possible. 
@@ -87,7 +87,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/dot-notation
      */
-    "dot-notation": [2, {
+    "dot-notation": ["error", {
       "allowKeywords": true,
       "allowPattern": "",
     }],
@@ -97,42 +97,42 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/eqeqeq
      */
-    "eqeqeq": [2, "always"],
+    "eqeqeq": ["error", "always"],
 
     /**
      * Require for-in loops to include an if statement.
      *
      * https://eslint.org/docs/rules/guard-for-in
      */
-    "guard-for-in": 2,
+    "guard-for-in": "error",
 
     /**
      * Enforce a maximum number of classes per file.
      *
      * https://eslint.org/docs/rules/max-classes-per-file
      */
-    "max-classes-per-file": [2, 1],
+    "max-classes-per-file": ["error", 1],
     
     /**
      * Disallow the use of alert, confirm, and prompt.
      *
      * https://eslint.org/docs/rules/no-alert
      */
-    "no-alert": 2,
+    "no-alert": "error",
 
     /**
      * Disallow the use of arguments.caller or arguments.callee.
      *
      * https://eslint.org/docs/rules/no-caller
      */
-    "no-caller": 2,
+    "no-caller": "error",
 
     /**
      * Disallow lexical declarations in case clauses,
      *
      * https://eslint.org/docs/rules/no-case-declarations
      */
-    "no-case-declarations": 2,
+    "no-case-declarations": "error",
 
     /**
      * Disallow division operators explicitly at the beginning of regular
@@ -142,7 +142,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-div-regex
      */
-    "no-div-regex": 2,
+    "no-div-regex": "error",
 
     /**
      * Disallow else blocks after return statements in if statements. 
@@ -151,7 +151,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-else-return
      */
-    "no-else-return": [2, {
+    "no-else-return": ["error", {
       "allowElseIf": false,
     }],
 
@@ -160,7 +160,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-empty-function
      */
-    "no-empty-function": [2, {
+    "no-empty-function": ["error", {
       "allow": [
         //"functions",
         //"arrowFunctions",
@@ -180,21 +180,21 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-empty-pattern
      */
-    "no-empty-pattern": 2,
+    "no-empty-pattern": "error",
 
     /**
      * Disallow null comparisons without type-checking operators.
      *
      * https://eslint.org/docs/rules/no-eq-null
      */
-    "no-eq-null": 2,
+    "no-eq-null": "error",
 
     /**
      * Disallow the use of eval().
      *
      * https://eslint.org/docs/rules/no-eval
      */
-    "no-eval": [2, {
+    "no-eval": ["error", {
       "allowIndirect": false,
     }],
 
@@ -203,7 +203,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-extend-native
      */
-    "no-extend-native": [2, {
+    "no-extend-native": ["error", {
       "exceptions": [],
     }],
     
@@ -214,21 +214,21 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-extra-bind
      */
-    "no-extra-bind": 2,
+    "no-extra-bind": "error",
 
     /**
      * Disallow unnecessary labels.
      *
      * https://eslint.org/docs/rules/no-extra-label
      */
-    "no-extra-label": 2,
+    "no-extra-label": "error",
 
     /**
      * Disallow fallthrough of case statements.
      *
      * https://eslint.org/docs/rules/no-fallthrough
      */
-    "no-fallthrough": [2, {
+    "no-fallthrough": ["error", {
       "commentPattern": "fallthrough",
     }],
 
@@ -239,14 +239,14 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-floating-decimal
      */
-    "no-floating-decimal": 2,
+    "no-floating-decimal": "error",
 
     /**
      * Disallow assignments to native objects or read-only global variables.
      *
      * https://eslint.org/docs/rules/no-global-assign
      */
-    "no-global-assign": [2, {
+    "no-global-assign": ["error", {
       "exceptions": [],
     }],
 
@@ -257,7 +257,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-implicit-coercion
      */
-    "no-implicit-coercion": [2, {
+    "no-implicit-coercion": ["error", {
       "boolean": true,
       "number": true,
       "string": true,
@@ -274,35 +274,35 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-implicit-globals
      */
-    "no-implicit-globals": 2,
+    "no-implicit-globals": "error",
 
     /**
      * Disallow the use of eval()-like methods.
      *
      * https://eslint.org/docs/rules/no-implied-eval
      */
-    "no-implied-eval": 2,
+    "no-implied-eval": "error",
 
     /**
      * Disallow this keywords outside of classes or class-like objects.
      *
      * https://eslint.org/docs/rules/no-invalid-this
      */
-    "no-invalid-this": 2,
+    "no-invalid-this": "error",
 
     /**
      * Disallow the use of the __iterator__ property.
      *
      * https://eslint.org/docs/rules/no-iterator
      */
-    "no-iterator": 2,
+    "no-iterator": "error",
 
     /**
      * Disallow labeled statements.
      *
      * https://eslint.org/docs/rules/no-labels
      */
-    "no-labels": [2, {
+    "no-labels": ["error", {
       "allowLoop": false,
       "allowSwitch": false,
     }],
@@ -312,7 +312,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-lone-blocks
      */
-    "no-lone-blocks": 2,
+    "no-lone-blocks": "error",
 
     /**
      * Disallow function declarations that contain unsafe references inside loop
@@ -320,14 +320,14 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-loop-func
      */
-    "no-loop-func": 2,
+    "no-loop-func": "error",
 
     /**
      * Disallow magic numbers.
      *
      * https://eslint.org/docs/rules/no-magic-numbers
      */
-    "no-magic-numbers": [2, {
+    "no-magic-numbers": ["error", {
       "ignore": [],
       "ignoreArrayIndexes": true,
       "enforceConst": true,
@@ -341,7 +341,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-multi-spaces
      */
-    "no-multi-spaces": [2, {
+    "no-multi-spaces": ["error", {
       "ignoreEOLComments": false,
       "exceptions": {
         "Property": false, // default is True
@@ -353,7 +353,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-multi-str
      */
-    "no-multi-str": 2,
+    "no-multi-str": "error",
     
     /**
      * Disallow new operators outside of assignments or comparisons.
@@ -361,7 +361,7 @@ module.exports = {
      * https://eslint.org/docs/rules/no-new
      */
     // Since webpack uses plugins with new, we might need to set this to warn only
-    "no-new": 1,
+    "no-new": "warn",
 
     /**
      * Disallow new operators with the Function object.
@@ -375,28 +375,28 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-new-wrappers
      */
-    "no-new-wrappers": 2,
+    "no-new-wrappers": "error",
 
     /**
      * Disallow octal literals.
      *
      * https://eslint.org/docs/rules/no-octal
      */
-    "no-octal": 2,
+    "no-octal": "error",
 
     /**
      * Disallow octal escape sequences in string literals.
      *
      * https://eslint.org/docs/rules/no-octal-escape
      */
-    "no-octal-escape": 2,
+    "no-octal-escape": "error",
 
     /**
      * Disallow reassigning function parameters.
      *
      * https://eslint.org/docs/rules/no-param-reassign
      */
-    "no-param-reassign": [2, {
+    "no-param-reassign": ["error", {
       "props": true, // Default: false
       "ignorePropertyModificationsFor": [],
     }],
@@ -406,14 +406,14 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-proto
      */
-    "no-proto": 2,
+    "no-proto": "error",
 
     /**
      * Disallow variable redeclaration.
      *
      * https://eslint.org/docs/rules/no-redeclare
      */
-    "no-redeclare": [2, {
+    "no-redeclare": ["error", {
       "builtinGlobals": true,
     }],
 
@@ -422,7 +422,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-restricted-properties
      */
-    "no-restricted-properties": [2, {
+    "no-restricted-properties": ["error", {
       "object": "",
       "property": "",
       "message": "",
@@ -433,28 +433,28 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-return-assign<Paste>
      */
-    "no-return-assign": [2, "always"],
+    "no-return-assign": ["error", "always"],
    
     /**
      * Disallow unnecessary return await.
      *
      * https://eslint.org/docs/rules/no-return-await
      */
-    "no-return-await": 2,
+    "no-return-await": "error",
 
     /**
      * Disallow javascript: urls.
      *
      * https://eslint.org/docs/rules/no-script-url
      */
-    "no-script-url": 2,
+    "no-script-url": "error",
 
     /**
      * Disallow assignments where both sides are exactly the same.
      *
      * https://eslint.org/docs/rules/no-self-assign
      */
-    "no-self-assign": [2, {
+    "no-self-assign": ["error", {
       "props": true,
     }],
 
@@ -463,35 +463,35 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-self-compare
      */
-    "no-self-compare": 2,
+    "no-self-compare": "error",
 
     /**
      * Disallow comma operators.
      *
      * https://eslint.org/docs/rules/no-sequences
      */
-    "no-sequences": 2,
+    "no-sequences": "error",
 
     /**
      * Disallow throwing literals as exceptions.
      *
      * https://eslint.org/docs/rules/no-throw-literal
      */
-    "no-throw-literal": 2,
+    "no-throw-literal": "error",
 
     /**
      * Disallow unmodified loop conditions.
      *
      * https://eslint.org/docs/rules/no-unmodified-loop-condition
      */
-    "no-unmodified-loop-condition": 2,
+    "no-unmodified-loop-condition": "error",
 
     /**
      * Disallow unused expressions.
      *
      * https://eslint.org/docs/rules/no-unused-expressions
      */
-    "no-unused-expressions": [2, {
+    "no-unused-expressions": ["error", {
       "allowShortCircuit": true,
       "allowTernary": true,
       "allowTaggedTemplates": false
@@ -504,35 +504,35 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-unused-labels
      */
-    "no-unused-labels": 2,
+    "no-unused-labels": "error",
 
     /**
      * Disallow unnecessary calls to .call() and .apply().
      *
      * https://eslint.org/docs/rules/no-useless-call
      */
-    "no-useless-call": 2,
+    "no-useless-call": "error",
 
     /**
      * Disallow unnecessary catch clauses,
      *
      * https://eslint.org/docs/rules/no-useless-catch
      */
-    "no-useless-catch": 2,
+    "no-useless-catch": "error",
 
     /**
      * Disallow unnecessary concatenation of literals or template literals.
      *
      * https://eslint.org/docs/rules/no-useless-concat
      */
-    "no-useless-concat": 2,
+    "no-useless-concat": "error",
 
     /**
      * Disallow unnecessary escape characters.
      *
      * https://eslint.org/docs/rules/no-useless-escape
      */
-    "no-useless-escape": 2,
+    "no-useless-escape": "error",
 
     /**
      * Disallow redundant return statements.
@@ -541,21 +541,21 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-useless-return<Paste>
      */
-    "no-useless-return": 2,
+    "no-useless-return": "error",
    
     /**
      * Disallow void operators,
      *
      * https://eslint.org/docs/rules/no-void
      */
-    "no-void": 2,
+    "no-void": "error",
 
     /**
      * Disallow specified warning terms in comments.
      *
      * https://eslint.org/docs/rules/no-warning-comments
      */
-    "no-warning-comments": [2, {
+    "no-warning-comments": ["error", {
       "terms": ["todo", "fix",],
       "location": "start",
     }],
@@ -565,56 +565,56 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-with
      */
-    "no-with": 2,
+    "no-with": "error",
 
     /**
      * Enforce using named capture group in regular expression.
      *
      * https://eslint.org/docs/rules/prefer-named-capture-group<Paste>
      */
-    "prefer-named-capture-group": 1, // only available in newer envs.
+    "prefer-named-capture-group": "warn", // only available in newer envs.
     
     /**
      * Require using Error objects as Promise rejection reasons.
      * 
      * https://eslint.org/docs/rules/prefer-promise-reject-errors
      */
-    "prefer-promise-reject-errors": 2,
+    "prefer-promise-reject-errors": "error",
 
     /**
      * Enforce the consistent use of the radix argument when using parseInt().
      *
      * https://eslint.org/docs/rules/radix
      */
-    "radix": [2, "as-needed"],
+    "radix": ["error", "as-needed"],
 
     /**
      * Disallow async functions which have no await expression.
      *
      * https://eslint.org/docs/rules/require-await
      */
-    "require-await": 2,
+    "require-await": "error",
 
     /**
      * Enforce the use of u flag on RegExp.
      *
      * https://eslint.org/docs/rules/require-unicode-regexp<Paste>
      */
-    "require-unicode-regexp": 1,
+    "require-unicode-regexp": "warn",
    
     /**
      * Require var declarations be placed at the top of their containing scope.
      *
      * https://eslint.org/docs/rules/vars-on-top
      */
-    "vars-on-top": 1,
+    "vars-on-top": "warn",
 
     /**
      * Require parentheses around immediate function invocations.
      *
      * https://eslint.org/docs/rules/wrap-iife
      */
-    "wrap-iife": [2, "outside", {
+    "wrap-iife": ["error", "outside", {
       "functionPrototypeMethods": false
     }],
 
@@ -623,7 +623,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/yoda
      */
-    "yoda": [2, "never", {
+    "yoda": ["error", "never", {
       "exceptRange": true,
       "onlyEquality": false,
     }],

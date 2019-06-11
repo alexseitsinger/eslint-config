@@ -5,21 +5,21 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
      */
-    "react/jsx-boolean-value": 2,
+    "react/jsx-boolean-value": "error",
 
     /**
      * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
      */
-    "react/jsx-child-element-spacing": 0,
+    "react/jsx-child-element-spacing": "off",
 
     /**
      * Validate closing bracket location in JSX. (fixable)
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
      */
-    "react/jsx-closing-bracket-location": [2, {
+    "react/jsx-closing-bracket-location": ["error", {
       "nonEmpty": "after-props",
       "selfClosing": "tag-aligned",
     }],
@@ -29,14 +29,14 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
      */
-    "react/jsx-closing-tag-location": 2,
+    "react/jsx-closing-tag-location": "error",
 
     /**
      * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions. (fixable)
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
      */
-    "react/jsx-curly-spacing": [2, { // might want to change this 
+    "react/jsx-curly-spacing": ["error", { // might want to change this 
       "when": "never",
       "allowMultiline": true,
     }],
@@ -46,7 +46,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
      */
-    "react/jsx-equals-spacing": [2, "never"],
+    "react/jsx-equals-spacing": ["error", "never"],
 
     /**
      * Restrict file extensions that may contain JSX.
@@ -62,14 +62,14 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
      */
-    "react/jsx-first-prop-new-line": [2, "multiline"],
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
 
     /**
      * Enforce event handler naming conventions in JSX.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
      */
-    "react/jsx-handler-names": [2, {
+    "react/jsx-handler-names": ["error", {
       "eventHandlerPrefix": "handle",
       "eventHandlerPropPrefix": "on",
     }],
@@ -79,7 +79,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
      */
-    "react/jsx-indent": [2, 2, {
+    "react/jsx-indent": ["error", 2, {
       "checkAttributes": true,
       "indentLogicalExpressions": true,
     }],
@@ -89,21 +89,21 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
      */
-    "react/jsx-indent-props": [2, "first"],
+    "react/jsx-indent-props": ["error", "first"],
 
     /**
      * Validate JSX has key prop when in array or iterator.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
      */
-    "react/jsx-key": 2,
+    "react/jsx-key": "error",
 
     /**
      * Validate JSX maximum depth.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md
      */
-    "react/jsx-max-depth": [2, {
+    "react/jsx-max-depth": ["error", {
       "max": 10,
     }],
 
@@ -112,7 +112,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
      */
-    "react/jsx-max-props-per-line": [2, {
+    "react/jsx-max-props-per-line": ["error", {
       "maximum": 1,
       "when": "always" // might want to change this to multiline
     }],
@@ -122,7 +122,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
      */
-    "react/jsx-no-bind": [2, {
+    "react/jsx-no-bind": ["error", {
       "ignoreDOMComponents": false,
       "ignoreRefs": false,
       "allowArrowFunctions": true,
@@ -135,14 +135,14 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
      */
-    "react/jsx-no-comment-textnodes": 2,
+    "react/jsx-no-comment-textnodes": "error",
 
     /**
      * Prevent duplicate props in JSX.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
      */
-    "react/jsx-no-duplicate-props": [2, {
+    "react/jsx-no-duplicate-props": ["error", {
       "ignoreCase": true,
     }],
 
@@ -151,7 +151,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
      */
-    "react/jsx-no-literals": [0, {
+    "react/jsx-no-literals": ["off", {
       "noStrings": false,
     }],
 
@@ -160,7 +160,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
      */
-    "react/jsx-no-target-blank": [2, {
+    "react/jsx-no-target-blank": ["error", {
       "enforceDynamicLinks": "always",
     }],
 
@@ -169,7 +169,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
      */
-    "react/jsx-no-undef": [2, {
+    "react/jsx-no-undef": ["error", {
       "allowGlobals": false, // might want to change this.
     }],
 
@@ -178,7 +178,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
      */
-    "react/jsx-one-expression-per-line": [2, {
+    "react/jsx-one-expression-per-line": ["error", {
       "allow": "single-child",
     }],
 
@@ -187,7 +187,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
      */
-    "react/jsx-curly-brace-presence": [2, {
+    "react/jsx-curly-brace-presence": ["error", {
       "props": "always",
       "children": "never", // might want to change this.
     }],
@@ -197,14 +197,14 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md
      */
-    "react/jsx-fragments": [2, "element"], // might want ot change.
+    "react/jsx-fragments": ["error", "element"], // might want ot change.
 
     /**
      * Enforce PascalCase for user-defined JSX components.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
      */
-    "react/jsx-pascal-case": [2, {
+    "react/jsx-pascal-case": ["error", {
       "allowAllCaps": false,
       "ignore": [],
     }],
@@ -214,21 +214,21 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-multi-spaces.md
      */
-    "react/jsx-props-no-multi-spaces": 2,
+    "react/jsx-props-no-multi-spaces": "error",
 
     /**
      * Disallow JSX props spreading.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
      */
-    "react/jsx-props-no-spreading": 0,
+    "react/jsx-props-no-spreading": "off",
 
     /**
      * Enforce default props alphabetical sorting.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
      */
-    "react/jsx-sort-default-props": [2, {
+    "react/jsx-sort-default-props": ["off", {
       "ignoreCase": true,
     }],
 
@@ -237,7 +237,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
      */
-    "react/jsx-sort-props": [2, {
+    "react/jsx-sort-props": ["off", {
       "callbacksLast": true,
       "shorthandFirst": true,
       "shorthandLast": false,
@@ -251,7 +251,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
      */
-    "react/jsx-tag-spacing": [2, {
+    "react/jsx-tag-spacing": ["error", {
       "closingSlash": "never",
       "beforeSelfClosing": "always",
       "afterOpening": "never",
@@ -263,21 +263,21 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
      */
-    "react/jsx-uses-react": 2,
+    "react/jsx-uses-react": "error",
 
     /**
      * Prevent variables used in JSX to be incorrectly marked as unused.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
      */
-    "react/jsx-uses-vars": 2,
+    "react/jsx-uses-vars": "error",
 
     /**
      * Prevent missing parentheses around multilines JSX. (fixable)
      * 
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
      */
-    "react/jsx-wrap-multilines": [2, {
+    "react/jsx-wrap-multilines": ["error", {
       "declaration": "parens-new-line",
       "assignment": "parens-new-line",
       "return": "parens-new-line",

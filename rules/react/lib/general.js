@@ -5,7 +5,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
      */
-    "react/boolean-prop-naming": [2, {
+    "react/boolean-prop-naming": ["error", {
       "propTypeNames": ["bool"],
       "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+",
       //"message": "",
@@ -17,7 +17,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
      */
-    "react/button-has-type": [2, {
+    "react/button-has-type": ["error", {
       "button": true,
       "submit": true,
       "reset": true,
@@ -28,7 +28,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
      */
-    "react/default-props-match-prop-types": [2, {
+    "react/default-props-match-prop-types": ["error", {
       "allowRequiredDefaults": false,
     }],
 
@@ -37,7 +37,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
      */
-    "react/destructuring-assignment": [2, "always", {
+    "react/destructuring-assignment": ["error", "always", {
       "ignoreClassFields": true,
     }],
     
@@ -46,7 +46,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
      */
-    "react/display-name": [2, {
+    "react/display-name": ["error", {
       "ignoreTranspilerName": false,
     }],
 
@@ -55,7 +55,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
      */
-    "react/forbid-component-props": [2, {
+    "react/forbid-component-props": ["error", {
       "forbid": ["className", "style"],
     }],
 
@@ -64,7 +64,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md
      */
-    "react/forbid-dom-props": [2, {
+    "react/forbid-dom-props": ["error", {
       "forbid": [],
     }],
 
@@ -73,7 +73,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
      */
-    "react/forbid-elements": [2, {
+    "react/forbid-elements": ["error", {
       "forbid": [],
     }],
 
@@ -82,7 +82,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
      */
-    "react/forbid-prop-types": [2, {
+    "react/forbid-prop-types": ["error", {
       "forbid": ["any", "array", "object"],
       "checkContextTypes": false,
       "checkChildContextTypes": false,
@@ -93,42 +93,42 @@ module.exports = {
      * 
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
      */
-    "react/forbid-foreign-prop-types": 2,
+    "react/forbid-foreign-prop-types": "error",
 
     /**
      * Prevent using this.state inside this.setState.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
      */
-    "react/no-access-state-in-setstate": 2,
+    "react/no-access-state-in-setstate": "error",
 
     /**
      * Prevent using Array index in key props.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
      */
-    "react/no-array-index-key": 2,
+    "react/no-array-index-key": "error",
 
     /**
      * Prevent passing children as props.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
      */
-    "react/no-children-prop": 2,
+    "react/no-children-prop": "error",
 
     /**
      * Prevent usage of dangerous JSX properties.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
      */
-    "react/no-danger": 2,
+    "react/no-danger": "error",
     
     /**
      * Prevent problem with children and props.dangerouslySetInnerHTML.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
      */
-    "react/no-danger-with-children": 2,
+    "react/no-danger-with-children": "error",
 
     /**
      * Prevent usage of deprecated methods, including component lifecyle
@@ -136,49 +136,49 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
      */
-    "react/no-deprecated": 2,
+    "react/no-deprecated": "error",
 
     /**
      * Prevent usage of setState in componentDidMount.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
      */
-    "react/no-did-mount-set-state": [2, "disallow-in-func"],
+    "react/no-did-mount-set-state": ["error", "disallow-in-func"],
 
     /**
      * Prevent usage of setState in componentDidUpdate.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
      */
-    "react/no-did-update-set-state": [2, "disallow-in-func"],
+    "react/no-did-update-set-state": ["error", "disallow-in-func"],
 
     /**
      * Prevent direct mutation of this.state.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
      */
-    "react/no-direct-mutation-state": 2,
+    "react/no-direct-mutation-state": "error",
 
     /**
      * Prevent usage of findDOMNode.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
      */
-    "react/no-find-dom-node": 2,
+    "react/no-find-dom-node": "error",
 
     /**
      * Prevent usage of isMounted.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
      */
-    "react/no-is-mounted": 2,
+    "react/no-is-mounted": "error",
 
     /**
      * Prevent multiple component definition per file.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
      */
-    "react/no-multi-comp": [2, {
+    "react/no-multi-comp": ["error", {
       "ignoreStateless": false,
     }],
 
@@ -188,35 +188,35 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
      */
-    "react/no-redundant-should-component-update": 2,
+    "react/no-redundant-should-component-update": "error",
 
     /**
      * Prevent usage of the return value of React.render.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
      */
-    "react/no-render-return-value": 2,
+    "react/no-render-return-value": "error",
 
     /**
      * Prevent usage of setState.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
      */
-    "react/no-set-state": 2,
+    "react/no-set-state": "error",
 
     /**
      * Prevent common casing typos.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md
      */
-    "react/no-typos": 2,
+    "react/no-typos": "error",
 
     /**
      * Prevent using string references in ref attribute.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
      */
-    "react/no-string-refs": [2, {
+    "react/no-string-refs": ["error", {
       "noTemplateLiterals": true,
     }],
 
@@ -225,14 +225,14 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-this-in-sfc.md
      */
-    "react/no-this-in-sfc": 2,
+    "react/no-this-in-sfc": "error",
 
     /**
      * Prevent invalid characters from appearing in markup.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
      */
-    "react/no-unescaped-entities": [2, {
+    "react/no-unescaped-entities": ["error", {
       "forbid": [">", '"', "\'", "}"],
     }],
 
@@ -241,7 +241,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
      */
-    "react/no-unknown-property": [2, {
+    "react/no-unknown-property": ["error", {
       "ignore": [],
     }],
 
@@ -250,7 +250,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
      */
-    "react/no-unsafe": [2, {
+    "react/no-unsafe": ["error", {
       "checkAliases": true,
     }],
 
@@ -259,7 +259,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
      */
-    "react/no-unused-prop-types": [2, {
+    "react/no-unused-prop-types": ["error", {
       "customValidators": [],
       "skipShapeProps": true,
     }],
@@ -269,35 +269,35 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md
      */
-    "react/no-unused-state": 2,
+    "react/no-unused-state": "error",
 
     /**
      * Prevent usage of setState in componentWillUpdate.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md
      */
-    "react/no-will-update-set-state": [2, "disallow-in-func"],
+    "react/no-will-update-set-state": ["error", "disallow-in-func"],
 
     /**
      * Enforce ES5 or ES6 class for React Components.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
      */
-    "react/prefer-es6-class": [2, "always"],
+    "react/prefer-es6-class": ["error", "always"],
 
     /**
      * Enforce that props are read-only.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
      */
-    "react/prefer-read-only-props": 2,
+    "react/prefer-read-only-props": "error",
 
     /**
      * Enforce stateless React Components to be written as a pure function.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
      */
-    "react/prefer-stateless-function": [2, {
+    "react/prefer-stateless-function": ["error", {
       "ignorePureComponents": true,
     }],
 
@@ -306,7 +306,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
      */ 
-    "react/prop-types": [2, {
+    "react/prop-types": ["error", {
       "ignore": [],
       "customValidators": [],
       "skipUndeclared": true,
@@ -317,7 +317,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
      */
-    "react/react-in-jsx-scope": 2,
+    "react/react-in-jsx-scope": "error",
 
     /**
      * Enforce a defaultProps definition for every prop that is not a required
@@ -325,7 +325,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
      */
-    "react/require-default-props": [2, {
+    "react/require-default-props": ["error", {
       "forbidDefaultForRequired": true,
     }],
 
@@ -334,21 +334,21 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
      */
-    "react/require-optimization": 0,
+    "react/require-optimization": "off",
 
     /**
      * Enforce ES5 or ES6 class for returning value in render function.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
      */
-    "react/require-render-return": 2,
+    "react/require-render-return": "error",
 
     /**
      * Prevent extra closing tags for components without children. (fixable)
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
      */
-    "react/self-closing-comp": [2, {
+    "react/self-closing-comp": ["error", {
       "component": true,
       "html": true,
     }],
@@ -358,7 +358,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
      */
-    "react/sort-comp": [2, {
+    "react/sort-comp": ["error", {
       "order": [
         "static-methods",
         "instance-variables",
@@ -411,7 +411,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
      */
-    "react/sort-prop-types": [2, {
+    "react/sort-prop-types": ["off", {
       "callbacksLast": true,
       "ignoreCase": false,
       "requiredFirst": true,
@@ -425,27 +425,27 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
      */
-    "react/state-in-constructor": [2, "never"],
+    "react/state-in-constructor": ["error", "never"],
 
     /**
      * Enforces where React component static properties should be positioned.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
      */
-    "react/static-property-placement": [2, "property assignment"],
+    "react/static-property-placement": ["error", "property assignment"],
 
     /**
      * Enforce style prop value being an object.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
      */
-    "react/style-prop-object": 2,
+    "react/style-prop-object": "error",
 
     /**
      * Prevent void DOM elements (e.g. <img />, <br />) from receiving children.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
      */
-    "react/void-dom-elements-no-children": 2,
+    "react/void-dom-elements-no-children": "error",
   }
 }

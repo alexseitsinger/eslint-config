@@ -5,6 +5,6 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/strict
      */
-    "strict": [2, "global"],
+    "strict": ["off", "global"],
   }
 }

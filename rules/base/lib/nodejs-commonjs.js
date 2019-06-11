@@ -5,7 +5,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/callback-return
      */
-    "callback-return": [2, [
+    "callback-return": ["error", [
       "callback", 
       "cb", 
       "errback",
@@ -21,28 +21,28 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/global-require
      */
-    "global-require": 0,
+    "global-require": "off",
 
     /**
      * Require error handling in callbacks.
      *
      * https://eslint.org/docs/rules/handle-callback-err
      */
-    "handle-callback-err": [2, "err"],
+    "handle-callback-err": ["error", "err"],
 
     /**
      * Disallow use of the Buffer() constructor
      *
      * https://eslint.org/docs/rules/no-buffer-constructor
      */
-    "no-buffer-constructor": 2,
+    "no-buffer-constructor": "error",
 
     /**
      * Disallow require calls to be mixed with regular variable declarations.
      *
      * https://eslint.org/docs/rules/no-mixed-requires
      */
-    "no-mixed-requires": [2, {
+    "no-mixed-requires": ["error", {
       "grouping": false,
       "allowCall": false,
     }],
@@ -52,35 +52,35 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-new-require
      */
-    "no-new-require": 2,
+    "no-new-require": "error",
 
     /**
      * Disallow string concatenation with __dirname and __filename.
      *
      * https://eslint.org/docs/rules/no-path-concat
      */
-    "no-path-concat": 2,
+    "no-path-concat": "error",
     
     /**
      * Disallow the use of process.env.
      *
      * https://eslint.org/docs/rules/no-process-env
      */
-    "no-process-env": 2, // might want to disable this rule
+    "no-process-env": "error", // might want to disable this rule
     
     /**
      * Disallow the use of process.exit().
      *
      * https://eslint.org/docs/rules/no-process-exit
      */
-    "no-process-exit": 2,
+    "no-process-exit": "error",
 
     /**
      * Disallow specified modules when loaded by require.
      *
      * https://eslint.org/docs/rules/no-restricted-modules
      */
-    "no-restricted-modules": [2, {
+    "no-restricted-modules": ["error", {
       "paths": [],
       "patterns": [],
     }],
@@ -90,7 +90,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-sync
      */
-    "no-sync": [2, {
+    "no-sync": ["error", {
       "allowAtRootLevel": false
     }],
   }

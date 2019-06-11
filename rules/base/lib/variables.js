@@ -5,7 +5,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/init-declarations
      */
-    "init-declarations": [0, "never", {
+    "init-declarations": ["off", "never", {
       "ignoreForLoopInit": true,
     }],
 
@@ -15,14 +15,14 @@ module.exports = {
      * https://eslint.org/docs/rules/no-delete-var
      */
     // we sometimes delete a var for garbage collection
-    "no-delete-var": 1, 
+    "no-delete-var": "warn", 
 
     /**
      * Disallow labels that share a name with a variable.
      *
      * https://eslint.org/docs/rules/no-label-var
      */
-    "no-label-var": 2,
+    "no-label-var": "error",
 
     /**
      * Disallow specified global variables.
@@ -30,7 +30,7 @@ module.exports = {
      * https://eslint.org/docs/rules/no-restricted-globals
      */
     // Specify the global variable names that you don't want to use in your code.
-    "no-restricted-globals": [2,],
+    "no-restricted-globals": ["error",],
 
     /**
      * Disallow variable declarations from shadowing variables declared in the
@@ -38,7 +38,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-shadow
      */
-    "no-shadow": [1, {
+    "no-shadow": ["warn", {
       "builtinGlobals": true,
       "hoist": "all",
       "allow": [],
@@ -49,14 +49,14 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-shadow-restricted-names<Paste>
      */
-    "no-shadow-restricted-names": 2,
+    "no-shadow-restricted-names": "error",
 
     /**
      * Disallow the use of undeclared variables unless mentioned in global comments.
      *
      * https://eslint.org/docs/rules/no-undef
      */
-    "no-undef": [2, {
+    "no-undef": ["error", {
       "typeof": true,  
     }],
     
@@ -65,21 +65,21 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-undef-init
      */
-    "no-undef-init": 2,
+    "no-undef-init": "error",
 
     /**
      * Disallow the use of undefined as an identifier.
      *
      * https://eslint.org/docs/rules/no-undefined
      */
-    "no-undefined": 2,
+    "no-undefined": "error",
 
     /**
      * Disallow unused variables.
      *
      * https://eslint.org/docs/rules/no-unused-vars
      */
-    "no-unused-vars": [1, {
+    "no-unused-vars": ["warn", {
       vars: "all",
       varsIgnorePattern: "",
       args: "after-used",
@@ -94,7 +94,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-use-before-define
      */
-    "no-use-before-define": [2, {
+    "no-use-before-define": ["error", {
       "functions": true,
       "classes": true,
       "variables": true,
