@@ -15,7 +15,7 @@ module.exports = {
      * https://eslint.org/docs/rules/no-delete-var
      */
     // we sometimes delete a var for garbage collection
-    "no-delete-var": "warn", 
+    "no-delete-var": 1, 
 
     /**
      * Disallow labels that share a name with a variable.
