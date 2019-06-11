@@ -1,0 +1,38 @@
+{
+  "name": "@alexseitsinger/eslint-config",
+  "version": "0.1.0",
+  "description": "Custom ESLint config.",
+  "main": "dist/main.js",
+  "homepage": "https://www.alexseitsinger.com/packages/node/eslint-config",
+  "author": {
+    "name": "Alex Seitsinger",
+    "email": "contact@alexseitsinger.com",
+    "url": "https://www.alexseitsinger.com"
+  },
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexseitsinger/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexseitsinger/eslint-config/issues"
+  },
+  "files": [
+    "dist/main.js",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "eslint", 
+    "react"
+  ],
+  "peerDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "test": "./node_modules/.bin/jest"
+  }
+}
