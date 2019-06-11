@@ -1,3 +1,10 @@
+<a name="v0.1.2"></a>
+## [v0.1.2](https://github.com/alexseitsinger/eslint-config/compare/v0.1.1...v0.1.2) (2019-06-11)
+
+### Code Refactoring
+- Changes required paths. ([9eef3db](https://github.com/alexseitsinger/eslint-config/commit/9eef3dbfb930a76b9d92c79d71e2693cfd201a6c))
+
+
 <a name="v0.1.1"></a>
 ## [v0.1.1](https://github.com/alexseitsinger/eslint-config/compare/v0.1.0...v0.1.1) (2019-06-11)
 
