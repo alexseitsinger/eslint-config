@@ -27,7 +27,8 @@
   "keywords": [
     "eslint",
     "eslintconfig",
-    "react"
+    "react",
+    "webpack"
   ],
   "peerDependencies": {
     "eslint": "^5.16.0",
