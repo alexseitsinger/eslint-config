@@ -2,7 +2,7 @@
   "name": "@alexseitsinger/eslint-config",
   "version": "0.1.4",
   "description": "Custom ESLint config.",
-  "main": "dist/main.js",
+  "main": "index.js",
   "homepage": "https://www.alexseitsinger.com/packages/node/eslint-config",
   "author": {
     "name": "Alex Seitsinger",
@@ -18,13 +18,14 @@
     "url": "https://github.com/alexseitsinger/eslint-config/issues"
   },
   "files": [
-    "dist/main.js",
+    "index.js",
     "package.json",
     "README.md",
     "LICENSE"
   ],
   "keywords": [
     "eslint",
+    "eslintconfig",
     "react"
   ],
   "peerDependencies": {
