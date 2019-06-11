@@ -167,8 +167,8 @@ module.exports = {
      * https://eslint.org/docs/rules/prefer-const
      */
     "prefer-const": [2, {
-      "destructuring": "any",
-      "ignoreReadBeforeAssign": true,
+      destructuring: "any",
+      ignoreReadBeforeAssign: true,
     }],
 
     /**
@@ -177,10 +177,16 @@ module.exports = {
      * https://eslint.org/docs/rules/prefer-destructuring
      */
     "prefer-destructuring": [2, {
-      "array": true,
-      "object": true,
+      VariableDeclarator: {
+        array: false,
+        object: false,
+      },
+      AssignmentExpression: {
+        array: true,
+        object: true,
+      }
     }, {
-      "enforceForRenamedProperties": false,
+      enforceForRenamedProperties: true,
     }],
 
     /**

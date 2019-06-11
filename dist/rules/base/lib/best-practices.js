@@ -607,7 +607,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/vars-on-top
      */
-    "vars-on-top": 2,
+    "vars-on-top": 1,
 
     /**
      * Require parentheses around immediate function invocations.

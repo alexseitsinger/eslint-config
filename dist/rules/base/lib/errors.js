@@ -130,8 +130,8 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-extra-parens
      */
-    "no-extra-parens": [2, "all", {
-      "conditionalAssign": false,
+    "no-extra-parens": [1, "all", {
+      "conditionalAssign": true,
       "returnAssign": false,
       "nestedBinaryExpressions": false,
       "ignoreJSX": "all",

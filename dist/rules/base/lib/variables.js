@@ -38,7 +38,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-shadow
      */
-    "no-shadow": [2, {
+    "no-shadow": [1, {
       "builtinGlobals": true,
       "hoist": "all",
       "allow": [],
@@ -79,14 +79,14 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-unused-vars
      */
-    "no-unused-vars": [2, {
-      "vars": "all",
-      "varsIgnorePattern": "",
-      "args": "after-used",
-      "ignoreRestSiblings": false, // might want it true
-      "argsIgnorePattern": "",
-      "caughtErrors": "all",
-      "caughtErrorsIgnorePattern": "",
+    "no-unused-vars": [1, {
+      vars: "all",
+      varsIgnorePattern: "",
+      args: "after-used",
+      ignoreRestSiblings: true,
+      argsIgnorePattern: "",
+      caughtErrors: "all",
+      caughtErrorsIgnorePattern: "",
     }],
 
     /**

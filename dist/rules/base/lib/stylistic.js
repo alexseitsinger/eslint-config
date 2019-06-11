@@ -74,7 +74,13 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/comma-dangle
      */
-    "comma-dangle": [2, "never"],
+    "comma-dangle": [2, {
+      arrays: "always-multiline",
+      objects: "always-multiline",
+      imports: "always-multiline",
+      exports: "always-multiline",
+      functions: "always-multiline",
+    }],
 
     /**
      * Enforce consistent spacing before and after commas. (fixable)
@@ -112,7 +118,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/computed-property-spacing
      */
-    "computed-property-spacing": [2, "always"],
+    "computed-property-spacing": [2, "never"],
 
     /**
      * Enforce consistent naming when capturing the current execution context.
@@ -171,7 +177,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/function-paren-newline
      */
-    "function-paren-newline": [2, "multiline"],
+    "function-paren-newline": [2, "consistent"],
 
     /**
      * Disallow specified identifiers.
@@ -253,11 +259,9 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/key-spacing
      */
-    "key-spacing": [2, { // might need to change.
-      "beforeColon": false,
-      "afterColon": true,
-      "mode": "strict",
-      "align": "colon",
+    "key-spacing": [2, { 
+      beforeColon: false,
+      afterColon: true
     }],
 
     /**
@@ -334,8 +338,8 @@ module.exports = {
       "code": 80,
       "tabWidth": 2,
       "comments": 80,
-      "ignorePattern": "^//",
-      "ignoreTrailingComments": true,
+      "ignorePattern": "",
+      "ignoreTrailingComments": false,
       "ignoreUrls": true,
       "ignoreStrings": true,
       "ignoreTemplateLiterals": true,
@@ -349,8 +353,8 @@ module.exports = {
      */
     "max-lines": [2, {
       "max": 300,
-      "skipBlankLines": false,
-      "skipComments": false,
+      "skipBlankLines": true,
+      "skipComments": true,
     }],
 
     /**
@@ -838,8 +842,11 @@ module.exports = {
      * https://eslint.org/docs/rules/space-unary-ops
      */
     "space-unary-ops": [2, {
-      "words": true,
-      "nonwords": true,
+      words: true,
+      nonwords: false,
+      overrides: {
+        //... 
+      }
     }],
 
     /**
