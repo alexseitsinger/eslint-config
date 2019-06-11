@@ -1,3 +1,10 @@
+<a name="v0.1.5"></a>
+## [v0.1.5](https://github.com/alexseitsinger/eslint-config/compare/v0.1.4...v0.1.5) (2019-06-11)
+
+### Code Refactoring
+- Moves modules to root of package. ([420e31c](https://github.com/alexseitsinger/eslint-config/commit/420e31c4d55e752d9554c584c852d7e49038a1e1))
+
+
 <a name="v0.1.4"></a>
 ## [v0.1.4](https://github.com/alexseitsinger/eslint-config/compare/v0.1.3...v0.1.4) (2019-06-11)
 
