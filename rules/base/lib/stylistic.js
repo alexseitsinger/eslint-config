@@ -6,10 +6,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/array-bracket-newline
      */
-    "array-bracket-newline": ["error", {
-      "multiline": true,
-      "minItems": 2,
-    }],
+    "array-bracket-newline": ["error", "consistent"],
 
     /**
      * Enforce consistent spacing inside array brackets. (fixable)
