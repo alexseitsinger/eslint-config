@@ -100,7 +100,9 @@ module.exports = {
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
      */
     "import/no-unassigned-import": ["error", {
-      allow: [],
+      allow: [
+        "core-js/stable",
+      ],
     }],
 
     /**
