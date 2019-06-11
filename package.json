@@ -19,17 +19,7 @@
   },
   "files": [
     "index.js",
-    "rules/base/index.js",
-    "rules/base/lib/best-practices.js",
-    "rules/base/lib/errors.js",
-    "rules/base/lib/es6.js",
-    "rules/base/lib/nodejs-commonjs.js",
-    "rules/base/lib/strict-mode.js",
-    "rules/base/lib/stylistic.js",
-    "rules/base/lib/variables.js",
-    "rules/react/index.js",
-    "rules/react/lib/general.js",
-    "rules/react/lib/jsx.js",
+    "rules/",
     "package.json",
     "README.md",
     "LICENSE"
