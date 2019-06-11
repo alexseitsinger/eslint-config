@@ -1,6 +1,6 @@
 {
   "name": "@alexseitsinger/eslint-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Custom ESLint config.",
   "main": "index.js",
   "homepage": "https://www.alexseitsinger.com/packages/node/eslint-config",
