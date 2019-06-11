@@ -17,8 +17,25 @@ module.exports = {
       impliedStrict: true,
     },
   },
+  plugins: [
+    "react",
+  ],
+  settings: {
+    linkComponents: [
+      {name: "Link", linkAttribute: "to"}  
+    ]
+  },
   extends: [
-    "./rules/base", 
-    "./rules/react",
-  ].map(require.resolve),
+    // base
+    "./rules/base/best-practices",
+    "./rules/base/errors",
+    "./rules/base/es6",
+    "./rules/base/nodejs-commonjs",
+    "./rules/base/strict-mode",
+    "./rules/base/stylistic",
+    "./rules/base/variables",
+    // react
+    "./rules/react/general",
+    "./rules/react/jsx",
+  ].map(require.resolve)
 }
