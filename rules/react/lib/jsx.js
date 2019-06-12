@@ -113,8 +113,8 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
      */
     "react/jsx-max-props-per-line": ["error", {
-      "maximum": 1,
-      "when": "always" // might want to change this to multiline
+      //maxmimum: 1,
+      when: "multiline" 
     }],
 
     /**
