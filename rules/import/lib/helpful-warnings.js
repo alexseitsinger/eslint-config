@@ -31,12 +31,21 @@ module.exports = {
     /**
      * Forbid the use of extraneous packages.
      *
+     * NOTES:
+     * - Since we use devDependencies in tests & webpack, we use the glob 
+     *   patterns to exclude checking modules in those files.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
      */
     "import/no-extraneous-dependencies": ["error", {
-      devDependencies: false,
-      optionalDependencies: false,
+      devDependencies: [
+        "**/*.test.js",
+        "**/webpack.config.js",
+        "**/jest.*.js",
+      ],
       peerDependencies: false,
+      optionalDependencies: false,
+      //packageDir: ""
     }],
 
     /**
