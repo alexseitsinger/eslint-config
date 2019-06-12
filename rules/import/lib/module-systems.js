@@ -3,9 +3,12 @@ module.exports = {
     /**
      * Report potentially ambiguous parse goal (script vs. module).
      *
+     * NOTES:
+     * - This gets thrown from our webpack configs, so disable it.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
      */
-    "import/unambiguous": "error",
+    "import/unambiguous": "off",
 
     /**
      * Report CommonJS require calls and module.exports or exports.*.
