@@ -3,6 +3,18 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    jest: true,
+    commonjs: true,
+  },
+  globals: {
+    // Add some globals for Jest.
+    describe: "readonly",
+    it: "readonly",
+    test: "readonly",
+    expect: "readonly",
+    shallow: "readonly",
+    mount: "readonly",
+    render: "readonly",
   },
   parserOptions: {
     ecmaVersion: "2018",
