@@ -1,14 +1,18 @@
 module.exports = {
   rules: {
     /**
-     * Require braces around arrow function bodies. (fixable)
+     * Require braces around arrow function bodies. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/arrow-body-style
      */
     "arrow-body-style": ["error", "as-needed"],
 
     /**
-     * Require parentheses around arrow function arguments. (fixable)
+     * Require parentheses around arrow function arguments. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/arrow-parens
      */
@@ -18,6 +22,7 @@ module.exports = {
 
     /**
      * Enforce consistent spacing before and after the arrow in arrow functions.
+     * 
      * (fixable)
      *
      * https://eslint.org/docs/rules/arrow-spacing
@@ -36,6 +41,7 @@ module.exports = {
 
     /**
      * Enforce consistent spacing around * operators in generator functions.
+     * 
      * (fixable)
      *
      * https://eslint.org/docs/rules/generator-star-spacing
@@ -54,6 +60,7 @@ module.exports = {
 
     /**
      * Disallow arrow functions where they could be confused with comparisons.
+     * 
      * (fixable)
      *
      * https://eslint.org/docs/rules/no-confusing-arrow
@@ -110,7 +117,9 @@ module.exports = {
     "no-this-before-super": "error",
 
     /**
-     * Disallow unnecessary computed property keys in object literals. (fixable)
+     * Disallow unnecessary computed property keys in object literals. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/no-useless-computed-key
      */
@@ -125,7 +134,9 @@ module.exports = {
 
     /**
      * Disallow renaming import, export, and destructured assignments to the
-     * same name. (fixable)
+     * same name. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/no-useless-rename
      */
@@ -144,7 +155,9 @@ module.exports = {
 
     /**
      * Require or disallow method and property shorthand syntax for object
-     * literals. (fixable)
+     * literals. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/object-shorthand
      */
@@ -162,7 +175,9 @@ module.exports = {
 
     /**
      * Require const declarations for variables that are never reassigned after
-     * declared. (fixable)
+     * declared. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/prefer-const
      */
@@ -191,7 +206,9 @@ module.exports = {
 
     /**
      * Disallow parseInt() and Number.parseInt() in favor of binary, octal, and
-     * hexadecimal literals. (fixable)
+     * hexadecimal literals. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/prefer-numeric-literals
      */
@@ -212,7 +229,9 @@ module.exports = {
     "prefer-spread": "error",
 
     /**
-     * Require template literals instead of string concatenation. (fixable)
+     * Require template literals instead of string concatenation. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/prefer-template
      */
@@ -227,6 +246,7 @@ module.exports = {
 
     /**
      * Enforce spacing between rest and spread operators and their expressions.
+     * 
      * (fixable)
      *
      * https://eslint.org/docs/rules/rest-spread-spacing
@@ -234,7 +254,9 @@ module.exports = {
     "rest-spread-spacing": ["error", "never"],
    
     /**
-     * Enforce sorted import declarations within modules. (fixable)
+     * Enforce sorted import declarations within modules. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/sort-imports
      */
@@ -254,14 +276,18 @@ module.exports = {
     
     /**
      * Require or disallow spacing around embedded expressions of template
-     * strings. (fixable)
+     * strings. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/template-curly-spacing
      */
     "template-curly-spacing": ["error", "never"],
 
     /**
-     * Require or disallow spacing around the * in yield* expressions. (fixable)
+     * Require or disallow spacing around the * in yield* expressions. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/yield-star-spacing
      */

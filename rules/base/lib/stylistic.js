@@ -2,6 +2,7 @@ module.exports = {
   rules: {
     /**
      * Enforce linebreaks after opening and before closing array brackets.
+     * 
      * (fixable)
      *
      * https://eslint.org/docs/rules/array-bracket-newline
@@ -9,7 +10,9 @@ module.exports = {
     "array-bracket-newline": ["error", "consistent"],
 
     /**
-     * Enforce consistent spacing inside array brackets. (fixable)
+     * Enforce consistent spacing inside array brackets. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/array-bracket-spacing
      */
@@ -20,7 +23,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce line breaks after each array element. (fixable)
+     * Enforce line breaks after each array element. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/array-element-newline
      */
@@ -28,14 +33,18 @@ module.exports = {
 
     /**
      * Disallow or enforce spaces inside of blocks after opening block and
-     * before closing block. (fixable)
+     * before closing block. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/block-spacing
      */
     "block-spacing": ["error", "always"],
 
     /**
-     * Enforce consistent brace style for blocks. (fixable)
+     * Enforce consistent brace style for blocks. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/brace-style
      */
@@ -56,6 +65,7 @@ module.exports = {
 
     /**
      * Enforce or disallow capitalization of the first letter of a comment.
+     *
      * (fixable)
      *
      * https://eslint.org/docs/rules/capitalized-comments
@@ -67,7 +77,9 @@ module.exports = {
     }],
     
     /**
-     * Require or disallow trailing commas. (fixable)
+     * Require or disallow trailing commas. 
+     *
+     * (fixable)
      *
      * NOTES:
      * - With function calls, we must pass a composed component tree as an
@@ -85,7 +97,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce consistent spacing before and after commas. (fixable)
+     * Enforce consistent spacing before and after commas. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/comma-spacing
      */
@@ -95,7 +109,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce consistent comma style. (fixable)
+     * Enforce consistent comma style. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/comma-style
      */
@@ -116,7 +132,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce consistent spacing inside computed property brackets. (fixable)
+     * Enforce consistent spacing inside computed property brackets. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/computed-property-spacing
      */
@@ -130,7 +148,9 @@ module.exports = {
     "consistent-this": ["error", "that", "self"],
 
     /**
-     * Require or disallow newline at the end of files. (fixable)
+     * Require or disallow newline at the end of files. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/eol-last
      */
@@ -138,7 +158,9 @@ module.exports = {
 
     /**
      * Require or disallow spacing between function identifiers and their
-     * invocations. (fixable)
+     * invocations. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/func-call-spacing
      */
@@ -175,7 +197,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce consistent line breaks inside function parentheses. (fixable)
+     * Enforce consistent line breaks inside function parentheses. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/function-paren-newline
      */
@@ -212,14 +236,18 @@ module.exports = {
     }],  
     
     /**
-     * Enforce the location of arrow function bodies. (fixable)
+     * Enforce the location of arrow function bodies. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/implicit-arrow-linebreak
      */
     "implicit-arrow-linebreak": ["error", "beside"],
 
     /**
-     * Enforce consistent indentation. (fixable)
+     * Enforce consistent indentation. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/indent
      */
@@ -249,7 +277,9 @@ module.exports = {
 
     /**
      * Enforce the consistent use of either double or single quotes in JSX
-     * attributes. (fixable)
+     * attributes. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/jsx-quotes
      */
@@ -285,14 +315,18 @@ module.exports = {
     "line-comment-position": ["error", "above"],
 
     /**
-     * Enforce consistent linebreak style. (fixable)
+     * Enforce consistent linebreak style. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/linebreak-style
      */
     "linebreak-style": ["error", "unix"],
 
     /**
-     * Require empty lines around comments. (fixable)
+     * Require empty lines around comments. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/lines-around-comment
      */
@@ -314,7 +348,9 @@ module.exports = {
     }],
 
     /**
-     * Require or disallow an empty line between class members. (fixable)
+     * Require or disallow an empty line between class members. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/lines-between-class-members
      */
@@ -408,7 +444,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce a particular style for multiline comments. (fixable)
+     * Enforce a particular style for multiline comments. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/multiline-comment-style
      */
@@ -438,7 +476,9 @@ module.exports = {
 
     /**
      * Enforce or disallow parentheses when invoking a constructor with no
-     * arguments. (fixable)
+     * arguments. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/new-parens
      */
@@ -485,7 +525,9 @@ module.exports = {
     "no-inline-comments": "error",
 
     /**
-     * Disallow if statements as the only statement in else blocks. (fixable)
+     * Disallow if statements as the only statement in else blocks. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/no-lonely-if
      */
@@ -494,9 +536,29 @@ module.exports = {
     /**
      * Disallow mixed binary operators.
      *
+     * NOTES:
+     * - Added options according to AirBNB's config.
+     *
      * https://eslint.org/docs/rules/no-mixed-operators
      */
-    "no-mixed-operators": "error",
+    "no-mixed-operators": ["error", {
+      // Arithmetic groups disallowed from mixing with other groups.
+      groups: [
+        ["%", "**"],
+        ["%", "+"],
+        ["%", "-"],
+        ["%", "*"],
+        ["%", "/"],
+        ["**", "+"],
+        ["**", "-"],
+        ["**", "/"],
+        ["&", "|", "^", "~", "<<", ">>", ">>>"],
+        ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+        ["&&", "||"],
+        ["in", "instanceof"],
+      ],
+      allowSamePrecedence: false,
+    }],
 
     /**
      * Disallow mixed spaces and tabs for indentation.
@@ -513,7 +575,9 @@ module.exports = {
     "no-multi-assign": "error",
 
     /**
-     * Disallow multiple empty lines. (fixable)
+     * Disallow multiple empty lines. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/no-multiple-empty-lines
      */
@@ -528,7 +592,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-negated-condition
      */
-    "no-negated-condition": "error",
+    "no-negated-condition": "error", // might wnat to disable this rule.
 
     /**
      * Disallow nested ternary expressions.
@@ -556,17 +620,29 @@ module.exports = {
     /**
      * Disallow specified syntax.
      *
+     * NOTES:
+     * - Extended this setting using the AirBNB eslint.
+     *
      * https://eslint.org/docs/rules/no-restricted-syntax
      */
     "no-restricted-syntax": ["error", {
-      "selector": "FunctionExpression",
-      "message": "Function expressions are not allowed."
+      selector: "FunctionExpression",
+      message: "Function expressions are not allowed. Use a function declaration or an arrow function instead."
     }, {
-      "selector": "CallExpresion[callee.name='setTimeout'][arguments.length!=2]",
-      "message": "setTimeout must always be invoked with two arguments."
+      selector: "CallExpresion[callee.name='setTimeout'][arguments.length!=2]",
+      message: "setTimeout must always be invoked with two arguments."
     }, {
-      "selector": "WithStatement",
-      "message": "With statements are not allowed.",
+      selector: "WithStatement",
+      message: "With statements are not allowed.",
+    }, {
+      selector: 'ForInStatement',
+      message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+    }, {
+      selector: 'ForOfStatement',
+      message: 'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.',
+    }, {
+      selector: 'LabeledStatement',
+      message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
     }],
     
     /**
@@ -590,13 +666,15 @@ module.exports = {
     "no-ternary": "off",
 
     /**
-     * Disallow trailing whitespace at the end of lines. (fixable)
+     * Disallow trailing whitespace at the end of lines. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/no-trailing-spaces
      */
-    "no-trailing-spaces": ["off", {
-      "skipBlankLines": true,
-      "ignoreComments": true,
+    "no-trailing-spaces": ["error", {
+      "skipBlankLines": false,
+      "ignoreComments": false,
     }],
     
     /**
@@ -612,23 +690,29 @@ module.exports = {
     }],
 
     /**
-     * Disallow ternary operators when simpler alternatives exist. (fixable)
+     * Disallow ternary operators when simpler alternatives exist. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/no-unneeded-ternary
      */
     "no-unneeded-ternary": ["error", {
-      "defaultAssignment": true,
+      "defaultAssignment": false,
     }],
     
     /**
-     * Disallow whitespace before properties. (fixable)
+     * Disallow whitespace before properties. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/no-whitespace-before-property<Paste>
      */
     "no-whitespace-before-property": "error",
    
     /**
-     * Enforce the location of single-line statements. (fixable)
+     * Enforce the location of single-line statements. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/nonblock-statement-body-position
      */
@@ -637,7 +721,9 @@ module.exports = {
     }],
     
     /**
-     * Enforce consistent line breaks inside braces. (fixable)
+     * Enforce consistent line breaks inside braces. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/object-curly-newline
      */
@@ -661,7 +747,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce consistent spacing inside braces. (fixable)
+     * Enforce consistent spacing inside braces. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/object-curly-spacing
      */
@@ -671,7 +759,9 @@ module.exports = {
     }],
     
     /**
-     * Enforce placing object properties on separate lines. (fixable)
+     * Enforce placing object properties on separate lines. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/object-property-newline
      */
@@ -681,14 +771,18 @@ module.exports = {
 
     /**
      * Enforce variables to be declared either together or separately in
-     * functions. (fixable)
+     * functions. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/one-var
      */
     "one-var": ["error", "never"],
 
     /**
-     * Require or disallow newlines around variable declarations. (fixable)
+     * Require or disallow newlines around variable declarations. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/one-var-declaration-per-line
      */
@@ -696,6 +790,7 @@ module.exports = {
 
     /**
      * Require or disallow assignment operator shorthand where possible.
+     * 
      * (fixable)
      *
      * https://eslint.org/docs/rules/operator-assignment
@@ -703,14 +798,18 @@ module.exports = {
     "operator-assignment": ["error", "always"],
 
     /**
-     * Enforce consistent linebreak style for operators. (fixable)
+     * Enforce consistent linebreak style for operators. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/operator-linebreak
      */
     "operator-linebreak": ["error", "none"],
 
     /**
-     * Require or disallow padding within blocks. (fixable)
+     * Require or disallow padding within blocks. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/padded-blocks
      */
@@ -720,7 +819,9 @@ module.exports = {
 
     /**
      * Requires or disallows blank lines between the given 2 kinds of
-     * statements. (fixable)
+     * statements. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/padding-line-between-statements
      */
@@ -732,7 +833,9 @@ module.exports = {
     
     /**
      * Disallow using Object.assign with an object literal as the first argument
-     * and prefer the use of object spread instead. (fixable)
+     * and prefer the use of object spread instead. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/prefer-object-spread
      */
@@ -744,14 +847,16 @@ module.exports = {
      * https://eslint.org/docs/rules/quote-props
      */
     "quote-props": ["error", "consistent", {
-      "keywords": true,
-      "unnecessary": false,
-      "numbers": true,
+      "keywords": false,
+      "unnecessary": true,
+      "numbers": false,
     }],
     
     /**
      * Enforces the consistent use of either backticks, double, or single
-     * quotes. (fixable)
+     * quotes. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/quotes
      */
@@ -761,7 +866,9 @@ module.exports = {
     }],
     
     /**
-     * Require or disallow semicolons instead of ASI. (fixable)
+     * Require or disallow semicolons instead of ASI. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/semi
      */
@@ -770,7 +877,9 @@ module.exports = {
     }],
     
     /**
-     * Enforce spacing around a semicolon. (fixable)
+     * Enforce spacing around a semicolon. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/semi-spacing
      */
@@ -780,7 +889,9 @@ module.exports = {
     }],
     
     /**
-     * Enforce location of semicolons. (fixable)
+     * Enforce location of semicolons. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/semi-style
      */
@@ -808,7 +919,9 @@ module.exports = {
     }],
     
     /**
-     * Enforce consistent spacing before blocks. (fixable)
+     * Enforce consistent spacing before blocks. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/space-before-blocks
      */
@@ -820,21 +933,27 @@ module.exports = {
 
     /**
      * Enforce consistent spacing before function definition opening
-     * parenthesis. (fixable)
+     * parenthesis. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/space-before-function-paren
      */
     "space-before-function-paren": ["error", "never"],
 
     /**
-     * Enforce consistent spacing inside parentheses. (fixable)
+     * Enforce consistent spacing inside parentheses. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/space-in-parens
      */
     "space-in-parens": ["error", "never"],
 
     /**
-     * Require spacing around infix operators. (fixable)
+     * Require spacing around infix operators. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/space-infix-ops
      */
@@ -843,7 +962,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce consistent spacing before or after unary operators. (fixable)
+     * Enforce consistent spacing before or after unary operators. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/space-unary-ops
      */
@@ -856,7 +977,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce consistent spacing after the // or /* in a comment. (fixable)
+     * Enforce consistent spacing after the // or /* in a comment. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/spaced-comment
      */
@@ -866,7 +989,9 @@ module.exports = {
     }],
 
     /**
-     * Enforce spacing around colons of switch statements. (fixable)
+     * Enforce spacing around colons of switch statements. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/switch-colon-spacing
      */
@@ -877,6 +1002,7 @@ module.exports = {
 
     /**
      * Require or disallow spacing between template tags and their literals.
+     * 
      * (fixable)
      *
      * https://eslint.org/docs/rules/template-tag-spacing
@@ -884,14 +1010,18 @@ module.exports = {
     "template-tag-spacing": ["error", "never"],
 
     /**
-     * Require or disallow Unicode byte order mark (BOM). (fixable)
+     * Require or disallow Unicode byte order mark (BOM). 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/unicode-bom
      */
     "unicode-bom": ["error", "never"],
 
     /**
-     * Require parenthesis around regex literals. (fixable)
+     * Require parenthesis around regex literals. 
+     *
+     * (fixable)
      *
      * https://eslint.org/docs/rules/wrap-regex
      */

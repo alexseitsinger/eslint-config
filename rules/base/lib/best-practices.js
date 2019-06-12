@@ -163,14 +163,18 @@ module.exports = {
     /**
      * Disallow empty functions.
      *
+     * NOTES:
+     * - We sometimes use empty functions for defaultProps in react. As a
+     *   result, allow functions and methods to be empty.
+     *
      * https://eslint.org/docs/rules/no-empty-function
      */
     "no-empty-function": ["error", {
       "allow": [
-        //"functions",
-        //"arrowFunctions",
+        "functions",
+        "arrowFunctions",
         //"generatorFunctions",
-        //"methods",
+        "methods",
         //"generatorMethods",
         //"getters",
         //"setters",
@@ -291,9 +295,13 @@ module.exports = {
     /**
      * Disallow this keywords outside of classes or class-like objects.
      *
+     * NOTES:
+     * - We use 'this' for references the global scope when we use IIFE's, etc.
+     *   As a result, disable this rule.
+     *
      * https://eslint.org/docs/rules/no-invalid-this
      */
-    "no-invalid-this": "error",
+    "no-invalid-this": "off",
 
     /**
      * Disallow the use of the __iterator__ property.
@@ -406,8 +414,18 @@ module.exports = {
      * https://eslint.org/docs/rules/no-param-reassign
      */
     "no-param-reassign": ["error", {
-      "props": true, // Default: false
-      "ignorePropertyModificationsFor": [],
+      "props": true,
+      "ignorePropertyModificationsFor": [
+        "acc", // for reduce accumulators
+        "accumulator", // for reduce accumulators
+        "e", // for e.returnvalue
+        "event", // for event.returnvalue
+        "req", // for Express requests
+        "request", // for Express requests
+        "res", // for Express responses
+        "response", // for Express responses
+        "staticContext", // for ReactRouter context
+      ],
     }],
 
     /**
@@ -432,15 +450,49 @@ module.exports = {
      * https://eslint.org/docs/rules/no-restricted-properties
      */
     "no-restricted-properties": ["error", {
-      "object": "",
-      "property": "",
-      "message": "",
+      object: 'arguments',
+      property: 'callee',
+      message: 'arguments.callee is deprecated',
+    }, {
+      object: 'global',
+      property: 'isFinite',
+      message: 'Please use Number.isFinite instead',
+    }, {
+      object: 'self',
+      property: 'isFinite',
+      message: 'Please use Number.isFinite instead',
+    }, {
+      object: 'window',
+      property: 'isFinite',
+      message: 'Please use Number.isFinite instead',
+    }, {
+      object: 'global',
+      property: 'isNaN',
+      message: 'Please use Number.isNaN instead',
+    }, {
+      object: 'self',
+      property: 'isNaN',
+      message: 'Please use Number.isNaN instead',
+    }, {
+      object: 'window',
+      property: 'isNaN',
+      message: 'Please use Number.isNaN instead',
+    }, {
+      property: '__defineGetter__',
+      message: 'Please use Object.defineProperty instead.',
+    }, {
+      property: '__defineSetter__',
+      message: 'Please use Object.defineProperty instead.',
+    }, {
+      object: 'Math',
+      property: 'pow',
+      message: 'Use the exponentiation operator (**) instead.',
     }],
 
     /**
      * Disallow assignment operators in return statements.
      *
-     * https://eslint.org/docs/rules/no-return-assign<Paste>
+     * https://eslint.org/docs/rules/no-return-assign
      */
     "no-return-assign": ["error", "always"],
    
@@ -501,8 +553,8 @@ module.exports = {
      * https://eslint.org/docs/rules/no-unused-expressions
      */
     "no-unused-expressions": ["error", {
-      "allowShortCircuit": true,
-      "allowTernary": true,
+      "allowShortCircuit": false,
+      "allowTernary": false,
       "allowTaggedTemplates": false
     }],
 
@@ -518,9 +570,13 @@ module.exports = {
     /**
      * Disallow unnecessary calls to .call() and .apply().
      *
+     * NOTES:
+     * - Sometimes, .call() and .apply() are used to invoke a function with a
+     *   specific context/arguments. As a result, disable this rule.
+     *
      * https://eslint.org/docs/rules/no-useless-call
      */
-    "no-useless-call": "error",
+    "no-useless-call": "off",
 
     /**
      * Disallow unnecessary catch clauses,
@@ -548,7 +604,7 @@ module.exports = {
      *
      * (fixable)
      *
-     * https://eslint.org/docs/rules/no-useless-return<Paste>
+     * https://eslint.org/docs/rules/no-useless-return
      */
     "no-useless-return": "error",
    
@@ -579,9 +635,12 @@ module.exports = {
     /**
      * Enforce using named capture group in regular expression.
      *
-     * https://eslint.org/docs/rules/prefer-named-capture-group<Paste>
+     * NOTES:
+     * - This is only available in newer ecmascript version.
+     *
+     * https://eslint.org/docs/rules/prefer-named-capture-group
      */
-    "prefer-named-capture-group": "warn", // only available in newer envs.
+    "prefer-named-capture-group": "off",
     
     /**
      * Require using Error objects as Promise rejection reasons.
@@ -600,14 +659,17 @@ module.exports = {
     /**
      * Disallow async functions which have no await expression.
      *
+     * NOTES:
+     * - Disabled this according to AirBNB eslint.
+     *
      * https://eslint.org/docs/rules/require-await
      */
-    "require-await": "error",
+    "require-await": "off",
 
     /**
      * Enforce the use of u flag on RegExp.
      *
-     * https://eslint.org/docs/rules/require-unicode-regexp<Paste>
+     * https://eslint.org/docs/rules/require-unicode-regexp
      */
     "require-unicode-regexp": "off",
    
@@ -616,7 +678,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/vars-on-top
      */
-    "vars-on-top": "warn",
+    "vars-on-top": "error",
 
     /**
      * Require parentheses around immediate function invocations.
