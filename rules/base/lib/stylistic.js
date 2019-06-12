@@ -895,6 +895,6 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/wrap-regex
      */
-    "wrap-regex": "error",
+    "wrap-regex": "off",
   }
 }
