@@ -69,6 +69,11 @@ module.exports = {
     /**
      * Require or disallow trailing commas. (fixable)
      *
+     * NOTES:
+     * - With function calls, we must pass a composed component tree as an
+     *   argument. When we do this, we dont wnat to have to also pass a comma
+     *   after the closing tag. So, ignore this rule for functions.
+     *
      * https://eslint.org/docs/rules/comma-dangle
      */
     "comma-dangle": ["error", {
@@ -76,7 +81,7 @@ module.exports = {
       objects: "always-multiline",
       imports: "always-multiline",
       exports: "always-multiline",
-      functions: "always-multiline",
+      functions: "ignore",
     }],
 
     /**
