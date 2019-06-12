@@ -47,9 +47,14 @@ module.exports = {
     /**
      * Require return statements to either always or never specify values.
      *
+     * NOTES:
+     * - Since reducer functions only return for matching cases, we dont supply
+     *   a return value at the end of them. As a result, turn this rule off to
+     *   avoid throwng this error.
+     *
      * https://eslint.org/docs/rules/consistent-return
      */
-    "consistent-return": ["error", {
+    "consistent-return": ["off", {
       "treatUndefinedAsUnspecified": false,
     }],
    
