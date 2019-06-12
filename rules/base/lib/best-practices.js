@@ -609,7 +609,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/require-unicode-regexp<Paste>
      */
-    "require-unicode-regexp": "warn",
+    "require-unicode-regexp": "off",
    
     /**
      * Require var declarations be placed at the top of their containing scope.
