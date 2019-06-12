@@ -176,10 +176,16 @@ module.exports = {
     /**
      * Prevent multiple component definition per file.
      *
+     * NOTES:
+     * - In tets, we often have multuple components declared in one file. As a
+     *   result, it might be better to disable this rule. For now, we will
+     *   throw an error if there are more than one Class components in a file.
+     *   If we have multiple stateless functions, it will ignore them.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
      */
     "react/no-multi-comp": ["error", {
-      "ignoreStateless": false,
+      "ignoreStateless": true,
     }],
 
     /**
