@@ -122,9 +122,12 @@ module.exports = {
      * Forbid modules without any export, and exports not imported by any
      * modules..
      *
+     * NOTES:
+     * - We have unused exports in webpack configs, we disable this rule.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
      */
-    "import/no-unused-modules": ["error", {
+    "import/no-unused-modules": ["off", {
       unusedExports: true,
       missingExports: true,
       //src: [],
