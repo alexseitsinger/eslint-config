@@ -1,3 +1,17 @@
+<a name="v0.4.0"></a>
+## [v0.4.0](https://github.com/alexseitsinger/eslint-config/compare/v0.3.0...v0.4.0) (2019-06-12)
+
+### Features
+- Adds globals. Adds envs. ([2142e39](https://github.com/alexseitsinger/eslint-config/commit/2142e395861152b5816cccdb9a860a0872f5cd79))
+- Adds globs to extraneous-deps rule. ([8bc3ab8](https://github.com/alexseitsinger/eslint-config/commit/8bc3ab8ae6b27e22a737821447c18c902ecab4f8))
+- Disables no-magic-numbers. ([e6447ef](https://github.com/alexseitsinger/eslint-config/commit/e6447ef8961ecceaa9002de1f8ba861588321e98))
+- Ignores commas in functions. ([e1c60ba](https://github.com/alexseitsinger/eslint-config/commit/e1c60ba62a2c2df684be7921bf8d8e199584ee8f))
+- Ignores stateless for no-multi-comp rule. ([e273cff](https://github.com/alexseitsinger/eslint-config/commit/e273cff7b3f935a65e7ef98cf551da65260a75da))
+- Jsx-max-props-per-line to multiline. ([d14b9f3](https://github.com/alexseitsinger/eslint-config/commit/d14b9f37809cc34240ba9bade5c65ce95910baa3))
+- Makes array-bracket-newline consistent. ([f77d2a5](https://github.com/alexseitsinger/eslint-config/commit/f77d2a508f034f314cf87600e483e47cd11a4cbf))
+- Turns off consistent-return rule. ([b0d9b7a](https://github.com/alexseitsinger/eslint-config/commit/b0d9b7a8dfe4ac180434adee83844fe9d955f6ca))
+
+
 <a name="v0.3.0"></a>
 ## [v0.3.0](https://github.com/alexseitsinger/eslint-config/compare/v0.2.0...v0.3.0) (2019-06-11)
 
