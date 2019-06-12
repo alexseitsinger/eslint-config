@@ -330,9 +330,13 @@ module.exports = {
     /**
      * Disallow magic numbers.
      *
+     * NOTES:
+     * - Setting a literal 0 will throw an error with this enabled. So, disable
+     *   this rule completely.
+     *
      * https://eslint.org/docs/rules/no-magic-numbers
      */
-    "no-magic-numbers": ["error", {
+    "no-magic-numbers": ["off", {
       "ignore": [],
       "ignoreArrayIndexes": true,
       "enforceConst": true,
