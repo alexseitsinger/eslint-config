@@ -132,9 +132,13 @@ module.exports = {
      *
      * (fixable)
      *
+     * NOTES:
+     * - Since we often group expressions using parens, to make them easier to
+     *   read, we should disable this rule.
+     *
      * https://eslint.org/docs/rules/no-extra-parens
      */
-    "no-extra-parens": ["warn", "all", {
+    "no-extra-parens": ["off", "all", {
       "conditionalAssign": true,
       "returnAssign": false,
       "nestedBinaryExpressions": false,
