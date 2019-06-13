@@ -3,9 +3,13 @@ module.exports = {
     /**
      * Require return statements after callbacks.
      *
+     * NOTES:
+     * - Since our callback are often asyncronous, we shouldn't expect return
+     *   statements. As a result, disable this rule.
+     *
      * https://eslint.org/docs/rules/callback-return
      */
-    "callback-return": ["error", [
+    "callback-return": ["off", [
       "callback", 
       "cb", 
       "errback",
@@ -18,6 +22,10 @@ module.exports = {
 
     /**
      * Require require() calls to be placed at top-level module scope.
+     *
+     * NOTES:
+     * - Since we use require() calls in our reducer, when its hot reloaded, we
+     *   need to disable this rule.
      *
      * https://eslint.org/docs/rules/global-require
      */
@@ -64,9 +72,13 @@ module.exports = {
     /**
      * Disallow the use of process.env.
      *
+     * NOTES:
+     * - Since we use process.env for webpack configs, we need to disable this
+     *   rule.
+     *
      * https://eslint.org/docs/rules/no-process-env
      */
-    "no-process-env": "error", // might want to disable this rule
+    "no-process-env": "off", 
     
     /**
      * Disallow the use of process.exit().
@@ -78,9 +90,13 @@ module.exports = {
     /**
      * Disallow specified modules when loaded by require.
      *
+     * NOTES:
+     * - Since we arent specifying any modules, by default, we don't need to
+     *   enable this rule.
+     *
      * https://eslint.org/docs/rules/no-restricted-modules
      */
-    "no-restricted-modules": ["error", {
+    "no-restricted-modules": ["off", {
       "paths": [],
       "patterns": [],
     }],
@@ -88,9 +104,13 @@ module.exports = {
     /**
      * Disallow synchronous methods.
      *
+     * NOTES:
+     * - We use syncronous methods in some node packages, so we should disable
+     *   this rule.
+     *
      * https://eslint.org/docs/rules/no-sync
      */
-    "no-sync": ["error", {
+    "no-sync": ["off", {
       "allowAtRootLevel": false
     }],
   }
