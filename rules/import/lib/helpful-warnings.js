@@ -39,11 +39,34 @@ module.exports = {
      */
     "import/no-extraneous-dependencies": ["error", {
       devDependencies: [
-        "tests/*.test.js",
+        /**
+         * Jest
+         */
+        "tests/**",
+        "**/tests/**",
+        "__tests__/**",
+        "**/__tests__/**",
         "jest.*.js",
+        "**/jest.*.js",
+        "jest/*.js",
+        "**/jest/*.js",
+        /**
+         * Webpack
+         */
         "webpack.config.js",
+        "**/webpack.config.js",
+        "webpack-config.*.*.js",
+        "**/webpack-config.*.*.js",
+        "webpack.config.*.js",
+        "**/webpack.config.*.js",
+        "webpack/**",
+        "**/webpack/**",
         "webpack/*.js",
-        "webpack/**/*.js",
+        "**/webpack/*.js",
+        "webpack/client/*.js",
+        "**/webpack/client/*.js",
+        "webpack/server/*.js",
+        "**/webpack/server/*.js",
       ],
       peerDependencies: false,
       optionalDependencies: false,
