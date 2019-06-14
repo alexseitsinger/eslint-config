@@ -618,9 +618,13 @@ module.exports = {
     /**
      * Disallow specified warning terms in comments.
      *
+     * NOTES:
+     * - We use warning comments to keep our place when we're developing
+     *   something. So, disable this rule.
+     *
      * https://eslint.org/docs/rules/no-warning-comments
      */
-    "no-warning-comments": ["error", {
+    "no-warning-comments": ["off", {
       "terms": ["todo", "fix",],
       "location": "start",
     }],
