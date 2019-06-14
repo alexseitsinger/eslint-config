@@ -1,3 +1,27 @@
+<a name="v0.5.1"></a>
+## [v0.5.1](https://github.com/alexseitsinger/eslint-config/compare/v0.5.0...v0.5.1)
+
+
+<a name="v0.5.0"></a>
+## [v0.5.0](https://github.com/alexseitsinger/eslint-config/compare/v0.4.0...v0.5.0) (2019-06-14)
+
+### Features
+- Adds glob paths to rule. ([33b112c](https://github.com/alexseitsinger/eslint-config/commit/33b112c03fdd3672e3b1b7940975a7636fdaae03))
+- Disabled unambiguous rule. ([eef14e3](https://github.com/alexseitsinger/eslint-config/commit/eef14e3c62076a541c386233de7efbc2fe0d7c75))
+- Disables max-lines and max-statements. ([9bc8738](https://github.com/alexseitsinger/eslint-config/commit/9bc8738f4028686219a7e83a748e375bdc5f0b11))
+- Disables no-dynamic-require rule. ([443de39](https://github.com/alexseitsinger/eslint-config/commit/443de39e1e6c2a56cd1fb9365f2743601927a369))
+- Disables no-extra-parens. ([00f2bc7](https://github.com/alexseitsinger/eslint-config/commit/00f2bc7da2ce0d9a5eb804657b9cd96c8cae3406))
+- Disables no-unused-modules rule. ([ae430ab](https://github.com/alexseitsinger/eslint-config/commit/ae430ab454f59571bc67aee3c6c752670ac0c53f))
+- Disables no-use-before-define for func defs. ([edafd10](https://github.com/alexseitsinger/eslint-config/commit/edafd1060e00e1b98c7eefd8be5f8b1ec293ba00))
+- Disables warning-comments. ([7a6c2e4](https://github.com/alexseitsinger/eslint-config/commit/7a6c2e44aece697d11c02fc9d3c9b46bf364d9bf))
+- Removes unicode regexp requirement. ([1202abb](https://github.com/alexseitsinger/eslint-config/commit/1202abb25d405783c61c17c55acab925a85fb89c))
+- Removes wrap regex in parens rule. ([8f42433](https://github.com/alexseitsinger/eslint-config/commit/8f424331dc80249b2bebd336e6b9cbe63464eea6))
+- Updates globs in no-extraneous. ([fdb665d](https://github.com/alexseitsinger/eslint-config/commit/fdb665d52393bc342b04806bdb4aeee29d1f0864))
+- Updates various rules. ([8921924](https://github.com/alexseitsinger/eslint-config/commit/8921924a86d070ec5eb0e94b1c56c03bfb80db9b))
+- Updates various rules. ([83f4718](https://github.com/alexseitsinger/eslint-config/commit/83f47182fb55d61f19988007b598dcf198e0e602))
+- Updates various rules. ([3eb3940](https://github.com/alexseitsinger/eslint-config/commit/3eb3940b3b9e9993f4eae9bf46c52b12eeaf48b8))
+
+
 <a name="v0.4.0"></a>
 ## [v0.4.0](https://github.com/alexseitsinger/eslint-config/compare/v0.3.0...v0.4.0) (2019-06-12)
 
