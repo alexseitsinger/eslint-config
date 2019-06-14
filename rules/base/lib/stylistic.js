@@ -387,9 +387,13 @@ module.exports = {
     /**
      * Enforce a maximum number of lines per file.
      *
+     * NOTES:
+     * - Have have packages that use modules longer than 300, so just disable
+     *   this rule completely.
+     *
      * https://eslint.org/docs/rules/max-lines
      */
-    "max-lines": ["error", {
+    "max-lines": ["off", {
       "max": 300,
       "skipBlankLines": true,
       "skipComments": true,
@@ -428,9 +432,12 @@ module.exports = {
     /**
      * Enforce a maximum number of statements allowed in function blocks.
      *
+     * NOTES:
+     * - We sometimes need long functions, without reason, so disable this rule.
+     *
      * https://eslint.org/docs/rules/max-statements
      */
-    "max-statements": ["error", {
+    "max-statements": ["off", {
       "max": 17,
     }],
 
