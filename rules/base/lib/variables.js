@@ -92,10 +92,15 @@ module.exports = {
     /**
      * Disallow the use of variables before they are defined.
      *
+     * NOTES:
+     * - Since function definitions get hoisted to the top of the scope, we can
+     *   disable this rule for functions. (This assumes we have prefered
+     *   function definitions in another rule.)
+     *
      * https://eslint.org/docs/rules/no-use-before-define
      */
     "no-use-before-define": ["error", {
-      "functions": true,
+      "functions": false,
       "classes": true,
       "variables": true,
     }],
