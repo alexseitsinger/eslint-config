@@ -62,9 +62,12 @@ module.exports = {
     /**
      * Forbid require() calls with expressions.
      *
+     * NOTES:
+     * - We use dynamic requires for packages, so disable this rule.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
      */
-    "import/no-dynamic-require": "error",
+    "import/no-dynamic-require": "off",
 
     /**
      * Prevent importing the submodules of other modules.
