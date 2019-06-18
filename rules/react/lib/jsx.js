@@ -5,7 +5,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
      */
-    "react/jsx-boolean-value": "error",
+    "react/jsx-boolean-value": "off",
 
     /**
      * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
@@ -36,7 +36,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
      */
-    "react/jsx-curly-spacing": ["error", { // might want to change this 
+    "react/jsx-curly-spacing": ["error", { // might want to change this
       "when": "never",
       "allowMultiline": true,
     }],
@@ -114,7 +114,7 @@ module.exports = {
      */
     "react/jsx-max-props-per-line": ["error", {
       //maxmimum: 1,
-      when: "multiline" 
+      when: "multiline"
     }],
 
     /**
@@ -245,7 +245,7 @@ module.exports = {
       "noSortAlphabetically": true,
       "reservedFirst": true,
     }],
-    
+
     /**
      * Validate whitespace in and around the JSX opening and closing brackets.
      *
@@ -257,7 +257,7 @@ module.exports = {
       "afterOpening": "never",
       "beforeClosing": "never",
     }],
-    
+
     /**
      * Prevent React to be incorrectly marked as unused.
      *
@@ -274,7 +274,7 @@ module.exports = {
 
     /**
      * Prevent missing parentheses around multilines JSX. (fixable)
-     * 
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
      */
     "react/jsx-wrap-multilines": ["error", {
