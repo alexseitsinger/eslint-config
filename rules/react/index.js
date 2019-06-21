@@ -8,8 +8,9 @@ module.exports = {
   ],
   settings: {
     linkComponents: [
-      {name: "Link", linkAttribute: "to"}
-    ]
+      {name: "Link", linkAttribute: "to"},
+      {name: "Anchor", linkAttribute: "href"},
+    ],
   },
   extends: [
     "./lib/general",
