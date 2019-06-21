@@ -1,7 +1,12 @@
+const confusingBrowserGlobals = require("confusing-browser-globals")
+
 module.exports = {
   rules: {
     /**
      * Require or disallow initialization in variable declarations.
+     *
+     * NOTES:
+     * - We sometimes declare varialbes with values, so disable this rule.
      *
      * https://eslint.org/docs/rules/init-declarations
      */
@@ -12,10 +17,13 @@ module.exports = {
     /**
      * Disallow deleting variables.
      *
+     * NOTES:
+     * - We infrequently use delete on variables to enforce garbage collection.
+     *   So, disable this rule.
+     *
      * https://eslint.org/docs/rules/no-delete-var
      */
-    // we sometimes delete a var for garbage collection
-    "no-delete-var": "warn",
+    "no-delete-var": "off",
 
     /**
      * Disallow labels that share a name with a variable.
@@ -27,10 +35,12 @@ module.exports = {
     /**
      * Disallow specified global variables.
      *
+     * NOTES:
+     * - We added variables based on AirBNB's eslint config.
+     *
      * https://eslint.org/docs/rules/no-restricted-globals
      */
-    // Specify the global variable names that you don't want to use in your code.
-    "no-restricted-globals": ["error",],
+    "no-restricted-globals": ["error", "isFinite", "isNaN"].concat(confusingBrowserGlobals),
 
     /**
      * Disallow variable declarations from shadowing variables declared in the
