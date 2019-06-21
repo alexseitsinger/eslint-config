@@ -15,7 +15,7 @@ module.exports = {
      * https://eslint.org/docs/rules/no-delete-var
      */
     // we sometimes delete a var for garbage collection
-    "no-delete-var": "warn", 
+    "no-delete-var": "warn",
 
     /**
      * Disallow labels that share a name with a variable.
@@ -57,9 +57,9 @@ module.exports = {
      * https://eslint.org/docs/rules/no-undef
      */
     "no-undef": ["error", {
-      "typeof": true,  
+      "typeof": true,
     }],
-    
+
     /**
      * Disallow initializing variables to undefined.
      *
@@ -77,16 +77,22 @@ module.exports = {
     /**
      * Disallow unused variables.
      *
+     * NOTES:
+     * - We sometimes declare catch without using the error object, so dont
+     *   check them.
+     * - Ignore rest siblings should be true,
+     * - We should check all variable, even global ones.
+     *
      * https://eslint.org/docs/rules/no-unused-vars
      */
-    "no-unused-vars": ["warn", {
+    "no-unused-vars": ["error", {
       vars: "all",
-      varsIgnorePattern: "",
+      //varsIgnorePattern: "[iI]gnore",
       args: "after-used",
       ignoreRestSiblings: true,
-      argsIgnorePattern: "",
-      caughtErrors: "all",
-      caughtErrorsIgnorePattern: "",
+      //argsIgnorePattern: "^_",
+      caughtErrors: "none",
+      //caughtErrorsIgnorePattern: "^ignore",
     }],
 
     /**
