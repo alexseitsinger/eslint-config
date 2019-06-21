@@ -1,3 +1,7 @@
+/**
+ * @description The ESLint config for imports.
+ * @return {Object} The eslint config object for import rules.
+ */
 module.exports = {
   plugins: [
     "import",

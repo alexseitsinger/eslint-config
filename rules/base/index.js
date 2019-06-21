@@ -1,3 +1,7 @@
+/**
+ * @description The ESLint config for base rules.
+ * @return {Object} The eslint config object for base rules.
+ */
 module.exports = {
   extends: [
     "./lib/best-practices",
