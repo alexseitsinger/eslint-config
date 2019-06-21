@@ -1,5 +1,9 @@
-<a name="v0.6.1"></a>
-## [v0.6.1](https://github.com/alexseitsinger/eslint-config/compare/v0.6.0...v0.6.1)
+<a name="v0.7.0"></a>
+## [v0.7.0](https://github.com/alexseitsinger/eslint-config/compare/v0.6.0...v0.7.0) (2019-06-21)
+
+### Features
+- Adds Anchor to linkComponents settings. ([f6442d8](https://github.com/alexseitsinger/eslint-config/commit/f6442d8038a83c70d7007c4d1c21c1dde62c9b09))
+- Disables camelcase rule. ([9cc416c](https://github.com/alexseitsinger/eslint-config/commit/9cc416cce0e30eced7f4e1ca11978a311dbf1d8a))
 
 
 <a name="v0.6.0"></a>
