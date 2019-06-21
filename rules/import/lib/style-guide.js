@@ -11,7 +11,7 @@ module.exports = {
      * Ensure all exports appear after other statements,
      *
      * NOTES:
-     * - With React, we sometimes export stateless functional components, then 
+     * - With React, we sometimes export stateless functional components, then
      *   define its propType below, so disable this rule.
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
@@ -88,10 +88,14 @@ module.exports = {
     /**
      * Limit the maximum number of dependencies a module can have.
      *
+     * NOTES:
+     * - Some modules use a lot of dependencies, so either increase this to a
+     *   larger number, or disable it completely.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
      */
     "import/max-dependencies": ["error", {
-      max: 20,
+      max: 40,
     }],
 
     /**
