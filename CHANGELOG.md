@@ -1,5 +1,15 @@
-<a name="v0.5.1"></a>
-## [v0.5.1](https://github.com/alexseitsinger/eslint-config/compare/v0.5.0...v0.5.1)
+<a name="v0.6.1"></a>
+## [v0.6.1](https://github.com/alexseitsinger/eslint-config/compare/v0.6.0...v0.6.1)
+
+
+<a name="v0.6.0"></a>
+## [v0.6.0](https://github.com/alexseitsinger/eslint-config/compare/v0.5.0...v0.6.0) (2019-06-21)
+
+### Features
+- Changes no-unused-vars rule. ([156cf20](https://github.com/alexseitsinger/eslint-config/commit/156cf20606dd096a03abe8acc485bf6b41620cc2))
+- Disables jsx-boolean-value. ([ef0422c](https://github.com/alexseitsinger/eslint-config/commit/ef0422c98a8b4e7185b03b840d7940efc9cc49e9))
+- Doubled "import/max-dependencies" rule. ([a43fd4d](https://github.com/alexseitsinger/eslint-config/commit/a43fd4d7511323fa1ca58786851d748d661b3724))
+- Updates 2 rules. ([0159000](https://github.com/alexseitsinger/eslint-config/commit/015900081587b799067398f5a21772a3b3dc2910))
 
 
 <a name="v0.5.0"></a>
