@@ -1,3 +1,7 @@
+/**
+ * @description The ESLint config object for base, react, and imports.
+ * @return {Object} The ESLint config object to extend from.
+ */
 module.exports = {
   env: {
     browser: true,
