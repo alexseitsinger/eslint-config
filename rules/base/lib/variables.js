@@ -48,7 +48,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/no-shadow
      */
-    "no-shadow": ["warn", {
+    "no-shadow": ["error", {
       "builtinGlobals": true,
       "hoist": "all",
       "allow": [],
