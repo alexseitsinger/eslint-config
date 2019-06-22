@@ -6,7 +6,7 @@ module.exports = {
      * https://eslint.org/docs/rules/for-direction
      */
     "for-direction": "error",
-    
+
     /**
      * Enforce return statements in getters.
      *
@@ -15,7 +15,7 @@ module.exports = {
     "getter-return": ["error", {
       "allowImplicit": true,
     }],
-    
+
     /**
      * Disallow using an async function as a Promise executor.
      *
@@ -36,7 +36,7 @@ module.exports = {
      * https://eslint.org/docs/rules/no-compare-neg-zero
      */
     "no-compare-neg-zero": "error",
-    
+
     /**
      * Disallow assignment operators in conditional expressions.
      *
@@ -47,9 +47,12 @@ module.exports = {
     /**
      * Disallow the use of console.
      *
+     * NOTES:
+     * - We use console statements a lot, so disable this rule.
+     *
      * https://eslint.org/docs/rules/no-console
      */
-    "no-console": "error",
+    "no-console": "off",
 
     /**
      * Disallow constant expressions in conditions.
@@ -119,7 +122,7 @@ module.exports = {
     "no-ex-assign": "error",
 
     /**
-     * Disallow unnecessary boolean casts. 
+     * Disallow unnecessary boolean casts.
      *
      * (fixable)
      *
@@ -128,7 +131,7 @@ module.exports = {
     "no-extra-boolean-cast": "error",
 
     /**
-     * Disallow unnecessary parentheses. 
+     * Disallow unnecessary parentheses.
      *
      * (fixable)
      *
@@ -147,7 +150,7 @@ module.exports = {
     }],
 
     /**
-     * Disallow unnecessary semicolons. 
+     * Disallow unnecessary semicolons.
      *
      * (fixable)
      *
@@ -163,7 +166,7 @@ module.exports = {
     "no-func-assign": "error",
 
     /**
-     * Disallow variable or function declarations in nested blocks. 
+     * Disallow variable or function declarations in nested blocks.
      *
      * https://eslint.org/docs/rules/no-inner-declarations
      */
@@ -196,7 +199,7 @@ module.exports = {
      * https://eslint.org/docs/rules/no-misleading-character-class
      */
     "no-misleading-character-class": "error",
-   
+
     /**
      * Disallow calling global object properties as functions.
      *
@@ -210,9 +213,9 @@ module.exports = {
      * https://eslint.org/docs/rules/no-prototype-builtins
      */
     "no-prototype-builtins": "error",
-    
+
     /**
-     * Disallow multiple spaces in regular expressions. 
+     * Disallow multiple spaces in regular expressions.
      *
      * (fixable)
      *
@@ -254,9 +257,9 @@ module.exports = {
      * https://eslint.org/docs/rules/no-unsafe-finally
      */
     "no-unsafe-finally": "error",
-   
+
     /**
-     * Disallow negating the left operand of relational operators. 
+     * Disallow negating the left operand of relational operators.
      *
      * (fixable)
      *
@@ -287,4 +290,4 @@ module.exports = {
       "requireStringLiterals": true,
     }],
   }
-} 
+}
