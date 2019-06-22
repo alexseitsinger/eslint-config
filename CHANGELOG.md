@@ -1,3 +1,14 @@
+<a name="v0.8.0"></a>
+## [v0.8.0](https://github.com/alexseitsinger/eslint-config/compare/v0.7.0...v0.8.0) (2019-06-22)
+
+### Code Refactoring
+- Changes no-shadow to an error from warn. ([0c29b9d](https://github.com/alexseitsinger/eslint-config/commit/0c29b9d3d19f3ca9a0742e2a791949ea833017e2))
+
+### Features
+- Adds child_process to allowed node modules. ([a8f2920](https://github.com/alexseitsinger/eslint-config/commit/a8f29200d494fa35180634290c7d602a88f3c04a))
+- Disables no-console rule. ([e715f0f](https://github.com/alexseitsinger/eslint-config/commit/e715f0f44da2ee109255b41622f50811695e2ab4))
+
+
 <a name="v0.7.0"></a>
 ## [v0.7.0](https://github.com/alexseitsinger/eslint-config/compare/v0.6.0...v0.7.0) (2019-06-21)
 
