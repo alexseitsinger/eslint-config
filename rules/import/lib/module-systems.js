@@ -30,10 +30,14 @@ module.exports = {
     /**
      * No Node.js builtin modules.
      *
+     * NOTES:
+     * - We might need to disable this rule completely, if we find that we
+     *   continue to use a larger number of builtin modules.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
      */
     "import/no-nodejs-modules": ["error", {
-      allow: ["fs", "path"],
+      allow: ["fs", "path", "child_process"],
     }],
   }
 }
