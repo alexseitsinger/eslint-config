@@ -1,3 +1,7 @@
+<a name="v0.10.0"></a>
+## [v0.10.0](https://github.com/alexseitsinger/eslint-config/compare/v0.9.0...v0.10.0) (2019-06-25)
+
+
 <a name="v0.9.0"></a>
 ## [v0.9.0](https://github.com/alexseitsinger/eslint-config/compare/v0.8.0...v0.9.0) (2019-06-25)
 
