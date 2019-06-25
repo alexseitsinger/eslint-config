@@ -1,3 +1,10 @@
+<a name="v0.9.0"></a>
+## [v0.9.0](https://github.com/alexseitsinger/eslint-config/compare/v0.8.0...v0.9.0) (2019-06-25)
+
+### Code Refactoring
+- Changes to meta-package. ([9a50025](https://github.com/alexseitsinger/eslint-config/commit/9a50025b6b412a00443b463ab090b8d19866cae6))
+
+
 <a name="v0.8.0"></a>
 ## [v0.8.0](https://github.com/alexseitsinger/eslint-config/compare/v0.7.0...v0.8.0) (2019-06-22)
 
