@@ -4,7 +4,7 @@
     "name": "Alex Seitsinger"
   },
   "bugs": {
-    "url": "https://github.com/alexseitsinger/eslint-config-base/issues"
+    "url": "https://github.com/alexseitsinger/eslint-config/issues"
   },
   "description": "Eslint config",
   "files": [
@@ -14,7 +14,7 @@
     "README.md",
     "LICENSE"
   ],
-  "homepage": "https://github.com/alexseitsinger/eslint-config-base",
+  "homepage": "https://github.com/alexseitsinger/eslint-config",
   "keywords": [
     "eslint",
     "eslintconfig"
@@ -47,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexseitsinger/eslint-config-base.git"
+    "url": "https://github.com/alexseitsinger/eslint-config.git"
   },
   "version": "0.28.0",
   "dependencies": {
