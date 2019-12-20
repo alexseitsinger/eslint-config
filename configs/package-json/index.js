@@ -60,6 +60,6 @@ module.exports = {
     /**
      * Validate package.json files against the NPM specification.
      */
-    "package-json/valid-package-ref": "error",
+    //"package-json/valid-package-ref": "error",
   },
 }

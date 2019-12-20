@@ -83,11 +83,11 @@ module.exports = {
      */
     "import/order": ["error", {
       groups: [
-        ["builtin"],
-        ["external"],
-        ["internal", "parent", "sibling", "index", "unknown"],
+        ["builtin", "externa"],
+        ["internal"],
+        ["parent", "sibling", "index", "unknown"],
       ],
-      "newlines-between": "always",
+      "newlines-between": "always-and-inside-groups",
     }],
 
     /**

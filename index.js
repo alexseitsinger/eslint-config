@@ -33,9 +33,12 @@ module.exports = {
     "filenames",
     //"align-assignments",
   ].map(name => {
+    if (name === "core") {
+      return require.resolve(`./configs/core`)
+    }
     try {
       require(`eslint-plugin-${name}`)
-      return require.resolve(`./${name}`)
+      return require.resolve(`./configs/${name}`)
     }
     catch (e) {
       //...

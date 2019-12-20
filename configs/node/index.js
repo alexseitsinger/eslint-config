@@ -49,7 +49,7 @@ module.exports = {
       allowModules: [],
       resolvePaths: [],
       tryExtensions: [".js", ".jsx", ".json"],
-    }]
+    }],
 
     /**
      * disallow bin files that npm ignores
@@ -61,21 +61,9 @@ module.exports = {
      * disallow require() expressions which import private modules
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-require.md
      */
-    "node/no-unpublished-bin": ["error", {
-      allowModules: [],
-      convertPaths: null,
-      tryExtensions: [".js", ".jsx", ".json"],
-    }],
-    "node/no-unpublished-import": ["error", {
-      allowModules: [],
-      convertPaths: null,
-      tryExtensions: [".js", ".jsx", ".json"],
-    }],
-    "node/no-unpublished-require": ["error", {
-      allowModules: [],
-      convertPath: null,
-      tryExtensions: [".js", ".jsx", ".json"],
-    }],
+    "node/no-unpublished-bin": "error",
+    "node/no-unpublished-import": "error",
+    "node/no-unpublished-require": "error",
 
     /**
      * disallow unsupported ECMAScript built-ins on the specified version
