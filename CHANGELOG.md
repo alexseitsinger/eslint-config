@@ -1,3 +1,10 @@
+<a name="v0.29.0"></a>
+## [v0.29.0](https://github.com/alexseitsinger/eslint-config/compare/v0.10.0...v0.29.0) (2019-12-20)
+
+### Features
+- Adds new configs. ([43ae7ee](https://github.com/alexseitsinger/eslint-config/commit/43ae7ee89d6d9029ce65d34284f4cb5a1b193ff0))
+
+
 <a name="v0.10.0"></a>
 ## [v0.10.0](https://github.com/alexseitsinger/eslint-config/compare/v0.9.0...v0.10.0) (2019-06-25)
 
