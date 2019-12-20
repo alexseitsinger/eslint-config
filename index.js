@@ -1,12 +1,44 @@
-/**
- * ESLint config meta-package. This includes rules for base, import, and react.
- *
- * @return {object}
- * The eslint config object.
- */
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 9,
+    sourceType: "module",
+  },
   extends: [
-    "@alexseitsinger/eslint-config-base",
-    "@alexseitsinger/eslint-config-react",
-  ]
+    "core",
+    "import",
+    "node",
+    "package-json",
+    "ban",
+
+    /**
+     * React & Redux
+     */
+    "react",
+    "react-hooks",
+    "react-redux",
+    "redux-saga",
+
+    /**
+     * Jest
+     */
+    "jest",
+    "jest-formatting",
+
+    /**
+     * Misc.
+     */
+    "markdown",
+    "simple-import-sort",
+    "sort-exports",
+    "filenames",
+    //"align-assignments",
+  ].map(name => {
+    try {
+      require(`eslint-plugin-${name}`)
+      return require.resolve(`./${name}`)
+    }
+    catch (e) {
+      //...
+    }
+  })
 }
