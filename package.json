@@ -26,30 +26,30 @@
     "eslint": "^6.6.0"
   },
   "optionalDependencies": {
-    "eslint-plugin-ban": "*",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-package-json": "*",
-    "eslint-plugin-simple-import-sort": "*",
-    "eslint-plugin-sort-exports": "*",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-import-resolver-webpack": "^0.12.0",
     "eslint-plugin-align-assignments": "*",
+    "eslint-plugin-ban": "*",
     "eslint-plugin-filenames": "*",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "*",
     "eslint-plugin-jest-formatting": "*",
     "eslint-plugin-jsdoc": "*",
     "eslint-plugin-markdown": "*",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-package-json": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
     "eslint-plugin-react-redux": "^3.0.2",
-    "eslint-plugin-redux-saga": "*"
+    "eslint-plugin-redux-saga": "*",
+    "eslint-plugin-simple-import-sort": "*",
+    "eslint-plugin-sort-exports": "*"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alexseitsinger/eslint-config.git"
   },
-  "version": "0.28.0",
+  "version": "0.29.0",
   "dependencies": {
     "confusing-browser-globals": "^1.0.7"
   },
