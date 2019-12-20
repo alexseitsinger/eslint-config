@@ -23,27 +23,27 @@
   "main": "index.js",
   "name": "@alexseitsinger/eslint-config",
   "peerDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^6.6.0"
+  },
+  "optionalDependencies": {
+    "eslint-plugin-ban": "*",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-package-json": "*",
-    "eslint-plugin-ban": "*",
     "eslint-plugin-simple-import-sort": "*",
-    "eslint-plugin-sort-exports": "*"
-  },
-  "optionalDependencies": {
+    "eslint-plugin-sort-exports": "*",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-import-resolver-webpack": "^0.12.0",
-    "eslint-plugin-react": "*",
-    "eslint-plugin-react-redux": "^3.0.2",
-    "eslint-plugin-react-hooks": "*",
-    "eslint-plugin-jest-formatting": "*",
-    "eslint-plugin-jest": "*",
-    "eslint-plugin-redux-saga": "*",
-    "eslint-plugin-markdown": "*",
     "eslint-plugin-align-assignments": "*",
+    "eslint-plugin-filenames": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-jest-formatting": "*",
     "eslint-plugin-jsdoc": "*",
-    "eslint-plugin-filenames": "*"
+    "eslint-plugin-markdown": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-redux": "^3.0.2",
+    "eslint-plugin-redux-saga": "*"
   },
   "repository": {
     "type": "git",
@@ -52,5 +52,8 @@
   "version": "0.28.0",
   "dependencies": {
     "confusing-browser-globals": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
   }
 }
