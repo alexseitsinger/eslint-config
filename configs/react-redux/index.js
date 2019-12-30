@@ -3,7 +3,7 @@ module.exports = {
     "react-redux",
   ],
   rules: {
-    "react-redux/connect-prefer-minimum-two-arguments": "error",
+    //"react-redux/connect-prefer-minimum-two-arguments": "error",
 
     /**
      * connect has 4 optional arguments:

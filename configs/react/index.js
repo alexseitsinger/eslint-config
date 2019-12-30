@@ -531,7 +531,7 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
      */
     "react/jsx-filename-extension": ["error", {
-      extensions: [".js", ".jsx"]
+      extensions: [".js", ".jsx", ".ts", ".tsx"]
     }],
 
     /**
@@ -680,7 +680,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md
      */
-    "react/jsx-fragments": ["error", "element"],
+    "react/jsx-fragments": ["error", "syntax"],
 
     /**
      * Enforce PascalCase for user-defined JSX components.

@@ -5,7 +5,7 @@ module.exports = {
   rules: {
     "sort-exports/sort-exports": ["error", {
       // May be either asc(default) or desc.
-      sortDir: "asc",
+      sortDir: "desc",
       ignoreCase: false,
     }],
   },

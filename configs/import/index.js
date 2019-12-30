@@ -4,33 +4,39 @@ module.exports = {
   ],
   settings: {
     "import/extensions": [
+      ".ts",
+      ".tsx",
       ".js",
       ".jsx",
+      ".json",
+      ".css",
     ],
     "import/ignore": [
       "node_modules",
-      "\\.(scss|css|less|svg|json)$",
     ],
-    "import/core-modules": [],
     "import/external-module-folders": [
       "node_modules",
     ],
-    "import/parsers": {},
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
     "import/resolver": {
       node: {
-        extensions: [".js", ".jsx", ".json"],
+        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
       },
-      // Need to add the resolver on the site config.
+      // Need to add the webpack resolver in the project config.
     },
-    "import/cache": {},
   },
   rules: {
     /**
      * Ensure all imports appear before other statements.
      *
+     * NOTE: Disabled because problems with TypeScript when mixed ESM and CJS.
+     *        (see xo plugin)
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
      */
-    "import/first": "error",
+    //"import/first": "error",
 
     /**
      * Ensure all exports appear after other statements,
@@ -82,8 +88,8 @@ module.exports = {
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
      */
     "import/order": ["error", {
-      groups: [
-        ["builtin", "externa"],
+      "groups": [
+        ["builtin", "external"],
         ["internal"],
         ["parent", "sibling", "index", "unknown"],
       ],
@@ -93,11 +99,15 @@ module.exports = {
     /**
      * Enforce a newline after import statements.
      *
+     * NOTE: Disabled as it doesn't work with TypeScript (according to XO)
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
      */
-    "import/newline-after-import": ["error", {
-      count: 1,
-    }],
+    //
+    // "import/newline-after-import": ["error", {
+    // count: 1,
+    // }],
+    //
 
     /**
      * Prefer a default export if module exports a single name.
@@ -203,37 +213,57 @@ module.exports = {
     /**
      * Ensure imports point to a file/module that can be resolved.
      *
+     * NOTES:
+     * - According to XO, disabled because it doesn't work with TypeScript and
+     *   is buggy.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
      */
-    "import/no-unresolved": ["error", {
-      commonjs: true,
-      amd: false,
-      //ignore: [],
-      caseSensitive: true,
-    }],
+    //
+    // "import/no-unresolved": ["error", {
+    // commonjs: true,
+    // amd: false,
+    // //ignore: [],
+    // caseSensitive: true,
+    // }],
+    //
 
     /**
      * Ensure named imports correspond to a named export in the remote file.
      *
+     * NOTE: Disabled as it doesn't work with TypeScript
+     * (according to XO plugin)
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
      */
-    "import/named": "error",
+    //"import/named": "error",
 
     /**
      * Ensure a default export is present, given a default import.
      *
+     * - This causes the parser to do its own parsing and tracking,
+     *   so disable this. (recommended by the @typescript-eslint github).
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
      */
-    "import/default": "off",
+    //
+    // "import/default": "error",
+    //
 
     /**
      * Ensure imported namespaces contain dereferenced properties as they are dereferenced.
      *
+     * - This causes the parser to do its own parsing and tracking,
+     *   so disable this. (recommended by the @typescript-eslint github).
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
      */
-    "import/namespace": ["off", {
-      allowComputed: false,
-    }],
+    //
+    // "import/namespace": ["error", {
+    // // Change to true according to XO plugin.
+    // allowComputed: true,
+    // }],
+    //
 
     /**
      * Restrict which files can be imported in a given folder.
@@ -299,11 +329,18 @@ module.exports = {
      * Forbid a module from importing a module with a dependency path back to
      * itself.
      *
+     * NOTE: Enable this when Node.js has ES2015 module support.
+     * NOTE: Disabled according to XO plugin.
+     * - Recommended (@typescript-eslint) to only run this at CI/push time to
+     *   lessen local performance burden.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md
      */
-    "import/no-cycle": ["error", {
-      maxDepth: Infinity,
-    }],
+    //
+    // "import/no-cycle": ["error", {
+    // maxDepth: Infinity,
+    // }],
+    //
 
     /**
      * Prevent unnecessary path segments in import and require statements.
@@ -348,20 +385,30 @@ module.exports = {
      *
      * NOTES:
      * - This gets thrown from our webpack configs, so disable it.
+     * - According to XO plugin, enable this when Node.js has ES2015 module
+     *   support.
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
      */
-    "import/unambiguous": "off",
+    //
+    // "import/unambiguous": "error",
+    //
 
     /**
      * Report CommonJS require calls and module.exports or exports.*.
      *
+     * NOTES:
+     * - According to XO plugin, enable this when Node.js has ES2015 module
+     *   support.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
      */
-    "import/no-commonjs": ["off", {
-      allowRequire: true,
-      allowPrimitiveModules: true,
-    }],
+    //
+    // "import/no-commonjs": ["error", {
+    // allowRequire: true,
+    // allowPrimitiveModules: true,
+    // }],
+    //
 
     /**
      * Report AMD require and define calls.
@@ -394,23 +441,37 @@ module.exports = {
     /**
      * Report use of exported name as identifier of default export.
      *
+     * This rule doesn't have an equivalent check in TypeScript, so only run
+     * them at CI/push time to lessen the local performance burden. (according
+     * to @typescript-eslint docs)
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
      */
-    "import/no-named-as-default": "error",
+    //"import/no-named-as-default": "error",
 
     /**
      * Report use of exported name as property of default export.
      *
+     * - This causes the parser to do its own parsing and tracking,
+     *   so disable this. (recommended by the @typescript-eslint github).
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
      */
-    "import/no-named-as-default-member": "error",
+    //"import/no-named-as-default-member": "error",
 
     /**
      * Report imported names marked with @deprecated documentation tag.
      *
+     * NOTE: According to XO plugin, looks useful but is unstable, so disable.
+     * - According to @typescript-eslint docs, TypeScript doesn't have an
+     *   equivalent check for this, so to lessen local performance burden, this
+     *   should only be run at CI/push time.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
      */
-    "import/no-deprecated": "error",
+    //
+    // "import/no-deprecated": "error",
+    //
 
     /**
      * Forbid the use of extraneous packages.
@@ -447,20 +508,27 @@ module.exports = {
      * Report modules without exports, or exports without matching import in
      * another module.
      *
+     * - This rule does not have an equivalent check in TypeScript, so
+     *   (@typescript-eslint) recommends only running this check at CI/push time
+     *   to lessen the local performance burden.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
      */
-    "import/no-unused-modules": ["warn", {
-      unusedExports: true,
-      missingExports: false,
-      //src: [],
-      ignoreExports: [
-        "webpack.config.js",
-        "jest.config.js",
-        "jest.setup.js",
-        "jest.assetTransformer.js",
-        "babel.config.js",
-      ],
-    }],
-
+    //
+    // "import/no-unused-modules": ["error", {
+    // unusedExports: true,
+    // // Disabled because will throw annoyiung errors in entry points and config
+    // // files and there isn't an option to ignore those files here..
+    // missingExports: false,
+    // //src: [],
+    // ignoreExports: [
+    //     "webpack.config.js",
+    //     "jest.config.js",
+    //     "jest.setup.js",
+    //     "jest.assetTransformer.js",
+    //     "babel.config.js",
+    // ],
+    // }],
+    //
   },
 }

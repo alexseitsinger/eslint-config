@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    node: true,
+  },
   plugins: [
     "node",
   ],
@@ -21,7 +24,11 @@ module.exports = {
      *
      * disallow require() expressions which import extraneous modules
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-extraneous-require.md
+     *
+     * NOTE:
+     * - Disabled because redundant with import/no-extraneous-dependencies
      */
+    /*
     "node/no-extraneous-import": ["error", {
       allowModules: [],
       resolvePaths: [],
@@ -32,6 +39,7 @@ module.exports = {
       resolvePaths: [],
       tryExtensions: [".js", ".jsx", ".json"],
     }],
+    */
 
     /**
      * disallow import declarations which import non-existence modules
@@ -39,7 +47,11 @@ module.exports = {
      *
      * disallow require() expressions which import non-existence modules
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-require.md
+     *
+     * NOTES:
+     * - Disabled because redundant with import/no-unresolved
      */
+    /*
     "node/no-missing-import": ["error", {
       allowModules: [],
       resolvePaths: [],
@@ -50,6 +62,7 @@ module.exports = {
       resolvePaths: [],
       tryExtensions: [".js", ".jsx", ".json"],
     }],
+    */
 
     /**
      * disallow bin files that npm ignores
@@ -62,8 +75,13 @@ module.exports = {
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-require.md
      */
     "node/no-unpublished-bin": "error",
+    /*
+     * Disabled because too annoying.
+     * See: https://github.com/mysticatea/eslint-plugin-node/issues/156
+     *
     "node/no-unpublished-import": "error",
     "node/no-unpublished-require": "error",
+    */
 
     /**
      * disallow unsupported ECMAScript built-ins on the specified version
@@ -74,7 +92,11 @@ module.exports = {
      *
      * disallow unsupported Node.js built-in APIs on the specified version
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/node-builtins.md
+     *
+     * NOTE:
+     * - Enable after we add compiled sources to ignores.
      */
+    /*
     "node/no-unsupported-features/es-builtins": ["error", {
       // This option is read from the package.json, but can be overwritten here.
       //version: ">=8.0.0",
@@ -96,6 +118,7 @@ module.exports = {
       // of specific strings. See URL for that list.
       ignores: [],
     }],
+    */
 
     /**
      * make process.exit() expressions the same code path as throw
@@ -109,13 +132,20 @@ module.exports = {
      *
      * (Fixable)
      *
+     * NOTE:
+     * - Disabled as the rule doesn't exclude scripts executed with 'node' but
+     *   not referenced in 'bin'.
+     *   (see: https://github.com/mysticatea/eslint-plugin-node/issues/96)
+     *
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/shebang.md
      */
+    /*
     "node/shebang": ["error", {
       // Perhaps, the file path to source is never handled as a bin file. This
       // option tells the rule it needs to convert these file paths.
       convertPath: {},
     }],
+    */
 
     /**
      * Disallow the use of deprecated node APIs
@@ -131,18 +161,25 @@ module.exports = {
 
     /**
      * This rule enforces the export style.
+     *
+     * NOTE:
+     * - According to XO plugin, disable because it causes too much churn and
+     *   will be relatively useless when switching to ES2015 modules.
+     *
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/exports-style.md
      */
+    /*
     "node/exports-style": ["error", "module.exports", {
       // If true, allows module.exports = exports = obj
       allowBatchAssign: false,
     }],
+    */
 
     /**
      * Enforce the style of file extensions in import declarations
      */
     "node/file-extension-in-import": ["error", "never", {
-      tryExtensions: [".js", ".jsx", ".json"],
+      tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
       // ".<ext>": "always" or "never" to override for specific extensions.
     }],
 

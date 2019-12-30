@@ -3,9 +3,12 @@ const confusingBrowserGlobals = require("confusing-browser-globals")
 module.exports = {
   env: {
     node: true,
-  },
-  env: {
+    browser: true,
     es6: true,
+  },
+  globals: {
+    window: true,
+    document: true,
   },
   rules: {
     /**
@@ -99,12 +102,15 @@ module.exports = {
      * - With function calls, we must pass a composed component tree as an
      *   argument. When we do this, we dont wnat to have to also pass a comma
      *   after the closing tag. So, ignore this rule for functions.
+     * - We ignore objects because eslint applies commas to ingerfaces/types in
+     *   TypeScript, and then the TS compiler re-removes them. To avoid this
+     *   unnecessary-ness, just ignore them completely on objects.
      *
      * https://eslint.org/docs/rules/comma-dangle
      */
     "comma-dangle": ["warn", {
-      arrays: "always-multiline",
-      objects: "always-multiline",
+      arrays: "only-multiline",
+      objects: "only-multiline",
       imports: "always-multiline",
       exports: "always-multiline",
       functions: "ignore",
@@ -139,7 +145,7 @@ module.exports = {
         FunctionExpression: false,
         ImportDeclaration: false,
         ObjectExpression: false,
-        ObjectPattern: false,
+        ObjectPattern: true,
         VariableDeclaration: false,
         NewExpression: false,
       }
@@ -440,7 +446,7 @@ module.exports = {
      * https://eslint.org/docs/rules/max-params
      */
     "max-params": ["error", {
-      max: 5,
+      max: 8,
     }],
 
     /**
@@ -657,14 +663,14 @@ module.exports = {
       selector: "WithStatement",
       message: "With statements are not allowed.",
     }, {
-      selector: 'ForInStatement',
-      message: 'for-in loops iterate over the entire prototype chain. Use Object.{keys,values,entries} instead.',
+      selector: "ForInStatement",
+      message: "for-in loops iterate over the entire prototype chain. Use Object.{keys,values,entries} instead.",
     }, {
-      selector: 'ForOfStatement',
-      message: 'iterators/generators require regenerator-runtime, which is too heavyweight. Separately, loops should be avoided in favor of array iterations.',
+      selector: "ForOfStatement",
+      message: "iterators/generators require regenerator-runtime, which is too heavyweight. Separately, loops should be avoided in favor of array iterations.",
     }, {
-      selector: 'LabeledStatement',
-      message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+      selector: "LabeledStatement",
+      message: "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
     }],
 
     /**
@@ -849,7 +855,7 @@ module.exports = {
     "padding-line-between-statements": ["error", {
       blankLine: "always",
       prev: "var",
-      next:"return"
+      next: "return"
     }],
 
     /**
@@ -881,7 +887,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/quotes
      */
-    quotes: ["error", "double", {
+    "quotes": ["error", "double", {
       avoidEscape: true,
       allowTemplateLiterals: true,
     }],
@@ -893,7 +899,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/semi
      */
-    semi: ["error", "never", {
+    "semi": ["error", "never", {
       beforeStatementContinuationChars: "never",
     }],
 
@@ -1585,7 +1591,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/max-classes-per-file
      */
-    "max-classes-per-file": ["error", 1],
+    "max-classes-per-file": ["error", 5],
 
     /**
      * Disallow the use of alert, confirm, and prompt.
@@ -1921,43 +1927,43 @@ module.exports = {
      * https://eslint.org/docs/rules/no-restricted-properties
      */
     "no-restricted-properties": ["error", {
-      object: 'arguments',
-      property: 'callee',
-      message: 'arguments.callee is deprecated',
+      object: "arguments",
+      property: "callee",
+      message: "arguments.callee is deprecated",
     }, {
-      object: 'global',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
+      object: "global",
+      property: "isFinite",
+      message: "Please use Number.isFinite instead",
     }, {
-      object: 'self',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
+      object: "self",
+      property: "isFinite",
+      message: "Please use Number.isFinite instead",
     }, {
-      object: 'window',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
+      object: "window",
+      property: "isFinite",
+      message: "Please use Number.isFinite instead",
     }, {
-      object: 'global',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
+      object: "global",
+      property: "isNaN",
+      message: "Please use Number.isNaN instead",
     }, {
-      object: 'self',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
+      object: "self",
+      property: "isNaN",
+      message: "Please use Number.isNaN instead",
     }, {
-      object: 'window',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
+      object: "window",
+      property: "isNaN",
+      message: "Please use Number.isNaN instead",
     }, {
-      property: '__defineGetter__',
-      message: 'Please use Object.defineProperty instead.',
+      property: "__defineGetter__",
+      message: "Please use Object.defineProperty instead.",
     }, {
-      property: '__defineSetter__',
-      message: 'Please use Object.defineProperty instead.',
+      property: "__defineSetter__",
+      message: "Please use Object.defineProperty instead.",
     }, {
-      object: 'Math',
-      property: 'pow',
-      message: 'Use the exponentiation operator (**) instead.',
+      object: "Math",
+      property: "pow",
+      message: "Use the exponentiation operator (**) instead.",
     }],
 
     /**
@@ -2096,7 +2102,7 @@ module.exports = {
      * https://eslint.org/docs/rules/no-warning-comments
      */
     "no-warning-comments": ["off", {
-      terms: ["todo", "fix",],
+      terms: ["todo", "fix"],
       location: "start",
     }],
 
@@ -2564,9 +2570,12 @@ module.exports = {
     /**
      * Disallow the use of undefined as an identifier.
      *
+     * NOTE: We set the root reducer states to undefined to reset them all, so
+     * turn this rule off.
+     *
      * https://eslint.org/docs/rules/no-undefined
      */
-    "no-undefined": "error",
+    //"no-undefined": "error",
 
     /**
      * Disallow unused variables.
