@@ -16,9 +16,7 @@ module.exports = {
       "redux-saga",
       "jest",
       "jest-formatting",
-      "simple-import-sort",
-    ].map(name => {
-      return require.resolve(`./configs/${name}`)
-    }),
-  ],
-};
+      "simple-import-sort"
+    ].map(configName => require.resolve(`./configs/${configName}`))
+  ]
+}

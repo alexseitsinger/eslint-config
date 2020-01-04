@@ -1,31 +1,8 @@
 module.exports = {
-  plugins: [
-    "import",
-  ],
+  plugins: ["import"],
   settings: {
-    "import/extensions": [
-      ".ts",
-      ".tsx",
-      ".js",
-      ".jsx",
-      ".json",
-      ".css",
-    ],
-    "import/ignore": [
-      "node_modules",
-    ],
-    "import/external-module-folders": [
-      "node_modules",
-    ],
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
-    },
-    "import/resolver": {
-      node: {
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
-      },
-      // Need to add the webpack resolver in the project config.
-    },
+    "import/ignore": ["node_modules"],
+    "import/external-module-folders": ["node_modules"],
   },
   rules: {
     /**
@@ -71,6 +48,8 @@ module.exports = {
     "import/extensions": ["error", {
       js: "never",
       jsx: "never",
+      ts: "never",
+      tsx: "never",
       json: "always",
       css: "always",
       ico: "always",
@@ -487,7 +466,9 @@ module.exports = {
         "babel.config.js",
         ".babelrc",
         ".stylelintrc",
+        "stylelint.config.js",
         ".eslintrc.js",
+        ".eslintrc",
         "jest.*.js",
         "*.test.js",
         "**/tests/**",

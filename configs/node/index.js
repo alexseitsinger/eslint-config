@@ -2,9 +2,7 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: [
-    "node",
-  ],
+  plugins: ["node"],
   rules: {
     /**
      * ensure Node.js-style error-first callback pattern is followed
@@ -28,18 +26,18 @@ module.exports = {
      * NOTE:
      * - Disabled because redundant with import/no-extraneous-dependencies
      */
-    /*
-    "node/no-extraneous-import": ["error", {
-      allowModules: [],
-      resolvePaths: [],
-      tryExtensions: [".js", ".jsx", ".json"],
-    }],
-    "node/no-extraneous-require": ["error", {
-      allowModules: [],
-      resolvePaths: [],
-      tryExtensions: [".js", ".jsx", ".json"],
-    }],
-    */
+    //
+    // "node/no-extraneous-import": ["error", {
+    // allowModules: [],
+    // resolvePaths: [],
+    // tryExtensions: [".js", ".jsx", ".json"],
+    // }],
+    // "node/no-extraneous-require": ["error", {
+    // allowModules: [],
+    // resolvePaths: [],
+    // tryExtensions: [".js", ".jsx", ".json"],
+    // }],
+    //
 
     /**
      * disallow import declarations which import non-existence modules
@@ -51,18 +49,18 @@ module.exports = {
      * NOTES:
      * - Disabled because redundant with import/no-unresolved
      */
-    /*
-    "node/no-missing-import": ["error", {
-      allowModules: [],
-      resolvePaths: [],
-      tryExtensions: [".js", ".jsx", ".json"],
-    }],
-    "node/no-missing-require": ["error", {
-      allowModules: [],
-      resolvePaths: [],
-      tryExtensions: [".js", ".jsx", ".json"],
-    }],
-    */
+    //
+    // "node/no-missing-import": ["error", {
+    // allowModules: [],
+    // resolvePaths: [],
+    // tryExtensions: [".js", ".jsx", ".json"],
+    // }],
+    // "node/no-missing-require": ["error", {
+    // allowModules: [],
+    // resolvePaths: [],
+    // tryExtensions: [".js", ".jsx", ".json"],
+    // }],
+    //
 
     /**
      * disallow bin files that npm ignores
@@ -75,13 +73,13 @@ module.exports = {
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-require.md
      */
     "node/no-unpublished-bin": "error",
-    /*
-     * Disabled because too annoying.
-     * See: https://github.com/mysticatea/eslint-plugin-node/issues/156
-     *
-    "node/no-unpublished-import": "error",
-    "node/no-unpublished-require": "error",
-    */
+    //
+    // Disabled because too annoying.
+    // See: https://github.com/mysticatea/eslint-plugin-node/issues/156
+    //
+    // "node/no-unpublished-import": "error",
+    // "node/no-unpublished-require": "error",
+    //
 
     /**
      * disallow unsupported ECMAScript built-ins on the specified version
@@ -96,29 +94,29 @@ module.exports = {
      * NOTE:
      * - Enable after we add compiled sources to ignores.
      */
-    /*
-    "node/no-unsupported-features/es-builtins": ["error", {
-      // This option is read from the package.json, but can be overwritten here.
-      //version: ">=8.0.0",
-      // List of items to omit from this rule. This rule only accepts an array
-      // of specific strings. See URL for that list.
-      ignores: [],
-    }],
-    "node/no-unsupported-features/es-syntax": ["error", {
-      // This option is read from the package.json, but can be overwritten here.
-      //version: ">=8.0.0",
-      // List of items to omit from this rule. This rule only accepts an array
-      // of specific strings. See URL for that list.
-      ignores: [],
-    }],
-    "node/no-unsupported-features/node-builtins": ["error", {
-      // This option is read from the package.json, but can be overwritten here.
-      //version: ">=8.0.0",
-      // List of items to omit from this rule. This rule only accepts an array
-      // of specific strings. See URL for that list.
-      ignores: [],
-    }],
-    */
+    //
+    // "node/no-unsupported-features/es-builtins": ["error", {
+    // // This option is read from the package.json, but can be overwritten here.
+    // //version: ">=8.0.0",
+    // // List of items to omit from this rule. This rule only accepts an array
+    // // of specific strings. See URL for that list.
+    // ignores: [],
+    // }],
+    // "node/no-unsupported-features/es-syntax": ["error", {
+    // // This option is read from the package.json, but can be overwritten here.
+    // //version: ">=8.0.0",
+    // // List of items to omit from this rule. This rule only accepts an array
+    // // of specific strings. See URL for that list.
+    // ignores: [],
+    // }],
+    // "node/no-unsupported-features/node-builtins": ["error", {
+    // // This option is read from the package.json, but can be overwritten here.
+    // //version: ">=8.0.0",
+    // // List of items to omit from this rule. This rule only accepts an array
+    // // of specific strings. See URL for that list.
+    // ignores: [],
+    // }],
+    //
 
     /**
      * make process.exit() expressions the same code path as throw
@@ -139,13 +137,13 @@ module.exports = {
      *
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/shebang.md
      */
-    /*
-    "node/shebang": ["error", {
-      // Perhaps, the file path to source is never handled as a bin file. This
-      // option tells the rule it needs to convert these file paths.
-      convertPath: {},
-    }],
-    */
+    //
+    // "node/shebang": ["error", {
+    // // Perhaps, the file path to source is never handled as a bin file. This
+    // // option tells the rule it needs to convert these file paths.
+    // convertPath: {},
+    // }],
+    //
 
     /**
      * Disallow the use of deprecated node APIs
@@ -168,18 +166,27 @@ module.exports = {
      *
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/exports-style.md
      */
-    /*
-    "node/exports-style": ["error", "module.exports", {
-      // If true, allows module.exports = exports = obj
-      allowBatchAssign: false,
-    }],
-    */
+    //
+    // "node/exports-style": ["error", "module.exports", {
+    // // If true, allows module.exports = exports = obj
+    // allowBatchAssign: false,
+    // }],
+    //
 
     /**
      * Enforce the style of file extensions in import declarations
      */
     "node/file-extension-in-import": ["error", "never", {
-      tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+      "tryExtensions": [".ts", ".tsx", ".js", ".jsx"],
+      ".json": "always",
+      ".css": "always",
+      ".ico": "always",
+      ".svg": "always",
+      ".png": "always",
+      ".jpg": "always",
+      ".gif": "always",
+      ".ttf": "always",
+      ".otf": "always",
       // ".<ext>": "always" or "never" to override for specific extensions.
     }],
 

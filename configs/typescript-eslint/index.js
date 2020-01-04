@@ -1,6 +1,4 @@
-/*
- * https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
- */
+// https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
 
 module.exports = {
   parser: "@typescript-eslint/parser",
@@ -18,7 +16,7 @@ module.exports = {
      */
     "@typescript-eslint/array-type": ["error", {
       default: "array",
-      //readonly: 
+      //readonly:
     }],
 
     /**
@@ -60,10 +58,10 @@ module.exports = {
      * - Requires disabling the original eslint config rule.
      * - Disabled because we use eslint.
      */
-    /*
-    "brace-style": "off",
-    "@typescript-eslint/brace-style": "error",
-    */
+    //
+    // "brace-style": "off",
+    // "@typescript-eslint/brace-style": "error",
+    //
 
     /**
      * Enforce camelCase naming convention
@@ -259,7 +257,7 @@ module.exports = {
     /**
      * Disallows non-null assertions using the ! postfix operator
      */
-    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-non-null-assertion": "off",
 
     /**
      * Disallow the use of parameter properties in class constructors
@@ -452,7 +450,7 @@ module.exports = {
      * (Fixable)
      *
      * - This rule extends the original eslint rule, so disable that one for
-     *   this. 
+     *   this.
      */
     "quotes": "off",
     "@typescript-eslint/quotes": ["error", "double", {
@@ -497,7 +495,7 @@ module.exports = {
      * Require or disallow semicolons instead of ASI
      * (Fixable)
      *
-     * - Requires disabling the original eslint rule. 
+     * - Requires disabling the original eslint rule.
      * -This version adds support for numerous typescript features.
      */
     "semi": "off",
