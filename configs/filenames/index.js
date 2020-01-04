@@ -45,7 +45,7 @@ module.exports = {
      *     1. functionName.js
      *     2. function-name/index.js
      */
-    "filenames/match-exported": ["error", null, null, false],
+    "filenames/match-exported": ["error", null, null, false]
 
     /**
      * Having a bunch of index.js files can have negative influence on developer
@@ -53,5 +53,5 @@ module.exports = {
      * index.js files will always be considered a problem.
      */
     //"filenames/no-index": "error",
-  },
+  }
 }

@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    "redux-saga",
-  ],
+  plugins: ["redux-saga"],
   rules: {
     /**
      * Ensure effects are yielded.
@@ -18,6 +16,6 @@ module.exports = {
     /**
      * Ensures error handling on sagas.
      */
-    "redux-saga/no-unhandled-errors": "error",
-  },
+    "redux-saga/no-unhandled-errors": "error"
+  }
 }

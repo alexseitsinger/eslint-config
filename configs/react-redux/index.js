@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    "react-redux",
-  ],
+  plugins: ["react-redux"],
   rules: {
     //"react-redux/connect-prefer-minimum-two-arguments": "error",
 
@@ -64,6 +62,6 @@ module.exports = {
      * Enforces that all connected components are defined in a separate file.
      * https://github.com/DianaSuvorova/eslint-plugin-react-redux/blob/HEAD/docs/rules/prefer-separate-component-file.md
      */
-    "react-redux/prefer-separate-component-file": "error",
-  },
+    "react-redux/prefer-separate-component-file": "error"
+  }
 }

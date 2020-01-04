@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    "package-json",
-  ],
+  plugins: ["package-json"],
   rules: {
     /**
      * Require top-level properties to be in a conventional order ("name"first, etc.).
@@ -11,35 +9,38 @@ module.exports = {
      *
      * (Fixable)
      */
-    "package-json/order-properties": ["error", [
-      "name",
-      "version",
-      "private",
-      "publishConfig",
-      "description",
-      "main",
-      "browser",
-      "files",
-      "bin",
-      "directories",
-      "man",
-      "scripts",
-      "repository",
-      "keywords",
-      "author",
-      "license",
-      "bugs",
-      "homepage",
-      "config",
-      "dependencies",
-      "devDependencies",
-      "peerDependencies",
-      "optionalDependencies",
-      "bundledDependencies",
-      "engines",
-      "os",
-      "cpu",
-    ]],
+    "package-json/order-properties": [
+      "error",
+      [
+        "name",
+        "version",
+        "private",
+        "publishConfig",
+        "description",
+        "main",
+        "browser",
+        "files",
+        "bin",
+        "directories",
+        "man",
+        "scripts",
+        "repository",
+        "keywords",
+        "author",
+        "license",
+        "bugs",
+        "homepage",
+        "config",
+        "dependencies",
+        "devDependencies",
+        "peerDependencies",
+        "optionalDependencies",
+        "bundledDependencies",
+        "engines",
+        "os",
+        "cpu"
+      ]
+    ],
 
     /**
      * Keep sub-collections like "dependencies" and "scripts" in alphabetical order.
@@ -49,17 +50,20 @@ module.exports = {
      *
      * (Fixable)
      */
-    "package-json/sort-collections": ["error", [
-      "scripts",
-      "devDependencies",
-      "dependencies",
-      "peerDependencies",
-      "config",
-    ]],
+    "package-json/sort-collections": [
+      "error",
+      [
+        "scripts",
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "config"
+      ]
+    ]
 
     /**
      * Validate package.json files against the NPM specification.
      */
     //"package-json/valid-package-ref": "error",
-  },
+  }
 }

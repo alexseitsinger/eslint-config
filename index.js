@@ -17,6 +17,15 @@ module.exports = {
       "jest",
       "jest-formatting",
       "simple-import-sort"
-    ].map(configName => require.resolve(`./configs/${configName}`))
+    ].map(pluginName => {
+      try {
+        require(`eslint-plugin-${pluginName}`)
+        return require.resolve(`./configs/${pluginName}`)
+      }
+      catch (e) {
+        console.log(`Skipping config for ${pluginName}`)
+        return ""
+      }
+    })
   ]
 }

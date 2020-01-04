@@ -1,7 +1,7 @@
 module.exports = {
   env: {
-    jest: true,
-    "jest/globals": true,
+    jest: true
+    //"jest/globals": true
   },
   globals: {
     shallow: true,
@@ -13,11 +13,9 @@ module.exports = {
     afterAll: true,
     beforeEach: true,
     afterEach: true,
-    expect: true,
+    expect: true
   },
-  plugins: [
-    "jest",
-  ],
+  plugins: ["jest"],
   rules: {
     /**
      * Enforce consistent test or it keyword
@@ -232,6 +230,6 @@ module.exports = {
     /**
      * Enforce valid titles in jest blocks.
      */
-    "jest/valid-title": "error",
-  },
+    "jest/valid-title": "error"
+  }
 }

@@ -2,7 +2,7 @@ module.exports = {
   plugins: ["import"],
   settings: {
     "import/ignore": ["node_modules"],
-    "import/external-module-folders": ["node_modules"],
+    "import/external-module-folders": ["node_modules"]
   },
   rules: {
     /**
@@ -45,35 +45,41 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
      */
-    "import/extensions": ["error", {
-      js: "never",
-      jsx: "never",
-      ts: "never",
-      tsx: "never",
-      json: "always",
-      css: "always",
-      ico: "always",
-      svg: "always",
-      png: "always",
-      jpg: "always",
-      gif: "always",
-      ttf: "always",
-      otf: "always",
-    }],
+    "import/extensions": [
+      "error",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+        json: "always",
+        css: "always",
+        ico: "always",
+        svg: "always",
+        png: "always",
+        jpg: "always",
+        gif: "always",
+        ttf: "always",
+        otf: "always"
+      }
+    ],
 
     /**
      * Enforce a convention in module import order.
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
      */
-    "import/order": ["error", {
-      "groups": [
-        ["builtin", "external"],
-        ["internal"],
-        ["parent", "sibling", "index", "unknown"],
-      ],
-      "newlines-between": "always-and-inside-groups",
-    }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["internal"],
+          ["parent", "sibling", "index", "unknown"]
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ],
 
     /**
      * Enforce a newline after import statements.
@@ -109,9 +115,12 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
      */
-    "import/max-dependencies": ["error", {
-      max: 40,
-    }],
+    "import/max-dependencies": [
+      "error",
+      {
+        max: 40
+      }
+    ],
 
     /**
      * Forbid unassigned imports.
@@ -124,12 +133,12 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
      */
-    "import/no-unassigned-import": ["off", {
-      allow: [
-        "core-js/stable",
-        "url-search-params-polyfill",
-      ],
-    }],
+    "import/no-unassigned-import": [
+      "off",
+      {
+        allow: ["core-js/stable", "url-search-params-polyfill"]
+      }
+    ],
 
     /**
      * Forbid named default exports.
@@ -157,14 +166,17 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
      */
-    "import/no-anonymous-default-export": ["off", {
-      allowArray: false,
-      allowArrowFunction: false,
-      allowAnonymousClass: false,
-      allowAnonymousFunction: false,
-      allowLiteral: false,
-      allowObject: false,
-    }],
+    "import/no-anonymous-default-export": [
+      "off",
+      {
+        allowArray: false,
+        allowArrowFunction: false,
+        allowAnonymousClass: false,
+        allowAnonymousFunction: false,
+        allowLiteral: false,
+        allowObject: false
+      }
+    ],
 
     /**
      * Prefer named exports to be grouped together in a single export
@@ -183,11 +195,13 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
      */
-    "import/dynamic-import-chunkname": ["error", {
-      importFunctions: [],
-      webpackChunknameFormat: "[a-zA-Z0-9-/_.]",
-    }],
-
+    "import/dynamic-import-chunkname": [
+      "error",
+      {
+        importFunctions: [],
+        webpackChunknameFormat: "[a-zA-Z0-9-/_.]"
+      }
+    ],
 
     /**
      * Ensure imports point to a file/module that can be resolved.
@@ -253,20 +267,26 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
      */
-    "import/no-restricted-paths": ["off", {
-      zones: []
-    }],
+    "import/no-restricted-paths": [
+      "off",
+      {
+        zones: []
+      }
+    ],
 
     /**
      * Forbid import of modules using absolute paths.
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
      */
-    "import/no-absolute-path": ["error", {
-      esmodule: true,
-      commonjs: true,
-      amd: true,
-    }],
+    "import/no-absolute-path": [
+      "error",
+      {
+        esmodule: true,
+        commonjs: true,
+        amd: true
+      }
+    ],
 
     /**
      * Forbid require() calls with expressions.
@@ -286,9 +306,12 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
      */
-    "import/no-internal-modules": ["off", {
-      allow: [],
-    }],
+    "import/no-internal-modules": [
+      "off",
+      {
+        allow: []
+      }
+    ],
 
     /**
      * Forbid webpack loader syntax in imports.
@@ -326,9 +349,12 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md
      */
-    "import/no-useless-path-segments": ["error", {
-      noUselessIndex: true,
-    }],
+    "import/no-useless-path-segments": [
+      "error",
+      {
+        noUselessIndex: true
+      }
+    ],
 
     /**
      * Forbid importing modules from parent directories.
@@ -351,13 +377,15 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
      */
-    "import/no-unused-modules": ["off", {
-      //src: [],
-      missingExports: false,
-      unusedExports: true,
-      //ignoreExports: [],
-    }],
-
+    "import/no-unused-modules": [
+      "off",
+      {
+        //src: [],
+        missingExports: false,
+        unusedExports: true
+        //ignoreExports: [],
+      }
+    ],
 
     /**
      * Report potentially ambiguous parse goal (script vs. module).
@@ -405,10 +433,12 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
      */
-    "import/no-nodejs-modules": ["error", {
-      allow: ["fs", "path", "child_process"],
-    }],
-
+    "import/no-nodejs-modules": [
+      "error",
+      {
+        allow: ["fs", "path", "child_process"]
+      }
+    ],
 
     /**
      * Report any invalid exports, i.e. re-export of the same name.
@@ -461,29 +491,32 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
      */
-    "import/no-extraneous-dependencies": ["error", {
-      devDependencies: [
-        "babel.config.js",
-        ".babelrc",
-        ".stylelintrc",
-        "stylelint.config.js",
-        ".eslintrc.js",
-        ".eslintrc",
-        "jest.*.js",
-        "*.test.js",
-        "**/tests/**",
-        "webpack.config.js",
-        "webpack.config.*.js",
-        "**/webpack/**",
-      ],
-    }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: [
+          "babel.config.js",
+          ".babelrc",
+          ".stylelintrc",
+          "stylelint.config.js",
+          ".eslintrc.js",
+          ".eslintrc",
+          "jest.*.js",
+          "*.test.js",
+          "**/tests/**",
+          "webpack.config.js",
+          "webpack.config.*.js",
+          "**/webpack/**"
+        ]
+      }
+    ],
 
     /**
      * Forbid the use of mutable exports with var or let.
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
      */
-    "import/no-mutable-exports": "error",
+    "import/no-mutable-exports": "error"
 
     /**
      * Report modules without exports, or exports without matching import in
@@ -511,5 +544,5 @@ module.exports = {
     // ],
     // }],
     //
-  },
+  }
 }

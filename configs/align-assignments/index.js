@@ -1,8 +1,4 @@
 module.exports = {
-  plugins: [
-    "align-assignments",
-  ],
-  rules: {
-
-  },
+  plugins: ["align-assignments"],
+  rules: {}
 }

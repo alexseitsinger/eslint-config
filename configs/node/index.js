@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    node: true,
+    node: true
   },
   plugins: ["node"],
   rules: {
@@ -149,13 +149,16 @@ module.exports = {
      * Disallow the use of deprecated node APIs
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md
      */
-    "node/no-deprecated-api": ["error", {
-      // This rule reads from the 'engines' field in package.json, but can be overridden here.
-      //version: ">=8.0.0",
-      // Items that should be omitted from this rule.
-      ignoreModuleItems: [],
-      ignoreGlobalItems: [],
-    }],
+    "node/no-deprecated-api": [
+      "error",
+      {
+        // This rule reads from the 'engines' field in package.json, but can be overridden here.
+        //version: ">=8.0.0",
+        // Items that should be omitted from this rule.
+        ignoreModuleItems: [],
+        ignoreGlobalItems: []
+      }
+    ],
 
     /**
      * This rule enforces the export style.
@@ -176,19 +179,23 @@ module.exports = {
     /**
      * Enforce the style of file extensions in import declarations
      */
-    "node/file-extension-in-import": ["error", "never", {
-      "tryExtensions": [".ts", ".tsx", ".js", ".jsx"],
-      ".json": "always",
-      ".css": "always",
-      ".ico": "always",
-      ".svg": "always",
-      ".png": "always",
-      ".jpg": "always",
-      ".gif": "always",
-      ".ttf": "always",
-      ".otf": "always",
-      // ".<ext>": "always" or "never" to override for specific extensions.
-    }],
+    "node/file-extension-in-import": [
+      "error",
+      "never",
+      {
+        "tryExtensions": [".ts", ".tsx", ".js", ".jsx"],
+        ".json": "always",
+        ".css": "always",
+        ".ico": "always",
+        ".svg": "always",
+        ".png": "always",
+        ".jpg": "always",
+        ".gif": "always",
+        ".ttf": "always",
+        ".otf": "always"
+        // ".<ext>": "always" or "never" to override for specific extensions.
+      }
+    ],
 
     /**
      * Perfer either the global or required version of modules.
@@ -216,6 +223,6 @@ module.exports = {
      * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-promises/fs.md
      */
     "node/prefer-promises/dns": "error",
-    "node/prefer-promises/fs": "error",
-  },
+    "node/prefer-promises/fs": "error"
+  }
 }

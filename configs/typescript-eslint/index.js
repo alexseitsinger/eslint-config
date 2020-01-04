@@ -14,10 +14,13 @@ module.exports = {
      * Requires using either T[] or Array<T> for arrays
      * (Fixable)
      */
-    "@typescript-eslint/array-type": ["error", {
-      default: "array",
-      //readonly:
-    }],
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        default: "array"
+        //readonly:
+      }
+    ],
 
     /**
      * Disallows awaiting a value that is not a Thenable
@@ -40,16 +43,19 @@ module.exports = {
      * (Recommended)
      * (Fixable)
      */
-    "@typescript-eslint/ban-types": ["error", {
-      types: {
-        Array: null,
-        Object: "Use {} instead",
-        String: {
-          message: "Use string instead",
-          fixWith: "string",
-        },
-      },
-    }],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        types: {
+          Array: null,
+          Object: "Use {} instead",
+          String: {
+            message: "Use string instead",
+            fixWith: "string"
+          }
+        }
+      }
+    ],
 
     /**
      * Enforce consistent brace style for blocks
@@ -73,29 +79,38 @@ module.exports = {
      *   field.
      */
     "camelcase": "off",
-    "@typescript-eslint/camelcase": ["off", {
-      properties: "always",
-      genericType: "never",
-      ignoreDestructuring: false,
-      allow: [
-        // put names of keys that are allowed to be camelcase?
-      ],
-    }],
+    "@typescript-eslint/camelcase": [
+      "off",
+      {
+        properties: "always",
+        genericType: "never",
+        ignoreDestructuring: false,
+        allow: [
+          // put names of keys that are allowed to be camelcase?
+        ]
+      }
+    ],
 
     /**
      * Require PascalCased class and interface names
      */
-    "@typescript-eslint/class-name-casing": ["error", {
-      allowUnderscorePrefix: false,
-    }],
+    "@typescript-eslint/class-name-casing": [
+      "error",
+      {
+        allowUnderscorePrefix: false
+      }
+    ],
 
     /**
      * Enforces consistent usage of type assertions.
      */
-    "@typescript-eslint/consistent-type-assertions": ["error", {
-      assertionStyle: "as",
-      objectLiteralTypeAssertions: "allow",
-    }],
+    "@typescript-eslint/consistent-type-assertions": [
+      "error",
+      {
+        assertionStyle: "as",
+        objectLiteralTypeAssertions: "allow"
+      }
+    ],
 
     /**
      * Consistent with type definition either interface or type
@@ -115,17 +130,20 @@ module.exports = {
     /**
      * Require explicit accessibility modifiers on class properties and methods
      */
-    "@typescript-eslint/explicit-member-accessibility": ["error", {
-      accessibility: "explicit",
-      ignoredMethodNames: [],
-      overrides: {
-        accessors: "explicit",
-        constructors: "explicit",
-        methods: "explicit",
-        properties: "explicit",
-        parameterProperties: "explicit",
-      },
-    }],
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        accessibility: "explicit",
+        ignoredMethodNames: [],
+        overrides: {
+          accessors: "explicit",
+          constructors: "explicit",
+          methods: "explicit",
+          properties: "explicit",
+          parameterProperties: "explicit"
+        }
+      }
+    ],
 
     /**
      * Require or disallow spacing between function identifiers and their
@@ -272,10 +290,13 @@ module.exports = {
     /**
      * Disallow aliasing this
      */
-    "@typescript-eslint/no-this-alias": ["error", {
-      allowDestructuring: true,
-      allowedNames: [],
-    }],
+    "@typescript-eslint/no-this-alias": [
+      "error",
+      {
+        allowDestructuring: true,
+        allowedNames: []
+      }
+    ],
 
     /**
      * Disallow throwing literals as exceptions
@@ -285,15 +306,18 @@ module.exports = {
     /**
      * Disallow the use of type aliases
      */
-    "@typescript-eslint/no-type-alias": ["error", {
-      allowAliases: "never",
-      allowCallbacks: "never",
-      allowConditionalTypes: "never",
-      allowConstructors: "never",
-      allowLiterals: "never",
-      allowMappedTypes: "never",
-      allowTupleTypes: "never",
-    }],
+    "@typescript-eslint/no-type-alias": [
+      "error",
+      {
+        allowAliases: "never",
+        allowCallbacks: "never",
+        allowConditionalTypes: "never",
+        allowConstructors: "never",
+        allowLiterals: "never",
+        allowMappedTypes: "never",
+        allowTupleTypes: "never"
+      }
+    ],
 
     /**
      * Prevents conditionals where the type is always truthy or always falsy
@@ -329,9 +353,12 @@ module.exports = {
      * Requires that all public method arguments and return type will be
      * explicitly typed
      */
-    "@typescript-eslint/no-untyped-public-signature": ["error", {
-      ignoredMethods: [],
-    }],
+    "@typescript-eslint/no-untyped-public-signature": [
+      "error",
+      {
+        ignoredMethods: []
+      }
+    ],
 
     /**
      * Disallow unused expressions
@@ -343,11 +370,14 @@ module.exports = {
      * Disallow unused variables
      */
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error", {
-      vars: "all",
-      args: "after-used",
-      ignoreRestSiblings: false,
-    }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        vars: "all",
+        args: "after-used",
+        ignoreRestSiblings: false
+      }
+    ],
 
     /**
      * Disallow unused variables and arguments.
@@ -453,10 +483,14 @@ module.exports = {
      *   this.
      */
     "quotes": "off",
-    "@typescript-eslint/quotes": ["error", "double", {
-      avoidEscape: true,
-      allowTemplateLiterals: true,
-    }],
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true
+      }
+    ],
 
     /**
      * Enforce giving compare argument to Array#sort
@@ -517,33 +551,42 @@ module.exports = {
      * Sets preference level for triple slash directives versus ES6-style import
      * declarations
      */
-    "@typescript-eslint/triple-slash-reference": ["error", {
-      path: "never",
-      types: "never",
-      lib: "never",
-    }],
+    "@typescript-eslint/triple-slash-reference": [
+      "error",
+      {
+        path: "never",
+        types: "never",
+        lib: "never"
+      }
+    ],
 
     /**
      * Require consistent spacing around type annotations
      * (Fixable)
      */
-    "@typescript-eslint/type-annotation-spacing": ["error", {
-      before: false,
-      after: true,
-    }],
+    "@typescript-eslint/type-annotation-spacing": [
+      "error",
+      {
+        before: false,
+        after: true
+      }
+    ],
 
     /**
      * Requires type annotations to exist
      */
-    "@typescript-eslint/typedef": ["error", {
-      arrayDestructuring: true,
-      arrowParameter: true,
-      memberVariableDeclaration: true,
-      objectDestructuring: true,
-      parameter: true,
-      propertyDeclaration: true,
-      variableDeclaration: true,
-    }],
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        arrayDestructuring: true,
+        arrowParameter: true,
+        memberVariableDeclaration: true,
+        objectDestructuring: true,
+        parameter: true,
+        propertyDeclaration: true,
+        variableDeclaration: true
+      }
+    ],
 
     /**
      * Enforces unbound methods are called with their expected scope
@@ -556,6 +599,6 @@ module.exports = {
      * Warns for any two overloads that could be unified into one by using a
      * union or an optional/rest parameter
      */
-    "@typescript-eslint/unified-signatures": "error",
-  },
+    "@typescript-eslint/unified-signatures": "error"
+  }
 }
