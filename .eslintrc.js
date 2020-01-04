@@ -1,4 +1,8 @@
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 9,
+    sourceType: "module"
+  },
   plugins: [
     "filenames",
     "package-json",
@@ -6,7 +10,7 @@ module.exports = {
     "node",
     "package-json",
     "ban",
-    "simple-import-sort",
+    "simple-import-sort"
   ],
   extends: [
     ...[
@@ -17,9 +21,9 @@ module.exports = {
       "node",
       "package-json",
       "ban",
-      "simple-import-sort",
+      "simple-import-sort"
     ].map(name => {
-      return require.resolve(`./configs/${name}`)
+      return require.resolve(`./configs/${name}`);
     })
-  ],
-}
+  ]
+};
