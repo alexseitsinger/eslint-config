@@ -24,13 +24,17 @@ module.exports = {
 
     /**
      * Enforce assertion to be made in a test body
+     *
+     * NOTE: This is annoying, so disable.
      */
     "jest/expect-expect": "off",
 
     /**
      * Disallow capitalized test names
+     *
+     * Oftentimes, the classes we test are capitalized.
      */
-    "jest/lowercase-name": "error",
+    "jest/lowercase-name": "off",
 
     /**
      * Disallow alias methods
@@ -142,8 +146,10 @@ module.exports = {
 
     /**
      * Suggest using expect.assertions() OR expect.hasAssertions()
+     *
+     * NOTE: This is annoying, so disable.
      */
-    "jest/prefer-expect-assertions": "error",
+    "jest/prefer-expect-assertions": "off",
 
     /**
      * Suggest to have all hooks at top-level before tests
