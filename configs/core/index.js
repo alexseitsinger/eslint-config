@@ -524,7 +524,7 @@ module.exports = {
     "max-params": [
       "error",
       {
-        max: 8
+        max: 10
       }
     ],
 

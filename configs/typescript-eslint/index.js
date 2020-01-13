@@ -3,6 +3,7 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint/eslint-plugin"],
+  extends: ["prettier/@typescript-eslint"],
   rules: {
     /**
      * Require that member overloads be consecutive
@@ -402,7 +403,7 @@ module.exports = {
      *
      * - Disabled because we import our client store via require in a function.
      */
-    //"@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/no-var-requires": "off",
 
     /**
      * Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only
