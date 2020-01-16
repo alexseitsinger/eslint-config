@@ -1,3 +1,10 @@
+<a name="v1.1.0"></a>
+## [v1.1.0](https://github.com/alexseitsinger/eslint-config/compare/v1.0.0...v1.1.0) (2020-01-16)
+
+### Code Refactoring
+- Updates import groups. ([1543fda](https://github.com/alexseitsinger/eslint-config/commit/1543fda054d7359afba099bf342dac4adb178f99))
+
+
 <a name="v1.0.0"></a>
 ## [v1.0.0](https://github.com/alexseitsinger/eslint-config/compare/v0.29.0...v1.0.0) (2020-01-16)
 
