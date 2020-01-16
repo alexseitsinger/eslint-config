@@ -4,28 +4,15 @@ module.exports = {
     sourceType: "module"
   },
   extends: [
-    ...[
-      "core",
-      "import",
-      "node",
-      "package-json",
-      "ban",
-      "react",
-      "react-hooks",
-      "react-redux",
-      "redux-saga",
-      "jest",
-      "jest-formatting",
-      "simple-import-sort"
-    ].map(pluginName => {
-      try {
-        require(`eslint-plugin-${pluginName}`)
-        return require.resolve(`./configs/${pluginName}`)
-      }
-      catch (e) {
-        console.log(`Skipping config for ${pluginName}`)
-        return ""
-      }
-    })
-  ]
+    "eslint",
+    "package-json",
+    "import",
+    "node",
+    "jest",
+    "jest-formatting",
+    "react",
+    "react-redux",
+    "typescript-eslint",
+    "simple-import-sort"
+  ].map(n => require.resolve(`./${n}`))
 }
