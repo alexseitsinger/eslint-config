@@ -3,24 +3,12 @@ module.exports = {
     jest: true
     //"jest/globals": true
   },
-  globals: {
-    shallow: true,
-    mount: true,
-    describe: true,
-    it: true,
-    test: true,
-    beforeAll: true,
-    afterAll: true,
-    beforeEach: true,
-    afterEach: true,
-    expect: true
-  },
   plugins: ["jest"],
   rules: {
     /**
      * Enforce consistent test or it keyword
      */
-    "jest/consistent-test-it": "off",
+    "jest/consistent-test-it": "error",
 
     /**
      * Enforce assertion to be made in a test body
@@ -32,7 +20,7 @@ module.exports = {
     /**
      * Disallow capitalized test names
      *
-     * Oftentimes, the classes we test are capitalized.
+     * NOTE: Oftentimes, the classes we test are capitalized, so, disable.
      */
     "jest/lowercase-name": "off",
 
@@ -43,11 +31,15 @@ module.exports = {
 
     /**
      * Disallow commented out tests
+     *
+     * NOTE: This might be annoying, so perhaps we'll disable it later.
      */
     "jest/no-commented-out-tests": "error",
 
     /**
      * Disallow disabled tests
+     *
+     * NOTE: This might need to be disabled later.
      */
     "jest/no-disabled-tests": "error",
 
@@ -73,8 +65,10 @@ module.exports = {
 
     /**
      * Disallow setup and teardown hooks
+     *
+     * NOTE: We use these sometimes, so disable.
      */
-    "jest/no-hooks": "error",
+    "jest/no-hooks": "off",
 
     /**
      * Disallow identical titles

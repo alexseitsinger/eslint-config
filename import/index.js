@@ -13,7 +13,7 @@ module.exports = {
      *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
      */
-    //"import/first": "error",
+    "import/first": "off",
 
     /**
      * Ensure all exports appear after other statements,
@@ -67,10 +67,12 @@ module.exports = {
     /**
      * Enforce a convention in module import order.
      *
+     * NOTE: Disabled because we're using simple-import-sort.
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
      */
     "import/order": [
-      "error",
+      "off",
       {
         "groups": [
           ["builtin", "external"],

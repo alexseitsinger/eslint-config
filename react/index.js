@@ -1,5 +1,6 @@
 module.exports = {
   plugins: ["react"],
+  extends: ["prettier/react"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -14,7 +15,6 @@ module.exports = {
       { name: "Anchor", linkAttribute: "href" }
     ]
   },
-  extends: ["prettier/react"],
   rules: {
     /**
      * Enforces consistent naming for boolean props.

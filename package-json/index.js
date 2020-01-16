@@ -53,10 +53,14 @@ module.exports = {
     "package-json/sort-collections": [
       "error",
       [
-        "scripts",
-        "devDependencies",
+        "directories",
+        "files",
+        "bin",
+        "engines",
         "dependencies",
+        "devDependencies",
         "peerDependencies",
+        "scripts",
         "config"
       ]
     ]

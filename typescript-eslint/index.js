@@ -117,7 +117,7 @@ module.exports = {
      * Consistent with type definition either interface or type
      * (Fixable)
      */
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
 
     /**
      * Require explicit return types on functions and class methods
@@ -132,7 +132,7 @@ module.exports = {
      * Require explicit accessibility modifiers on class properties and methods
      */
     "@typescript-eslint/explicit-member-accessibility": [
-      "error",
+      "off",
       {
         accessibility: "explicit",
         ignoredMethodNames: [],
@@ -173,7 +173,31 @@ module.exports = {
      * Require a specific member delimiter style for interfaces and type
      * literals
      */
-    "@typescript-eslint/member-delimiter-style": ["error", "semi"],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        multiline: {
+          delimiter: "comma",
+          requireLast: true
+        },
+        singleline: {
+          delimiter: "comma",
+          requireLast: true
+        },
+        overrides: {
+          interface: {
+            multiline: {
+              delimiter: "semi",
+              requireLast: true
+            },
+            singleline: {
+              delimiter: "semi",
+              requireLast: true
+            }
+          }
+        }
+      }
+    ],
 
     /**
      * Enforces naming conventions for class members by visibility
@@ -308,7 +332,7 @@ module.exports = {
      * Disallow the use of type aliases
      */
     "@typescript-eslint/no-type-alias": [
-      "error",
+      "off",
       {
         allowAliases: "never",
         allowCallbacks: "never",
@@ -382,11 +406,14 @@ module.exports = {
 
     /**
      * Disallow unused variables and arguments.
-    "@typescript-eslint/no-unused-vars-experimental": ["error", {
-      ignoredNamesRegex: '^_',
-      ignoreArgsIfArgsAfterAreUsed: false,
-    }],
      */
+    "@typescript-eslint/no-unused-vars-experimental": [
+      "off",
+      {
+        ignoredNamesRegex: "^_",
+        ignoreArgsIfArgsAfterAreUsed: false
+      }
+    ],
 
     /**
      * Disallow the use of variables before they are defined
@@ -533,8 +560,8 @@ module.exports = {
      * - Requires disabling the original eslint rule.
      * -This version adds support for numerous typescript features.
      */
-    "semi": "off",
-    "@typescript-eslint/semi": "error",
+    //"semi": "off",
+    //"@typescript-eslint/semi": "error",
 
     /**
      * enforce consistent spacing before function definition opening parenthesis
@@ -569,7 +596,13 @@ module.exports = {
       "error",
       {
         before: false,
-        after: true
+        after: true,
+        overrides: {
+          arrow: {
+            before: true,
+            after: true
+          }
+        }
       }
     ],
 
@@ -577,7 +610,7 @@ module.exports = {
      * Requires type annotations to exist
      */
     "@typescript-eslint/typedef": [
-      "error",
+      "off",
       {
         arrayDestructuring: true,
         arrowParameter: true,
