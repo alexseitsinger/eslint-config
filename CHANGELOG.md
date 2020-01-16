@@ -1,3 +1,19 @@
+<a name="v1.0.0"></a>
+## [v1.0.0](https://github.com/alexseitsinger/eslint-config/compare/v0.29.0...v1.0.0) (2020-01-16)
+
+### Code Refactoring
+- Moves configs. ([00e0d53](https://github.com/alexseitsinger/eslint-config/commit/00e0d531c120b95e23cf3bfb51377471e61f439f))
+- Updates configs. ([78f5d87](https://github.com/alexseitsinger/eslint-config/commit/78f5d87ed45a232a3a6dbb43c1d6b0f90440ed66))
+- Updates entry. ([afb1fed](https://github.com/alexseitsinger/eslint-config/commit/afb1fed29b8fa7d85821119e1149298a4e68e32a))
+- Updates jest rules. ([9218f30](https://github.com/alexseitsinger/eslint-config/commit/9218f3089d063797289fa20641d74cb5811e398a))
+- Updates rules. ([43d4d1a](https://github.com/alexseitsinger/eslint-config/commit/43d4d1a1977a94c151ad262412f36d93183027b2))
+
+### Features
+- Adds dynamic loading. ([39ba2ee](https://github.com/alexseitsinger/eslint-config/commit/39ba2ee802fa01a8c99e3117517bb6d7226fdae5))
+- Updates configs. ([a96cfd8](https://github.com/alexseitsinger/eslint-config/commit/a96cfd88623b68998d2be0df4e88648301ca5334))
+- Updates. ([bf4b4ec](https://github.com/alexseitsinger/eslint-config/commit/bf4b4ec34df5d8d9f38f7151096647a2e8ac6ce8))
+
+
 <a name="v0.29.0"></a>
 ## [v0.29.0](https://github.com/alexseitsinger/eslint-config/compare/v0.10.0...v0.29.0) (2019-12-20)
 
