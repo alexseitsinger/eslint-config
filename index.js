@@ -15,4 +15,4 @@ module.exports = {
     "typescript-eslint",
     "simple-import-sort"
   ].map(n => require.resolve(`./${n}`))
-}
+};
