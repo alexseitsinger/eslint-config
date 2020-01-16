@@ -1,3 +1,10 @@
+<a name="v1.2.0"></a>
+## [v1.2.0](https://github.com/alexseitsinger/eslint-config/compare/v1.1.0...v1.2.0) (2020-01-16)
+
+### Bug Fixes
+- Disables rule. ([b301e68](https://github.com/alexseitsinger/eslint-config/commit/b301e68aa84e2c2eeb274ebf6419c96b74f6340a))
+
+
 <a name="v1.1.0"></a>
 ## [v1.1.0](https://github.com/alexseitsinger/eslint-config/compare/v1.0.0...v1.1.0) (2020-01-16)
 
