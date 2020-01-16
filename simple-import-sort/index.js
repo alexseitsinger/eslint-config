@@ -19,16 +19,16 @@ module.exports = {
           ],
 
           // Packages. `react` related packages come first.
-          ["^react", "^@?\\w"],
+          ["^react", "^prop-types", "^@?\\w"],
 
           // Internal packages.
-          ["^(src|app|core|site|pages|tests)(/.*)?$"],
-
-          // Parent imports. Put `..` last.
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^([@~$]?[sS]rc|[aA]pp|[cC]ore|[sS]ite|[pP]ages|[tT]ests)(/.*)?$"],
 
           // Other relative imports. Put same-folder imports and `.` last.
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
 
           // Misc imports.
           ["^.+\\.(s?css|json|png|jpe?g|gif|ico)$"]
