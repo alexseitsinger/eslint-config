@@ -3,27 +3,7 @@ module.exports = {
     ecmaVersion: 9,
     sourceType: "module"
   },
-  plugins: [
-    "filenames",
-    "package-json",
-    "import",
-    "node",
-    "package-json",
-    "ban",
-    "simple-import-sort"
-  ],
-  extends: [
-    ...[
-      "core",
-      "filenames",
-      "package-json",
-      "import",
-      "node",
-      "package-json",
-      "ban",
-      "simple-import-sort"
-    ].map(name => {
-      return require.resolve(`./configs/${name}`);
-    })
-  ]
+  extends: ["eslint", "node", "package-json"].map(n => {
+    return require.resolve(`./${n}`);
+  })
 };
