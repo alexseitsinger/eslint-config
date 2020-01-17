@@ -1,3 +1,11 @@
+<a name="v1.2.1"></a>
+## [v1.2.1](https://github.com/alexseitsinger/eslint-config/compare/v1.2.0...v1.2.1) (2020-01-17)
+
+### Code Refactoring
+- Adds group for rhl. ([433e296](https://github.com/alexseitsinger/eslint-config/commit/433e296c859724e102dc06d9e166df5e7234ae9b))
+- Updates for react-hot-loader. ([53056ff](https://github.com/alexseitsinger/eslint-config/commit/53056ff7b833d7d07b2c4c12e999ada8809f1282))
+
+
 <a name="v1.2.0"></a>
 ## [v1.2.0](https://github.com/alexseitsinger/eslint-config/compare/v1.1.0...v1.2.0) (2020-01-16)
 
