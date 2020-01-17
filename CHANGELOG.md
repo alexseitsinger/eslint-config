@@ -1,3 +1,14 @@
+<a name="v2.0.0"></a>
+## [v2.0.0](https://github.com/alexseitsinger/eslint-config/compare/v1.2.1...v2.0.0) (2020-01-17)
+
+### Code Refactoring
+- Changes default config. ([1af5504](https://github.com/alexseitsinger/eslint-config/commit/1af55040a7dea57cc20d8c098e008c28343845e8))
+- Removes plugins:[]. ([ecf2ce9](https://github.com/alexseitsinger/eslint-config/commit/ecf2ce9e703fb44b9893bf1502a0bf04d9036073))
+
+### Features
+- Adds configs. ([2f4783d](https://github.com/alexseitsinger/eslint-config/commit/2f4783d73e8646c5d1f548fd8fa612fd8845315c))
+
+
 <a name="v1.2.1"></a>
 ## [v1.2.1](https://github.com/alexseitsinger/eslint-config/compare/v1.2.0...v1.2.1) (2020-01-17)
 
