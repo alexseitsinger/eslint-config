@@ -52,7 +52,9 @@
     "eslint-plugin-prettier": "^3.1.2",
     "prettier": "^1.19.1"
   },
-  "optionalDependencies": {
+  "peerDependencies": {
+    "eslint": "^6.6.0",
+    "prettier": "*",
     "eslint-config-prettier": "^6.8.0",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-import-resolver-webpack": "^0.12.0",
@@ -66,9 +68,5 @@
     "eslint-plugin-react-hooks": "*",
     "eslint-plugin-react-redux": "^3.0.2",
     "eslint-plugin-redux-saga": "*"
-  },
-  "peerDependencies": {
-    "eslint": "^6.6.0",
-    "prettier": "*"
   }
 }
