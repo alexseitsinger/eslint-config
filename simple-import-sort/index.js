@@ -18,10 +18,10 @@ module.exports = {
             "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
           ],
 
-          ["^react-hot-loader(/boot)?$"],
+          ["^react-hot-loader(/root)?$"],
 
           // Packages. `react` related packages come first.
-          ["^react", "^prop-types", "^@?\\w"],
+          ["^react(?!react-hot-loader(/root)?$)", "^prop-types", "^@?\\w"],
 
           // Internal packages.
           ["^([@~$]?[sS]rc|[aA]pp|[cC]ore|[sS]ite|[pP]ages|[tT]ests)(/.*)?$"],
