@@ -5,14 +5,9 @@ module.exports = {
   },
   extends: [
     "eslint",
-    "package-json",
-    "import",
     "node",
-    "jest",
-    "jest-formatting",
-    "react",
-    "react-redux",
-    "typescript-eslint",
-    "simple-import-sort"
+    "import",
+    "simple-import-sort",
+    "package-json"
   ].map(n => require.resolve(`./${n}`))
 };
