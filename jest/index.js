@@ -3,7 +3,7 @@ module.exports = {
     jest: true
     //"jest/globals": true
   },
-  plugins: ["jest"],
+  //plugins: ["jest"],
   rules: {
     /**
      * Enforce consistent test or it keyword
@@ -232,4 +232,4 @@ module.exports = {
      */
     "jest/valid-title": "error"
   }
-}
+};

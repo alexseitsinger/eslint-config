@@ -1,4 +1,4 @@
-const confusingBrowserGlobals = require("confusing-browser-globals")
+const confusingBrowserGlobals = require("confusing-browser-globals");
 
 module.exports = {
   env: {
@@ -82,7 +82,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/camelcase
      */
-    "camelcase": [
+    camelcase: [
       "off",
       {
         properties: "never",
@@ -315,7 +315,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/indent
      */
-    "indent": [
+    indent: [
       "error",
       2,
       {
@@ -1037,7 +1037,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/quotes
      */
-    "quotes": [
+    quotes: [
       "error",
       "double",
       {
@@ -1053,7 +1053,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/semi
      */
-    "semi": [
+    semi: [
       "error",
       "never",
       {
@@ -1254,7 +1254,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/strict
      */
-    "strict": ["error", "never"],
+    strict: ["error", "never"],
 
     /**
      * Require return statements after callbacks.
@@ -1736,7 +1736,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/complexity
      */
-    "complexity": [
+    complexity: [
       "error",
       {
         max: 30
@@ -1767,7 +1767,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/curly
      */
-    "curly": ["error", "all"],
+    curly: ["error", "all"],
 
     /**
      * Require default cases in switch statements.
@@ -1810,7 +1810,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/eqeqeq
      */
-    "eqeqeq": ["error", "always"],
+    eqeqeq: ["error", "always"],
 
     /**
      * Require for-in loops to include an if statement.
@@ -2425,7 +2425,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/radix
      */
-    "radix": ["error", "as-needed"],
+    radix: ["error", "as-needed"],
 
     /**
      * Disallow async functions which have no await expression.
@@ -2469,7 +2469,7 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/yoda
      */
-    "yoda": [
+    yoda: [
       "error",
       "never",
       {
@@ -2968,4 +2968,4 @@ module.exports = {
       }
     ]
   }
-}
+};

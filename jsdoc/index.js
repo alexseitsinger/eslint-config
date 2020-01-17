@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-  plugins: ["jsdoc"],
+  //plugins: ["jsdoc"],
   rules: {
     "jsdoc/check-alignment": "warn",
     "jsdoc/check-examples": "warn",
@@ -32,4 +32,4 @@ module.exports = {
     "jsdoc/require-returns-type": "warn",
     "jsdoc/valid-types": "warn"
   }
-}
+};

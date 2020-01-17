@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["react-redux"],
+  //plugins: ["react-redux"],
   rules: {
     //"react-redux/connect-prefer-minimum-two-arguments": "error",
 
@@ -64,4 +64,4 @@ module.exports = {
      */
     "react-redux/prefer-separate-component-file": "error"
   }
-}
+};

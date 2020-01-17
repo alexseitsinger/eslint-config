@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["filenames"],
+  //plugins: ["filenames"],
   rules: {
     /**
      * A rule to enforce a certain file naming convention using a regular
@@ -54,4 +54,4 @@ module.exports = {
      */
     //"filenames/no-index": "error",
   }
-}
+};

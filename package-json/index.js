@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["package-json"],
+  //plugins: ["package-json"],
   rules: {
     /**
      * Require top-level properties to be in a conventional order ("name"first, etc.).
@@ -53,13 +53,12 @@ module.exports = {
     "package-json/sort-collections": [
       "error",
       [
-        "directories",
-        "files",
         "bin",
         "engines",
         "dependencies",
         "devDependencies",
         "peerDependencies",
+        "optionalDependencies",
         "scripts",
         "config"
       ]

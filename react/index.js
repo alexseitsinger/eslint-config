@@ -1,6 +1,6 @@
 module.exports = {
-  plugins: ["react"],
-  extends: ["prettier/react"],
+  //plugins: ["react"],
+  //extends: ["prettier/react"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -483,7 +483,7 @@ module.exports = {
             "componentDidCatch",
             "componentWillUnmount"
           ],
-          "rendering": ["/^render.+$/", "render"]
+          rendering: ["/^render.+$/", "render"]
         }
       }
     ],
@@ -885,4 +885,4 @@ module.exports = {
       }
     ]
   }
-}
+};

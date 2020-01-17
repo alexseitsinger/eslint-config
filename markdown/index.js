@@ -1,4 +1,4 @@
 module.exports = {
-  plugins: ["markdown"],
+  //plugins: ["markdown"],
   rules: {}
-}
+};

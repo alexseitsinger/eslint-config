@@ -2,7 +2,7 @@ module.exports = {
   env: {
     node: true
   },
-  plugins: ["node"],
+  //plugins: ["node"],
   rules: {
     /**
      * ensure Node.js-style error-first callback pattern is followed
@@ -183,7 +183,7 @@ module.exports = {
       "error",
       "never",
       {
-        "tryExtensions": [".ts", ".tsx", ".js", ".jsx"],
+        tryExtensions: [".ts", ".tsx", ".js", ".jsx"],
         ".json": "always",
         ".css": "always",
         ".ico": "always",
@@ -225,4 +225,4 @@ module.exports = {
     "node/prefer-promises/dns": "error",
     "node/prefer-promises/fs": "error"
   }
-}
+};

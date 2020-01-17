@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["redux-saga"],
+  //plugins: ["redux-saga"],
   rules: {
     /**
      * Ensure effects are yielded.
@@ -18,4 +18,4 @@ module.exports = {
      */
     "redux-saga/no-unhandled-errors": "error"
   }
-}
+};

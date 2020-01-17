@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["import"],
+  //plugins: ["import"],
   settings: {
     "import/ignore": ["node_modules"],
     "import/external-module-folders": ["node_modules"]
@@ -74,7 +74,7 @@ module.exports = {
     "import/order": [
       "off",
       {
-        "groups": [
+        groups: [
           ["builtin", "external"],
           ["internal"],
           ["parent", "sibling", "index", "unknown"]
@@ -547,4 +547,4 @@ module.exports = {
     // }],
     //
   }
-}
+};

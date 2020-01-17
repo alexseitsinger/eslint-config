@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["jest-formatting"],
+  //plugins: ["jest-formatting"],
   rules: {
     "jest-formatting/padding-around-after-all-blocks": "error",
     "jest-formatting/padding-around-after-each-blocks": "error",
@@ -12,4 +12,4 @@ module.exports = {
     // This is a meta-rule that pplies to all the above rules.
     //"jest-formatting/padding-around-all": null,
   }
-}
+};

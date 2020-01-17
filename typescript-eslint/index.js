@@ -2,8 +2,8 @@
 
 module.exports = {
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint/eslint-plugin"],
-  extends: ["prettier/@typescript-eslint"],
+  //plugins: ["@typescript-eslint/eslint-plugin"],
+  //extends: ["prettier/@typescript-eslint"],
   rules: {
     /**
      * Require that member overloads be consecutive
@@ -79,7 +79,7 @@ module.exports = {
      * - Note: Should ignore this for REST params that need to match a model
      *   field.
      */
-    "camelcase": "off",
+    camelcase: "off",
     "@typescript-eslint/camelcase": [
       "off",
       {
@@ -510,7 +510,7 @@ module.exports = {
      * - This rule extends the original eslint rule, so disable that one for
      *   this.
      */
-    "quotes": "off",
+    quotes: "off",
     "@typescript-eslint/quotes": [
       "error",
       "double",
@@ -635,4 +635,4 @@ module.exports = {
      */
     "@typescript-eslint/unified-signatures": "error"
   }
-}
+};
