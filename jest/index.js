@@ -32,9 +32,10 @@ module.exports = {
     /**
      * Disallow commented out tests
      *
-     * NOTE: This might be annoying, so perhaps we'll disable it later.
+     * Sometimes, we comment out tests until their completed. So, disable this
+     * rule.
      */
-    "jest/no-commented-out-tests": "error",
+    "jest/no-commented-out-tests": "off",
 
     /**
      * Disallow disabled tests
@@ -60,8 +61,10 @@ module.exports = {
 
     /**
      * Disallow focused tests
+     *
+     * NOTE: We sometimes use only to check if a test works, so disable this.
      */
-    "jest/no-focused-tests": "error",
+    "jest/no-focused-tests": "off",
 
     /**
      * Disallow setup and teardown hooks
