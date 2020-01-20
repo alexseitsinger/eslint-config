@@ -502,13 +502,23 @@ module.exports = {
           ".stylelintrc",
           "stylelint.config.js",
           ".eslintrc.js",
+          ".eslintrc.*.js",
           ".eslintrc",
           "jest.*.js",
-          "*.test.js",
-          "**/tests/**",
-          "webpack.config.js",
+          "webpack.*.js",
           "webpack.config.*.js",
-          "**/webpack/**"
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "__tests__/**/*.ts",
+          "__tests__/**/*.tsx",
+          "__tests__/**/*.js",
+          "__tests__/**/*.jsx",
+          "tests/**/*.ts",
+          "tests/**/*.tsx",
+          "tests/**/*.js",
+          "tests/**/*.jsx"
         ]
       }
     ],
