@@ -1,3 +1,10 @@
+<a name="v2.3.0"></a>
+## [v2.3.0](https://github.com/alexseitsinger/eslint-config/compare/v2.2.0...v2.3.0) (2020-01-21)
+
+### Features
+- Uncomments ts rules. ([60b6ffa](https://github.com/alexseitsinger/eslint-config/commit/60b6ffa22dc9997d2d4f2f8becd67b69ba76c156))
+
+
 <a name="v2.2.0"></a>
 ## [v2.2.0](https://github.com/alexseitsinger/eslint-config/compare/v2.1.0...v2.2.0) (2020-01-20)
 
