@@ -28,7 +28,7 @@ module.exports = {
      * (Fixable)
      * (Requires type info)
      */
-    //"@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/await-thenable": "error",
 
     /**
      * Bans “// @ts-ignore” comments from being used
@@ -66,9 +66,8 @@ module.exports = {
      * - Disabled because we use eslint.
      */
     //
-    // "brace-style": "off",
-    // "@typescript-eslint/brace-style": "error",
-    //
+    "brace-style": "off",
+    "@typescript-eslint/brace-style": "error",
 
     /**
      * Enforce camelCase naming convention
@@ -122,11 +121,14 @@ module.exports = {
     /**
      * Require explicit return types on functions and class methods
      */
-    //"@typescript-eslint/explicit-function-return-type": ["error", {
-    //  allowExpression: false,
-    //  allowTypedFunctionExpressions: true,
-    //  allowHigherOrderFunctions: true,
-    //}],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        allowExpressions: false,
+        allowTypedFunctionExpressions: true,
+        allowHigherOrderFunctions: true
+      }
+    ],
 
     /**
      * Require explicit accessibility modifiers on class properties and methods
@@ -151,23 +153,32 @@ module.exports = {
      * invocations
      * (Fixable)
      */
-    //"@typescript-eslint/func-call-spacing": null,
+    "func-call-spacing": "off",
+    "@typescript-eslint/func-call-spacing": ["error", "never"],
 
     /**
      * Enforces naming of generic type variables
      */
-    //"@typescript-eslint/generic-type-naming": null,
+    "@typescript-eslint/generic-type-naming": ["error", "^[A-Z]$"],
 
     /**
      * Enforce consistent indentation
      * (Fixable)
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
      */
-    //"@typescript-eslint/indent": null,
+    "@typescript-eslint/indent": ["error", 2],
 
     /**
      * Require that interface names should or should not prefixed with I
      */
-    //"@typescript-eslint/interface-name-prefix": null,
+    "@typescript-eslint/interface-name-prefix": [
+      "error",
+      {
+        prefixWithI: "never"
+        //allowUnderscorePrefix: false
+      }
+    ],
 
     /**
      * Require a specific member delimiter style for interfaces and type
@@ -202,105 +213,183 @@ module.exports = {
     /**
      * Enforces naming conventions for class members by visibility
      */
-    //"@typescript-eslint/member-naming": null,
+    "@typescript-eslint/member-naming": [
+      "error",
+      {
+        private: "^_"
+      }
+    ],
 
     /**
      * Require a consistent member declaration order
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-naming.md
      */
-    //"@typescript-eslint/member-ordering": null,
+    "@typescript-eslint/member-ordering": "error",
 
     /**
      * Disallow generic Array constructors
      * (Fixable)
      */
-    //"@typescript-eslint/no-array-constructor": null,
+    "@typescript-eslint/no-array-constructor": "error",
 
     /**
      * Bans usage of the delete operator with computed key expressions
      * (Fixable)
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
      */
-    //"@typescript-eslint/no-dynamic-delete": null,
+    "@typescript-eslint/no-dynamic-delete": "error",
 
     /**
      * Disallow empty functions
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
      */
-    //"@typescript-eslint/no-empty-function": null,
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "error",
 
     /**
      * Disallow the declaration of empty interfaces
      * (Fixable)
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md
      */
-    //"@typescript-eslint/no-empty-interface": null,
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        allowSingleExtends: false
+      }
+    ],
 
     /**
      * Disallow usage of the any type
      * (Fixable)
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
      */
-    //"@typescript-eslint/no-explicit-any": null,
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      {
+        fixToUnknown: false,
+        ignoreRestArgs: false
+      }
+    ],
 
     /**
      * Disallow extra non-null assertion
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-non-null-assertion.md<Paste>
      */
-    //"@typescript-eslint/no-extra-non-null-assertion": null,
+    "@typescript-eslint/no-extra-non-null-assertion": "error",
 
     /**
      * Disallow unnecessary parentheses
      * (Fixable)
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
      */
-    //"@typescript-eslint/no-extra-parens": null,
+    "no-extra-parens": "off",
+    "@typescript-eslint/no-extra-parens": "error",
 
     /**
      * Disallow unnecessary semicolons
      * (Fixable)
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.md
      */
-    //"@typescript-eslint/no-extra-semi": null,
+    "no-extra-semi": "off",
+    "@typescript-eslint/no-extra-semi": "error",
 
     /**
      * Forbids the use of classes as namespaces
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extraneous-class.md
      */
-    //"@typescript-eslint/no-extraneous-class": null,
+    "@typescript-eslint/no-extraneous-class": [
+      "error",
+      {
+        allowConstructorOnly: false,
+        allowEmpty: false,
+        allowStaticOnly: false,
+        allowWithDecorator: false
+      }
+    ],
 
     /**
      * Requires Promise-like values to be handled appropriately.
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
      */
-    //"@typescript-eslint/no-floating-promises": null,
+    "@typescript-eslint/no-floating-promises": [
+      "error",
+      {
+        ignoreVoid: false
+      }
+    ],
 
     /**
      * Disallow iterating over an array with a for-in loop
      */
-    //"@typescript-eslint/no-for-in-array": null,
+    "@typescript-eslint/no-for-in-array": "error",
 
     /**
      * Disallows explicit type declarations for variables or parameters
      * initialized to a number, string, or boolean
      * (Fixable)
      */
-    //"@typescript-eslint/no-inferrable-types": null,
+    "@typescript-eslint/no-inferrable-types": [
+      "error",
+      {
+        ignoreParameters: false,
+        ignoreProperties: false
+      }
+    ],
 
     /**
      * Disallows magic numbers
      */
-    //"@typescript-eslint/no-magic-numbers": null,
+    "no-magic-numbers": "off",
+    "@typescript-eslint/no-magic-numbers": [
+      "error",
+      {
+        ignoreNumericLiteralTypes: true,
+        ignoreReadonlyClassProperties: false,
+        ignoreEnums: false
+      }
+    ],
 
     /**
      * Enforce valid definition of new and constructor
      */
-    //"@typescript-eslint/no-misused-new": null,
+    "@typescript-eslint/no-misused-new": "error",
 
     /**
      * Avoid using promises in places not designed to handle them
      */
-    //"@typescript-eslint/no-misused-promises": null,
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        checksConditionals: true,
+        checksVoidReturn: true
+      }
+    ],
 
     /**
      * Disallow the use of custom TypeScript modules and namespaces
      */
-    //"@typescript-eslint/no-namespace": null,
+    "@typescript-eslint/no-namespace": [
+      "error",
+      {
+        allowDeclarations: false,
+        allowDefinitionFiles: true
+      }
+    ],
 
     /**
      * Disallows non-null assertions using the ! postfix operator
      */
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-non-null-assertion": "error",
 
     /**
      * Disallow the use of parameter properties in class constructors
@@ -309,17 +398,22 @@ module.exports = {
 
     /**
      * Disallows invocation of require()
+     *
+     * NOTE: We sometimes use require calls for simple dynamic modules. So,
+     * disable this rule.
      */
-    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/no-require-imports": "off",
 
     /**
      * Disallow aliasing this
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md
      */
     "@typescript-eslint/no-this-alias": [
       "error",
       {
         allowDestructuring: true,
-        allowedNames: []
+        allowedNames: ["self"]
       }
     ],
 
@@ -347,32 +441,39 @@ module.exports = {
     /**
      * Prevents conditionals where the type is always truthy or always falsy
      * (Fixable)
-    "@typescript-eslint/no-unnecessary-condition": ["error", {
-      ignoreRhs: false,
-      allowConstantLoopConditions: false,
-    }],
      */
+    "@typescript-eslint/no-unnecessary-condition": [
+      "error",
+      {
+        ignoreRhs: false,
+        allowConstantLoopConditions: false
+        //checkArrayPredicates: false
+      }
+    ],
 
     /**
      * Warns when a namespace qualifier is unnecessary
      * (Fixable)
-    "@typescript-eslint/no-unnecessary-qualifier": "error",
      */
+    "@typescript-eslint/no-unnecessary-qualifier": "error",
 
     /**
      * Warns if an explicitly specified type argument is the default for that
      * type parameter
      * (Fixable)
+     */
     "@typescript-eslint/no-unnecessary-type-arguments": "error",
-*/
 
     /**
      * Warns if a type assertion does not change the type of an expression
      * (Fixable)
-    "@typescript-eslint/no-unnecessary-type-assertion": ["error", {
-      typesToIgnore: [],
-    }],
      */
+    "@typescript-eslint/no-unnecessary-type-assertion": [
+      "error",
+      {
+        typesToIgnore: []
+      }
+    ],
 
     /**
      * Requires that all public method arguments and return type will be
@@ -435,73 +536,88 @@ module.exports = {
     /**
      * Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only
      * used to access the array being iterated
-    "@typescript-eslint/prefer-for-of": "error",
      */
+    "@typescript-eslint/prefer-for-of": "error",
 
     /**
      * Use function types instead of interfaces with call signatures
      * (Fixable)
-    "@typescript-eslint/prefer-function-type": "error",
      */
+    "@typescript-eslint/prefer-function-type": "error",
 
     /**
      * Enforce includes method over indexOf method
      * (Fixable)
-    "@typescript-eslint/prefer-includes": "error",
      */
+    "@typescript-eslint/prefer-includes": "error",
 
     /**
      * Require the use of the namespace keyword instead of the module keyword to
      * declare custom TypeScript modules
      * (Fixable)
-    "@typescript-eslint/prefer-namespace-keyword": "error",
      */
+    "@typescript-eslint/prefer-namespace-keyword": "error",
 
     /**
      * Enforce the usage of the nullish coalescing operator instead of logical
      * chaining
      * (Fixable)
-    "@typescript-eslint/prefer-nullish-coalescing": "error",
      */
+    "@typescript-eslint/prefer-nullish-coalescing": [
+      "error",
+      {
+        ignoreConditionalTests: true,
+        ignoreMixedLogicalExpressions: true,
+        forceSuggestionFixer: false
+      }
+    ],
 
     /**
      * Prefer using concise optional chain expressions instead of chained
      * logical ands
      * (Fixable)
-    "@typescript-eslint/prefer-optional-chain": "error",
      */
+    "@typescript-eslint/prefer-optional-chain": "error",
 
     /**
      * Requires that private members are marked as readonly if they're never
      * modified outside of the constructor
      * (Fixable)
-    "@typescript-eslint/prefer-readonly": "error",
      */
+    "@typescript-eslint/prefer-readonly": [
+      "error",
+      {
+        onlyInlineLambdas: false
+      }
+    ],
 
     /**
      * Prefer RegExp#exec() over String#match() if no global flag is provided
-    "@typescript-eslint/prefer-regexp-exec": "error",
      */
+    "@typescript-eslint/prefer-regexp-exec": "error",
 
     /**
      * Enforce the use of String#startsWith and String#endsWith instead of other
      * equivalent methods of checking substrings
      * (Fixable)
      * (Requires Type Info)
-    "@typescript-eslint/prefer-string-starts-ends-with": "error",
      */
+    "@typescript-eslint/prefer-string-starts-ends-with": "error",
 
     /**
      * Requires any function or method that returns a Promise to be marked async
      * (Requires Type Info)
-    "@typescript-eslint/promise-function-async": ["error", {
-      allowedPromiseNames: ["Thenable"],
-      checkArrowFunctions: true,
-      checkFunctionDeclarations: true,
-      checkFunctionExpressions: true,
-      checkMethodDeclarations: true,
-    }],
      */
+    "@typescript-eslint/promise-function-async": [
+      "error",
+      {
+        allowedPromiseNames: ["Thenable"],
+        checkArrowFunctions: true,
+        checkFunctionDeclarations: true,
+        checkFunctionExpressions: true,
+        checkMethodDeclarations: true
+      }
+    ],
 
     /**
      * Enforce the consistent use of either backticks, double, or single quotes
@@ -522,36 +638,42 @@ module.exports = {
 
     /**
      * Enforce giving compare argument to Array#sort
-    "@typescript-eslint/require-array-sort-compare": "error",
      */
+    "@typescript-eslint/require-array-sort-compare": "error",
 
     /**
      * Disallow async functions which have no await expression
+     */
     "require-await": "off",
     "@typescript-eslint/require-await": "error",
-     */
 
     /**
      * When adding two variables, operands must both be of type number or of
      * type string
-    "@typescript-eslint/restrict-plus-operands": ["error", {
-      checkCompoundAssignments: false,
-    }],
      */
+    "@typescript-eslint/restrict-plus-operands": [
+      "error",
+      {
+        checkCompoundAssignments: false
+      }
+    ],
 
     /**
      * Enforce template literal expressions to be of string type
-    "@typescript-eslint/restrict-template-expressions": ["error", {
-      allowNumber: false,
-      allowBoolean: false,
-      allowNullable: false,
-    }],
      */
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        allowNumber: false,
+        allowBoolean: false,
+        allowNullable: false
+      }
+    ],
 
     /**
      * Rules for awaiting returned promises
-    "@typescript-eslint/return-await": ["error", "in-try-catch"],
      */
+    "@typescript-eslint/return-await": ["error", "in-try-catch"],
 
     /**
      * Require or disallow semicolons instead of ASI
@@ -560,20 +682,28 @@ module.exports = {
      * - Requires disabling the original eslint rule.
      * -This version adds support for numerous typescript features.
      */
-    //"semi": "off",
-    //"@typescript-eslint/semi": "error",
+    semi: "off",
+    "@typescript-eslint/semi": "off",
 
     /**
      * enforce consistent spacing before function definition opening parenthesis
      * (Fixable)
      */
-    //"@typescript-eslint/space-before-function-paren": "error",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": "error",
 
     /**
      * Restricts the types allowed in boolean expressions
      * (Requires Type Info)
-    "@typescript-eslint/strict-boolean-expressions": "error",
      */
+    "@typescript-eslint/strict-boolean-expressions": [
+      "error",
+      {
+        allowNullable: false,
+        allowSafe: false,
+        ignoreRhs: false
+      }
+    ],
 
     /**
      * Sets preference level for triple slash directives versus ES6-style import
@@ -624,10 +754,13 @@ module.exports = {
 
     /**
      * Enforces unbound methods are called with their expected scope
-    "@typescript-eslint/unbound-method": ["error", {
-      ignoreStatic: true,
-    }],
      */
+    "@typescript-eslint/unbound-method": [
+      "error",
+      {
+        ignoreStatic: true
+      }
+    ],
 
     /**
      * Warns for any two overloads that could be unified into one by using a
