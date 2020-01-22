@@ -351,7 +351,7 @@ module.exports = {
      */
     "no-magic-numbers": "off",
     "@typescript-eslint/no-magic-numbers": [
-      "error",
+      "off",
       {
         ignoreNumericLiteralTypes: true,
         ignoreReadonlyClassProperties: false,
@@ -607,11 +607,13 @@ module.exports = {
     /**
      * Requires any function or method that returns a Promise to be marked async
      * (Requires Type Info)
+     *
+     * Disabled because annoying
      */
     "@typescript-eslint/promise-function-async": [
-      "error",
+      "off",
       {
-        allowedPromiseNames: ["Thenable"],
+        allowedPromiseNames: ["Thenable", "p"],
         checkArrowFunctions: true,
         checkFunctionDeclarations: true,
         checkFunctionExpressions: true,
@@ -662,7 +664,7 @@ module.exports = {
      * Enforce template literal expressions to be of string type
      */
     "@typescript-eslint/restrict-template-expressions": [
-      "error",
+      "off",
       {
         allowNumber: false,
         allowBoolean: false,

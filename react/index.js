@@ -443,12 +443,12 @@ module.exports = {
       {
         order: [
           "static-variables",
+          "instance-variables",
           "lifecycle-variables",
           "lifecycle-methods",
           "static-methods",
-          "event-methods",
-          "instance-variables",
           "instance-methods",
+          "event-methods",
           "everything-else",
           "rendering"
         ],

@@ -201,7 +201,7 @@ module.exports = {
       "error",
       {
         importFunctions: [],
-        webpackChunknameFormat: "[a-zA-Z0-9-/_.]"
+        webpackChunknameFormat: "[a-zA-Z0-9-/_]+"
       }
     ],
 
