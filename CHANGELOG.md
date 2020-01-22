@@ -1,3 +1,11 @@
+<a name="v2.4.0"></a>
+## [v2.4.0](https://github.com/alexseitsinger/eslint-config/compare/v2.3.0...v2.4.0) (2020-01-22)
+
+### Code Refactoring
+- Updates rules. ([8dde85e](https://github.com/alexseitsinger/eslint-config/commit/8dde85ea38688097be187bc7003bc92025bdc136))
+- Updates rules. ([a77d593](https://github.com/alexseitsinger/eslint-config/commit/a77d5938cfd23003f7808e4b279754f91d6e6fab))
+
+
 <a name="v2.3.0"></a>
 ## [v2.3.0](https://github.com/alexseitsinger/eslint-config/compare/v2.2.0...v2.3.0) (2020-01-21)
 
