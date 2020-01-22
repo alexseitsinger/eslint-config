@@ -18,8 +18,8 @@ module.exports = {
     "@typescript-eslint/array-type": [
       "error",
       {
-        default: "array"
-        //readonly:
+        default: "array",
+        readonly: "array"
       }
     ],
 
@@ -159,7 +159,7 @@ module.exports = {
     /**
      * Enforces naming of generic type variables
      */
-    "@typescript-eslint/generic-type-naming": ["error", "^[A-Z]$"],
+    "@typescript-eslint/generic-type-naming": ["error", "^([A-Z][a-z]+)$"],
 
     /**
      * Enforce consistent indentation
