@@ -1,3 +1,10 @@
+<a name="v2.6.0"></a>
+## [v2.6.0](https://github.com/alexseitsinger/eslint-config/compare/v2.5.0...v2.6.0) (2020-01-22)
+
+### Features
+- Adds types to package.json config. ([78afea4](https://github.com/alexseitsinger/eslint-config/commit/78afea425f70d4daf460a8449f85d67ab9684cab))
+
+
 <a name="v2.5.0"></a>
 ## [v2.5.0](https://github.com/alexseitsinger/eslint-config/compare/v2.4.0...v2.5.0) (2020-01-22)
 
