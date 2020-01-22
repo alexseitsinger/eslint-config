@@ -23,6 +23,7 @@
     "emotion/*",
     "spellcheck/*",
     "tsdoc/*",
+    "proper-ternary/*",
     "index.js",
     "package.json",
     "README.md",
@@ -61,7 +62,7 @@
     "prettier": "*"
   },
   "optionalDependencies": {
-    "@emotion/eslint-plugin": "^11",
+    "@emotion/eslint-plugin": "*",
     "@getify/eslint-plugin-proper-ternary": "^3",
     "eslint-config-prettier": "^6",
     "eslint-import-resolver-jest": "^3",
