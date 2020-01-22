@@ -18,6 +18,7 @@ module.exports = {
         "publishConfig",
         "description",
         "main",
+        "types",
         "browser",
         "files",
         "bin",
