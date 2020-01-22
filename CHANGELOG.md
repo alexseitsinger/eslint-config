@@ -1,3 +1,10 @@
+<a name="v2.5.0"></a>
+## [v2.5.0](https://github.com/alexseitsinger/eslint-config/compare/v2.4.0...v2.5.0) (2020-01-22)
+
+### Features
+- Adds rules for proper-ternary. ([a6b19db](https://github.com/alexseitsinger/eslint-config/commit/a6b19db0f38cfcc50c2502b1c3d19f344b1835a4))
+
+
 <a name="v2.4.0"></a>
 ## [v2.4.0](https://github.com/alexseitsinger/eslint-config/compare/v2.3.0...v2.4.0) (2020-01-22)
 
