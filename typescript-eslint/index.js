@@ -268,13 +268,15 @@ module.exports = {
      * Disallow usage of the any type
      * (Fixable)
      *
+     * We sometimes use any for dynamic properties and rest args, so disable
+     *
      * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
      */
     "@typescript-eslint/no-explicit-any": [
-      "error",
+      "off",
       {
         fixToUnknown: false,
-        ignoreRestArgs: false
+        ignoreRestArgs: true
       }
     ],
 
