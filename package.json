@@ -62,7 +62,7 @@
     "prettier": "*"
   },
   "optionalDependencies": {
-    "@emotion/eslint-plugin": "*",
+    "@emotion/eslint-plugin": "^11.0.0-next.10",
     "@getify/eslint-plugin-proper-ternary": "^3",
     "eslint-config-prettier": "^6",
     "eslint-import-resolver-jest": "^3",
