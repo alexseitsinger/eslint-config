@@ -1,3 +1,10 @@
+<a name="v2.8.0"></a>
+## [v2.8.0](https://github.com/alexseitsinger/eslint-config/compare/v2.7.1...v2.8.0) (2020-01-23)
+
+### Code Refactoring
+- Disable no-explcit-any. ([c02fa9f](https://github.com/alexseitsinger/eslint-config/commit/c02fa9f262e708acba880dfc2461e4ce991b97e4))
+
+
 <a name="v2.7.1"></a>
 ## [v2.7.1](https://github.com/alexseitsinger/eslint-config/compare/v2.7.0...v2.7.1) (2020-01-23)
 
