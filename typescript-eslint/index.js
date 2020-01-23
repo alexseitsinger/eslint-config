@@ -159,7 +159,7 @@ module.exports = {
     /**
      * Enforces naming of generic type variables
      */
-    "@typescript-eslint/generic-type-naming": ["error", "^([A-Z][a-z]+)$"],
+    "@typescript-eslint/generic-type-naming": ["error", "^[A-Z]$"],
 
     /**
      * Enforce consistent indentation
@@ -237,9 +237,11 @@ module.exports = {
      * Bans usage of the delete operator with computed key expressions
      * (Fixable)
      *
+     * We sometimes do this, so disable this rule.
+     *
      * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
      */
-    "@typescript-eslint/no-dynamic-delete": "error",
+    "@typescript-eslint/no-dynamic-delete": "off",
 
     /**
      * Disallow empty functions
@@ -758,7 +760,7 @@ module.exports = {
      * Enforces unbound methods are called with their expected scope
      */
     "@typescript-eslint/unbound-method": [
-      "error",
+      "off",
       {
         ignoreStatic: true
       }

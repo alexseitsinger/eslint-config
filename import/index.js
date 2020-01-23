@@ -1,8 +1,9 @@
 module.exports = {
   //plugins: ["import"],
   settings: {
-    "import/ignore": ["node_modules"],
-    "import/external-module-folders": ["node_modules"]
+    "import/core-modules": ["fs", "path", "child_process"],
+    "import/ignore": ["node_modules", ".yalc"],
+    "import/external-module-folders": ["node_modules", ".yalc"]
   },
   rules: {
     /**
@@ -75,9 +76,9 @@ module.exports = {
       "off",
       {
         groups: [
-          ["builtin", "external"],
-          ["internal"],
-          ["parent", "sibling", "index", "unknown"]
+          ["builtin"],
+          ["external"],
+          ["internal", "parent", "sibling", "index", "unknown"]
         ],
         "newlines-between": "always-and-inside-groups"
       }
@@ -506,7 +507,8 @@ module.exports = {
           ".eslintrc",
           "jest.*.js",
           "webpack.*.js",
-          "webpack.config.*.js",
+          "webpack.config.js",
+          "webpack.config.dev.js",
           "**/*.test.ts",
           "**/*.test.tsx",
           "**/*.test.js",

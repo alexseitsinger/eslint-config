@@ -76,7 +76,7 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
      */
     "react/display-name": [
-      "error",
+      "off",
       {
         ignoreTranspilerName: false
       }
@@ -510,7 +510,7 @@ module.exports = {
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
      */
-    "react/state-in-constructor": ["error", "never"],
+    "react/state-in-constructor": ["off", "never"],
 
     /**
      * Enforces where React component static properties should be positioned.
