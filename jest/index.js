@@ -138,8 +138,10 @@ module.exports = {
 
     /**
      * Suggest using toBeCalledWith() OR toHaveBeenCalledWith()
+     *
+     * sometimes we use toBeCalled() so disable this rule.
      */
-    "jest/prefer-called-with": "error",
+    "jest/prefer-called-with": "off",
 
     /**
      * Suggest using expect.assertions() OR expect.hasAssertions()
