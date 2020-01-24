@@ -10,7 +10,7 @@ module.exports = {
     /**
      * Disabled rules for other plugins.
      */
-    "semi": "off",
+    semi: "off",
     "eol-last": "off",
 
     /**
@@ -82,4 +82,4 @@ module.exports = {
      */
     "package-json/valid-package-def": "off"
   }
-}
+};
