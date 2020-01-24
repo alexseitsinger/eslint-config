@@ -1,6 +1,18 @@
+/**
+ * NOTE:
+ * This config should be placed AFTER 'eslint' config since it overrides rules
+ * from that config.
+ */
+
 module.exports = {
   //plugins: ["package-json"],
   rules: {
+    /**
+     * Disabled rules for other plugins.
+     */
+    "semi": "off",
+    "eol-last": "off",
+
     /**
      * Require top-level properties to be in a conventional order ("name"first, etc.).
      *
@@ -70,4 +82,4 @@ module.exports = {
      */
     "package-json/valid-package-def": "off"
   }
-};
+}
