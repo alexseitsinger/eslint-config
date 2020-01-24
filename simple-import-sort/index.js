@@ -1,3 +1,9 @@
+/**
+ * NOTE:
+ * This config shuld be listed AFTER 'import' and 'eslint' because it overrides
+ * rules from those configs.
+ */
+
 const projectDirs = "^([sS]rc|[aA]pp|[cC]ore|[sS]ite|[pP]ages|[tT]ests)(/.*|$)";
 const reactHotLoader = "^react-hot-loader(/root)?$";
 const builtins = [
@@ -43,9 +49,12 @@ const builtins = [
 module.exports = {
   //plugins: ["simple-import-sort"],
   rules: {
-    // Force certain rules from other plugins off.
+    /**
+     * Disabled rules for other plugins.
+     */
     "sort-imports": "off",
     "import/order": "off",
+
     "simple-import-sort/sort": [
       "error",
       {

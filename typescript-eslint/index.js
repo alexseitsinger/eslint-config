@@ -1,3 +1,9 @@
+/**
+ * NOTE:
+ * This config should be listed AFTER 'import' config because it overrides rules
+ * from that config.
+ */
+
 // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
 
 module.exports = {
@@ -5,6 +11,19 @@ module.exports = {
   //plugins: ["@typescript-eslint/eslint-plugin"],
   //extends: ["prettier/@typescript-eslint"],
   rules: {
+    /** Disabled rules for other plugins */
+    "import/first": "off",
+    "import/newline-after-import": "off",
+    "import/no-unresolved": "off",
+    "import/named": "off",
+    "import/default": "off",
+    "import/namespace": "off",
+    "import/no-cycle": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-deprecated": "off",
+    "import/no-unused-modules": "off",
+
     /**
      * Require that member overloads be consecutive
      * (Recommended)
