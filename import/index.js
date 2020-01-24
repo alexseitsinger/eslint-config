@@ -238,9 +238,7 @@ module.exports = {
       "error",
       {
         commonjs: true,
-        amd: false,
-        ignore: [],
-        caseSensitive: true
+        amd: false
       }
     ],
 
@@ -390,30 +388,6 @@ module.exports = {
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
      */
     "import/no-relative-parent-imports": "off",
-
-    /**
-     * Forbid modules without any export, and exports not imported by any
-     * modules.
-     *
-     * NOTES:
-     * - We always have unused exports in project and package entry points, as
-     *   well as javascript config files. So, we add them to the ignoredExports
-     *   list.
-     * - missingExports doesnt count module.exports so disable that part of the
-     *   rule.
-     * - Each eslint config should define this rule seperately, with ignored files.
-     *
-     * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
-     */
-    "import/no-unused-modules": [
-      "off",
-      {
-        //src: [],
-        missingExports: false,
-        unusedExports: true
-        //ignoreExports: [],
-      }
-    ],
 
     /**
      * Report potentially ambiguous parse goal (script vs. module).
@@ -574,15 +548,16 @@ module.exports = {
         unusedExports: true,
         // Disabled because will throw annoyiung errors in entry points and config
         // files and there isn't an option to ignore those files here..
-        missingExports: false,
-        src: [],
-        ignoreExports: [
-          "webpack.config.js",
-          "jest.config.js",
-          "jest.setup.js",
-          "jest.assetTransformer.js",
-          "babel.config.js"
-        ]
+        missingExports: false
+        //src: [],
+        // ignoreExports: [
+        // "webpack.config.js",
+        // "jest.config.js",
+        // "jest.setup.js",
+        // "jest.assetTransformer.js",
+        // "babel.config.js"
+        // ]
+        //
       }
     ]
   }
