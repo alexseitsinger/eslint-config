@@ -8,6 +8,7 @@ module.exports = {
     "node",
     "import",
     "simple-import-sort",
-    "package-json"
+    "package-json",
+    "sort-destructure-keys"
   ].map(n => require.resolve(`./${n}`))
 };
