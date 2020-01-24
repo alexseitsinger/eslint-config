@@ -267,7 +267,8 @@ module.exports = {
      *
      * https://eslint.org/docs/rules/id-blacklist
      */
-    "id-blacklist": ["error"], // add strings in here..
+    // add strings in here..
+    "id-blacklist": ["error"],
 
     /**
      * Enforce minimum and maximum identifier lengths.
@@ -295,7 +296,8 @@ module.exports = {
       {
         properties: true,
         onlyDeclarations: false,
-        ignoreDestructuring: false // might want it true
+        // might want it true
+        ignoreDestructuring: false
       }
     ],
 
@@ -2098,7 +2100,8 @@ module.exports = {
       {
         ignoreEOLComments: false,
         exceptions: {
-          Property: false // default is True
+          // default is True
+          Property: false
         }
       }
     ],
@@ -2158,15 +2161,20 @@ module.exports = {
       {
         props: true,
         ignorePropertyModificationsFor: [
-          "acc", // for reduce accumulators
-          "accumulator", // for reduce accumulators
-          "e", // for e.returnvalue
-          "event", // for event.returnvalue
-          "req", // for Express requests
-          "request", // for Express requests
-          "res", // for Express responses
-          "response", // for Express responses
-          "staticContext" // for ReactRouter context
+          // for reduce accumulators
+          "acc",
+          "accumulator",
+          // for events
+          "e",
+          "event",
+          // for Express requests
+          "req",
+          "request",
+          // for Express responses
+          "res",
+          "response",
+          // for ReactRouter context
+          "staticContext"
         ]
       }
     ],
