@@ -1,3 +1,10 @@
+<a name="v2.10.1"></a>
+## [v2.10.1](https://github.com/alexseitsinger/eslint-config/compare/v2.10.0...v2.10.1) (2020-01-24)
+
+### Code Refactoring
+- Removes package-json from default rules. ([9e1188f](https://github.com/alexseitsinger/eslint-config/commit/9e1188ff7afd2255e0429555f9c6b9c323b85a70))
+
+
 <a name="v2.10.0"></a>
 ## [v2.10.0](https://github.com/alexseitsinger/eslint-config/compare/v2.9.0...v2.10.0) (2020-01-24)
 
