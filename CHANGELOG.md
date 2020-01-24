@@ -1,3 +1,16 @@
+<a name="v2.10.0"></a>
+## [v2.10.0](https://github.com/alexseitsinger/eslint-config/compare/v2.9.0...v2.10.0) (2020-01-24)
+
+### Code Refactoring
+- Disables eslint rules. ([447ba88](https://github.com/alexseitsinger/eslint-config/commit/447ba888b84a97cbf1f3f0f202a00c4583b76f63))
+- Disables rules from respective configs. ([18dec3f](https://github.com/alexseitsinger/eslint-config/commit/18dec3fb4149dcd5d0a840249e285b23a3cc3540))
+
+### Features
+- Adds another default config. ([a2f86a5](https://github.com/alexseitsinger/eslint-config/commit/a2f86a5d7d0e3ec5b805f194c851c844c09f82e3))
+- Adds config for markdown. ([5c78b37](https://github.com/alexseitsinger/eslint-config/commit/5c78b379e4cd052587571c9fa4f57cb0bef478c4))
+- Adds sep. ([b59e4d9](https://github.com/alexseitsinger/eslint-config/commit/b59e4d9107c5c8574918ce8edb335421fc94d680))
+
+
 <a name="v2.9.0"></a>
 ## [v2.9.0](https://github.com/alexseitsinger/eslint-config/compare/v2.8.0...v2.9.0) (2020-01-24)
 
