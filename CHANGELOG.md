@@ -1,3 +1,10 @@
+<a name="v2.9.0"></a>
+## [v2.9.0](https://github.com/alexseitsinger/eslint-config/compare/v2.8.0...v2.9.0) (2020-01-24)
+
+### Code Refactoring
+- Disable jest rule. ([4a58e27](https://github.com/alexseitsinger/eslint-config/commit/4a58e27cc2b70b0f924a0f9bf6ad2e9a896f6208))
+
+
 <a name="v2.8.0"></a>
 ## [v2.8.0](https://github.com/alexseitsinger/eslint-config/compare/v2.7.1...v2.8.0) (2020-01-23)
 
