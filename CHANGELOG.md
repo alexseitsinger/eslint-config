@@ -1,3 +1,10 @@
+<a name="v2.10.2"></a>
+## [v2.10.2](https://github.com/alexseitsinger/eslint-config/compare/v2.10.1...v2.10.2) (2020-01-24)
+
+### Bug Fixes
+- Removes duplicate rule. ([352a4b9](https://github.com/alexseitsinger/eslint-config/commit/352a4b9fce0a93ab9524135a81c33998b05ad51b))
+
+
 <a name="v2.10.1"></a>
 ## [v2.10.1](https://github.com/alexseitsinger/eslint-config/compare/v2.10.0...v2.10.1) (2020-01-24)
 
