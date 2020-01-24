@@ -7,12 +7,7 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["node"],
-  extends: [
-    require.resolve("./eslint"),
-    require.resolve("./node"),
-    "prettier",
-    "prettier/babel"
-  ],
+  extends: [require.resolve("./eslint"), require.resolve("./node"), "prettier"],
   overrides: [
     {
       files: ["*.md"],
