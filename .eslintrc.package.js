@@ -4,5 +4,5 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["package-json"],
-  extends: [require.resolve("./package-json")]
+  extends: [require.resolve("./eslint"), require.resolve("./package-json")]
 };
