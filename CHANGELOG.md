@@ -1,3 +1,10 @@
+<a name="v2.11.0"></a>
+## [v2.11.0](https://github.com/alexseitsinger/eslint-config/compare/v2.10.2...v2.11.0) (2020-01-25)
+
+### Features
+- Adds extra exceptions for markdown. ([659d6b7](https://github.com/alexseitsinger/eslint-config/commit/659d6b7e06706ab52e02eb864c4c086521905277))
+
+
 <a name="v2.10.2"></a>
 ## [v2.10.2](https://github.com/alexseitsinger/eslint-config/compare/v2.10.1...v2.10.2) (2020-01-24)
 
