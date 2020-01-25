@@ -713,9 +713,11 @@ module.exports = {
     /**
      * enforce consistent spacing before function definition opening parenthesis
      * (Fixable)
+     *
+     * Disabled bncause this is annoying.
      */
     "space-before-function-paren": "off",
-    "@typescript-eslint/space-before-function-paren": "error",
+    "@typescript-eslint/space-before-function-paren": "off",
 
     /**
      * Restricts the types allowed in boolean expressions
