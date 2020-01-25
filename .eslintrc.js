@@ -1,5 +1,5 @@
-const markdownConfig = require("./.eslintrc.markdown");
-const packageConfig = require("./.eslintrc.package");
+const markdownConfig = require("./.eslintrc-markdown");
+const packageConfig = require("./.eslintrc-package");
 
 module.exports = {
   parserOptions: {
