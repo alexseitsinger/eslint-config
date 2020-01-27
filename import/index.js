@@ -185,17 +185,20 @@ module.exports = {
     /**
      * Forbid anonymous values as default exports,
      *
+     * - We default export arrays for action-types, so disable that rule.
+     * - We default export arrow funcs so disalbe for that (and anon funcs).
+     *
      * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
      */
     "import/no-anonymous-default-export": [
       "error",
       {
-        allowArray: false,
+        allowArray: true,
         allowArrowFunction: true,
         allowAnonymousClass: false,
-        allowAnonymousFunction: true,
+        allowAnonymousFunction: false,
         allowLiteral: false,
-        allowObject: false
+        allowObject: true
       }
     ],
 
