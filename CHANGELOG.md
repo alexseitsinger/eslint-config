@@ -1,3 +1,11 @@
+<a name="v2.12.0"></a>
+## [v2.12.0](https://github.com/alexseitsinger/eslint-config/compare/v2.11.0...v2.12.0) (2020-01-27)
+
+### Code Refactoring
+- Adjusts allowed anonymous def. ([b69f6bb](https://github.com/alexseitsinger/eslint-config/commit/b69f6bb7b4ed249c26b642836e8fa315c5012ee2))
+- Disable space for func paren. ([fd2ba2b](https://github.com/alexseitsinger/eslint-config/commit/fd2ba2b0419330dd77d7e9baa7ddfac4b4f24add))
+
+
 <a name="v2.11.0"></a>
 ## [v2.11.0](https://github.com/alexseitsinger/eslint-config/compare/v2.10.2...v2.11.0) (2020-01-25)
 
