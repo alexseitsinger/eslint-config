@@ -1,3 +1,10 @@
+<a name="v2.12.1"></a>
+## [v2.12.1](https://github.com/alexseitsinger/eslint-config/compare/v2.12.0...v2.12.1) (2020-02-02)
+
+### Bug Fixes
+- Removes unavailable rule. ([d42827d](https://github.com/alexseitsinger/eslint-config/commit/d42827d47c55815abad56aa228281ba54c6cf1ea))
+
+
 <a name="v2.12.0"></a>
 ## [v2.12.0](https://github.com/alexseitsinger/eslint-config/compare/v2.11.0...v2.12.0) (2020-01-27)
 
