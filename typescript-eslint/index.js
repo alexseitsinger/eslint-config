@@ -727,7 +727,7 @@ module.exports = {
       "error",
       {
         allowNullable: false,
-        allowSafe: false,
+        //allowSafe: false,
         ignoreRhs: false
       }
     ],
