@@ -1,3 +1,10 @@
+<a name="v2.13.0"></a>
+## [v2.13.0](https://github.com/alexseitsinger/eslint-config/compare/v2.12.1...v2.13.0) (2020-02-11)
+
+### Code Refactoring
+- Allows empty catch statements. ([8e9ce19](https://github.com/alexseitsinger/eslint-config/commit/8e9ce19472dd9b2fa315baa1697a6bf812daf58d))
+
+
 <a name="v2.12.1"></a>
 ## [v2.12.1](https://github.com/alexseitsinger/eslint-config/compare/v2.12.0...v2.12.1) (2020-02-02)
 
