@@ -1487,7 +1487,7 @@ module.exports = {
     "no-empty": [
       "error",
       {
-        allowEmptyCatch: false
+        allowEmptyCatch: true
       }
     ],
 
