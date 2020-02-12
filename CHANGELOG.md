@@ -1,3 +1,10 @@
+<a name="v2.14.0"></a>
+## [v2.14.0](https://github.com/alexseitsinger/eslint-config/compare/v2.13.0...v2.14.0) (2020-02-12)
+
+### Code Refactoring
+- Updates no-undef rule. ([a307f94](https://github.com/alexseitsinger/eslint-config/commit/a307f942ca9df776baf94087beca8d9fc16dc49e))
+
+
 <a name="v2.13.0"></a>
 ## [v2.13.0](https://github.com/alexseitsinger/eslint-config/compare/v2.12.1...v2.13.0) (2020-02-11)
 
