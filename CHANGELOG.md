@@ -1,3 +1,10 @@
+<a name="v2.15.0"></a>
+## [v2.15.0](https://github.com/alexseitsinger/eslint-config/compare/v2.14.0...v2.15.0) (2020-02-17)
+
+### Code Refactoring
+- Adds rule for webpack config dir. ([4879857](https://github.com/alexseitsinger/eslint-config/commit/487985778d87defffdbef58d3998f76c2c7dcd21))
+
+
 <a name="v2.14.0"></a>
 ## [v2.14.0](https://github.com/alexseitsinger/eslint-config/compare/v2.13.0...v2.14.0) (2020-02-12)
 
