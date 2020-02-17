@@ -508,6 +508,7 @@ module.exports = {
           ".eslintrc.*.js",
           ".eslintrc",
           "jest.*.js",
+          "webpack/**/*.js",
           "webpack.*.js",
           "webpack.config.js",
           "webpack.config.dev.js",
