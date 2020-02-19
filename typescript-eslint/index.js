@@ -520,19 +520,15 @@ module.exports = {
      */
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
-      "error",
+      "off",
       {
         vars: "all",
         args: "after-used",
         ignoreRestSiblings: false
       }
     ],
-
-    /**
-     * Disallow unused variables and arguments.
-     */
     "@typescript-eslint/no-unused-vars-experimental": [
-      "off",
+      "warn",
       {
         ignoredNamesRegex: "^_",
         ignoreArgsIfArgsAfterAreUsed: false
