@@ -156,9 +156,11 @@ module.exports = {
     /**
      * Prevent passing children as props.
      *
+     * 'warn' according to recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
      */
-    "react/no-children-prop": "error",
+    "react/no-children-prop": "warn",
 
     /**
      * Prevent usage of dangerous JSX properties.
@@ -170,17 +172,21 @@ module.exports = {
     /**
      * Prevent problem with children and props.dangerouslySetInnerHTML.
      *
+     * 'warn' according to plugin:recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
      */
-    "react/no-danger-with-children": "error",
+    "react/no-danger-with-children": "warn",
 
     /**
      * Prevent usage of deprecated methods, including component lifecyle
      * methods.
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
      */
-    "react/no-deprecated": "error",
+    "react/no-deprecated": "warn",
 
     /**
      * Prevent usage of setState in componentDidMount.
@@ -199,23 +205,29 @@ module.exports = {
     /**
      * Prevent direct mutation of this.state.
      *
+     * 'warn' according to recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
      */
-    "react/no-direct-mutation-state": "error",
+    "react/no-direct-mutation-state": "warn",
 
     /**
      * Prevent usage of findDOMNode.
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
      */
-    "react/no-find-dom-node": "error",
+    "react/no-find-dom-node": "warn",
 
     /**
      * Prevent usage of isMounted.
      *
+     * 'warn' according to recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
      */
-    "react/no-is-mounted": "error",
+    "react/no-is-mounted": "warn",
 
     /**
      * Prevent multiple component definition per file.
@@ -246,9 +258,11 @@ module.exports = {
     /**
      * Prevent usage of the return value of React.render.
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
      */
-    "react/no-render-return-value": "error",
+    "react/no-render-return-value": "warn",
 
     /**
      * Prevent usage of setState.
@@ -267,10 +281,12 @@ module.exports = {
     /**
      * Prevent using string references in ref attribute.
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
      */
     "react/no-string-refs": [
-      "error",
+      "warn",
       {
         noTemplateLiterals: true
       }
@@ -286,10 +302,12 @@ module.exports = {
     /**
      * Prevent invalid characters from appearing in markup.
      *
+     * 'warn' according to plugin:recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
      */
     "react/no-unescaped-entities": [
-      "error",
+      "warn",
       {
         forbid: [">", '"', "'", "}"]
       }
@@ -298,10 +316,12 @@ module.exports = {
     /**
      * Prevent usage of unknown DOM property. (fixable)
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
      */
     "react/no-unknown-property": [
-      "error",
+      "warn",
       {
         ignore: []
       }
@@ -310,10 +330,12 @@ module.exports = {
     /**
      * Prevent usage of unsafe lifecycle methods
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
      */
     "react/no-unsafe": [
-      "error",
+      "warn",
       {
         checkAliases: true
       }
@@ -375,10 +397,12 @@ module.exports = {
     /**
      * Prevent missing props validation in a React component definition.
      *
+     * Warn according to plugin:recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
      */
     "react/prop-types": [
-      "error",
+      "warn",
       {
         ignore: [],
         customValidators: [],
@@ -389,9 +413,11 @@ module.exports = {
     /**
      * Prevent missing React when using JSX.
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
      */
-    "react/react-in-jsx-scope": "error",
+    "react/react-in-jsx-scope": "warn",
 
     /**
      * Enforce a defaultProps definition for every prop that is not a required
@@ -416,9 +442,11 @@ module.exports = {
     /**
      * Enforce ES5 or ES6 class for returning value in render function.
      *
+     * 'warn' according to plugin:recommended
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
      */
-    "react/require-render-return": "error",
+    "react/require-render-return": "warn",
 
     /**
      * Prevent extra closing tags for components without children. (fixable)
@@ -644,9 +672,11 @@ module.exports = {
     /**
      * Validate JSX has key prop when in array or iterator.
      *
+     * 'warn' according to recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
      */
-    "react/jsx-key": "error",
+    "react/jsx-key": "warn",
 
     /**
      * Validate JSX maximum depth.
@@ -692,17 +722,21 @@ module.exports = {
     /**
      * Prevent comments from being inserted as text nodes.
      *
+     * Warn according to recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
      */
-    "react/jsx-no-comment-textnodes": "error",
+    "react/jsx-no-comment-textnodes": "warn",
 
     /**
      * Prevent duplicate props in JSX.
      *
+     * 'warn' accorind to recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
      */
     "react/jsx-no-duplicate-props": [
-      "error",
+      "warn",
       {
         ignoreCase: true
       }
@@ -723,10 +757,12 @@ module.exports = {
     /**
      * Prevent usage of unsafe target='_blank'.
      *
+     * 'warn' according to plugin recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
      */
     "react/jsx-no-target-blank": [
-      "error",
+      "warn",
       {
         enforceDynamicLinks: "always"
       }
@@ -735,13 +771,15 @@ module.exports = {
     /**
      * Disallow undeclared variables in JSX.
      *
+     * 'warn' according to recommended.
+     *
      * NOTES:
      * - We might want this be true.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
      */
     "react/jsx-no-undef": [
-      "error",
+      "warn",
       {
         allowGlobals: false
       }
@@ -856,16 +894,20 @@ module.exports = {
     /**
      * Prevent React to be incorrectly marked as unused.
      *
+     * 'warn' according to recommended.
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
      */
-    "react/jsx-uses-react": "error",
+    "react/jsx-uses-react": "warn",
 
     /**
      * Prevent variables used in JSX to be incorrectly marked as unused.
      *
+     * Changes to warn according to plugin 'recommended'
+     *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
      */
-    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-vars": "warn",
 
     /**
      * Prevent missing parentheses around multilines JSX. (fixable)
