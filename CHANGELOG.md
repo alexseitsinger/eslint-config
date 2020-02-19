@@ -1,3 +1,7 @@
+<a name="v2.17.0"></a>
+## [v2.17.0](https://github.com/alexseitsinger/eslint-config/compare/v2.16.0...v2.17.0) (2020-02-19)
+
+
 <a name="v2.16.0"></a>
 ## [v2.16.0](https://github.com/alexseitsinger/eslint-config/compare/v2.15.0...v2.16.0) (2020-02-19)
 
