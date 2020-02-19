@@ -1,3 +1,10 @@
+<a name="v2.16.0"></a>
+## [v2.16.0](https://github.com/alexseitsinger/eslint-config/compare/v2.15.0...v2.16.0) (2020-02-19)
+
+### Code Refactoring
+- Updates react rules with recommended. ([e03c169](https://github.com/alexseitsinger/eslint-config/commit/e03c1692bd32d73e4af70197916a72bf70d67e78))
+
+
 <a name="v2.15.0"></a>
 ## [v2.15.0](https://github.com/alexseitsinger/eslint-config/compare/v2.14.0...v2.15.0) (2020-02-17)
 
