@@ -1,3 +1,10 @@
+<a name="v2.18.0"></a>
+## [v2.18.0](https://github.com/alexseitsinger/eslint-config/compare/v2.17.0...v2.18.0) (2020-02-22)
+
+### Code Refactoring
+- Updates no-use-before-define. ([27c9f94](https://github.com/alexseitsinger/eslint-config/commit/27c9f94d8effc27d73078d1e4003a79754740365))
+
+
 <a name="v2.17.0"></a>
 ## [v2.17.0](https://github.com/alexseitsinger/eslint-config/compare/v2.16.0...v2.17.0) (2020-02-19)
 
