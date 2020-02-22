@@ -178,7 +178,7 @@ module.exports = {
     /**
      * Enforces naming of generic type variables
      */
-    "@typescript-eslint/generic-type-naming": ["error", "^[A-Z]$"],
+    "@typescript-eslint/generic-type-naming": ["error", "^[A-Z]([a-z]+)?$"],
 
     /**
      * Enforce consistent indentation
@@ -310,6 +310,9 @@ module.exports = {
      * Disallow unnecessary parentheses
      * (Fixable)
      *
+     * NOTE: We might want to disable this because sometimes, using parens makes
+     * code easier to read.
+     *
      * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
      */
     "no-extra-parens": "off",
@@ -371,6 +374,10 @@ module.exports = {
 
     /**
      * Disallows magic numbers
+     *
+     * Disabled because its annoying to have to define single-use numbers or
+     * seemingly pointless module-level variables just to complete a simple
+     * equation or define a timeout delay.
      */
     "no-magic-numbers": "off",
     "@typescript-eslint/no-magic-numbers": [
@@ -430,13 +437,16 @@ module.exports = {
     /**
      * Disallow aliasing this
      *
+     * We allow "self" and "root" since these are sometimes used in javascript
+     * modules when the root node is references in an iife.
+     *
      * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md
      */
     "@typescript-eslint/no-this-alias": [
       "error",
       {
         allowDestructuring: true,
-        allowedNames: ["self"]
+        allowedNames: ["self", "root"]
       }
     ],
 
@@ -531,7 +541,7 @@ module.exports = {
       "warn",
       {
         ignoredNamesRegex: "^_",
-        ignoreArgsIfArgsAfterAreUsed: false
+        ignoreArgsIfArgsAfterAreUsed: true
       }
     ],
 
@@ -539,6 +549,11 @@ module.exports = {
      * Disallow the use of variables before they are defined
      *
      * Disalbe the eslint rule for this one.
+     *
+     * NOTE:
+     * The standard practice is to define interfaces/types at the top of the
+     * file, so the component's contract is easy to read. Therefore, allow those
+     * to be used before defined.
      */
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": [
@@ -546,9 +561,9 @@ module.exports = {
       {
         functions: false,
         classes: true,
-        enums: true,
+        enums: false,
         variables: true,
-        typedefs: true
+        typedefs: false
       }
     ],
 
