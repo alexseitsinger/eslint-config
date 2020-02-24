@@ -99,11 +99,12 @@ module.exports = {
      */
     camelcase: "off",
     "@typescript-eslint/camelcase": [
-      "off",
+      "error",
       {
         properties: "always",
         genericType: "never",
-        ignoreDestructuring: false,
+        // ignore destructuring (since we may have rest responses from here)
+        ignoreDestructuring: true,
         allow: [
           // put names of keys that are allowed to be camelcase?
         ]
@@ -139,9 +140,11 @@ module.exports = {
 
     /**
      * Require explicit return types on functions and class methods
+     *
+     * 'warn' according to plugin:recommended
      */
     "@typescript-eslint/explicit-function-return-type": [
-      "error",
+      "warn",
       {
         allowExpressions: false,
         allowTypedFunctionExpressions: true,
@@ -292,7 +295,7 @@ module.exports = {
      * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
      */
     "@typescript-eslint/no-explicit-any": [
-      "off",
+      "warn",
       {
         fixToUnknown: false,
         ignoreRestArgs: true
@@ -418,8 +421,10 @@ module.exports = {
 
     /**
      * Disallows non-null assertions using the ! postfix operator
+     *
+     * 'warn' according to plugin:recommended
      */
-    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-non-null-assertion": "warn",
 
     /**
      * Disallow the use of parameter properties in class constructors
@@ -527,6 +532,8 @@ module.exports = {
 
     /**
      * Disallow unused variables
+     *
+     * 'warn' according to plugin:recommended
      */
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
