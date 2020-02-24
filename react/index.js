@@ -331,7 +331,7 @@ module.exports = {
     /**
      * Prevent usage of unsafe lifecycle methods
      *
-     * 'warn' according to plugin:recommended
+     * plugin:recommended prefers 'off'
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
      */
