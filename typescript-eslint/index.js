@@ -99,7 +99,7 @@ module.exports = {
      */
     camelcase: "off",
     "@typescript-eslint/camelcase": [
-      "error",
+      "off",
       {
         properties: "always",
         genericType: "never",
@@ -181,7 +181,7 @@ module.exports = {
     /**
      * Enforces naming of generic type variables
      */
-    "@typescript-eslint/generic-type-naming": ["error", "^[A-Z]([a-z]+)?$"],
+    "@typescript-eslint/generic-type-naming": ["error", "^([A-Z]([a-z]+)?)+$"],
 
     /**
      * Enforce consistent indentation
@@ -297,7 +297,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": [
       "warn",
       {
-        fixToUnknown: false,
+        fixToUnknown: true,
         ignoreRestArgs: true
       }
     ],
