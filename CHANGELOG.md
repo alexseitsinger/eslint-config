@@ -1,3 +1,14 @@
+<a name="v2.19.0"></a>
+## [v2.19.0](https://github.com/alexseitsinger/eslint-config/compare/v2.18.0...v2.19.0) (2020-02-26)
+
+### Bug Fixes
+- Fixes generic naming regex. ([82bcc51](https://github.com/alexseitsinger/eslint-config/commit/82bcc519d633230dd86423a0121bc5fe1db9d3ff))
+
+### Code Refactoring
+- Makes some rules "warn". ([9e3cfe8](https://github.com/alexseitsinger/eslint-config/commit/9e3cfe857e049b46bcb1e0eff4d2e44fd7c384ca))
+- Warns some rules. ([d74dafb](https://github.com/alexseitsinger/eslint-config/commit/d74dafbb0fcf3a9c0d2f71e6939bc4b76d834774))
+
+
 <a name="v2.18.0"></a>
 ## [v2.18.0](https://github.com/alexseitsinger/eslint-config/compare/v2.17.0...v2.18.0) (2020-02-22)
 
