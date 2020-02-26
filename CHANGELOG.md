@@ -1,3 +1,10 @@
+<a name="v2.20.0"></a>
+## [v2.20.0](https://github.com/alexseitsinger/eslint-config/compare/v2.19.0...v2.20.0) (2020-02-26)
+
+### Features
+- Adds rules for eslint-plugin-prettier. ([2038bc1](https://github.com/alexseitsinger/eslint-config/commit/2038bc11698d9028e6031c18d1029c73a5112916))
+
+
 <a name="v2.19.0"></a>
 ## [v2.19.0](https://github.com/alexseitsinger/eslint-config/compare/v2.18.0...v2.19.0) (2020-02-26)
 
