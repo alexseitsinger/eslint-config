@@ -1,3 +1,17 @@
+<a name="v3.0.0"></a>
+## [v3.0.0](https://github.com/alexseitsinger/eslint-config/compare/v2.20.0...v3.0.0) (2020-02-27)
+
+### Bug Fixes
+- Fixes typescript settings. ([6471dfd](https://github.com/alexseitsinger/eslint-config/commit/6471dfdce73f9463e9d2ef4c61d14ea91ed8b5d9))
+
+### Code Refactoring
+- Changes config process. ([6d8f880](https://github.com/alexseitsinger/eslint-config/commit/6d8f880e4c36025bc542794a32376c5cda8d9509))
+- Changes modules & files. ([f7298ed](https://github.com/alexseitsinger/eslint-config/commit/f7298ede1f8f6f2a0aeea46ab03bcceab56f1ff1))
+
+### Features
+- Adds more for typescript configs. ([fd7fd09](https://github.com/alexseitsinger/eslint-config/commit/fd7fd09aeb582e4789870e98cf4a7bb35a45e101))
+
+
 <a name="v2.20.0"></a>
 ## [v2.20.0](https://github.com/alexseitsinger/eslint-config/compare/v2.19.0...v2.20.0) (2020-02-26)
 
