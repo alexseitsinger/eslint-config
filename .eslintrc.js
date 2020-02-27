@@ -1,20 +1,15 @@
-const markdownConfig = require("./.eslintrc-markdown");
-const packageConfig = require("./.eslintrc-package");
-const javascriptConfig = require("./.eslintrc-javascript");
+const pkgConfig = require("./configs/package-json")
+const jsConfig = require("./configs/javascript")
 
 module.exports = {
   overrides: [
     {
-      files: ["*.js"],
-      ...javascriptConfig
-    },
-    {
-      files: ["*.md"],
-      ...markdownConfig
+      files: ["*.js", "*.md"],
+      ...jsConfig,
     },
     {
       files: ["package.json"],
-      ...packageConfig
-    }
-  ]
-};
+      ...pkgConfig,
+    },
+  ],
+}
