@@ -1,14 +1,13 @@
 const markdownConfig = require("./.eslintrc-markdown");
 const packageConfig = require("./.eslintrc-package");
+const javascriptConfig = require("./.eslintrc-javascript");
 
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 9,
-    sourceType: "module"
-  },
-  plugins: ["node"],
-  extends: [require.resolve("./eslint"), require.resolve("./node"), "prettier"],
   overrides: [
+    {
+      files: ["*.js"],
+      ...javascriptConfig
+    },
     {
       files: ["*.md"],
       ...markdownConfig
