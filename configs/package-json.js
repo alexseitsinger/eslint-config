@@ -1,13 +1,3 @@
-const coreRules = require("../lib/rulesets/core")
-const packageJsonRules = require("../lib/rules/package-json")
-const corePlugins = require("../lib/plugins/core")
-const defaults = require("../lib/defaults")
+const factory = require("../lib/factory")
 
-module.exports = {
-  ...defaults,
-  plugins: [...corePlugins, "package-json"],
-  rules: {
-    ...coreRules,
-    ...packageJsonRules,
-  },
-}
+module.exports = factory(["package-json"])
