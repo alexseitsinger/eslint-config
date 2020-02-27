@@ -6,6 +6,7 @@ const reduxRules = require("../lib/rulesets/redux")
 
 const importSettings = require("../lib/settings/import")
 const reactSettings = require("../lib/settings/react")
+const typescriptSettings = require("../lib/settings/typescript")
 
 const corePlugins = require("../lib/plugins/core")
 const commonPlugins = require("../lib/plugins/common")
@@ -18,9 +19,15 @@ const defaults = require("../lib/defaults")
 module.exports = {
   ...defaults,
   parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ...defaults.parserOptions,
+    project: "./tsconfig.json",
+    tsconfigRootDir: ".",
+  },
   settings: {
     ...importSettings,
     ...reactSettings,
+    ...typescriptSettings,
   },
   plugins: [
     ...corePlugins,
