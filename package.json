@@ -4,7 +4,7 @@
   "description": "Eslint config for various plugins",
   "main": "index.js",
   "files": [
-    "presets/*",
+    "configs/*",
     "lib/*",
     "index.js",
     "README.md",
