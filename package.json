@@ -5,7 +5,9 @@
   "main": "index.js",
   "files": [
     "configs/*",
-    "lib/*",
+    "groups/*",
+    "rules/*",
+    "factory.js",
     "index.js",
     "README.md",
     "LICENSE"

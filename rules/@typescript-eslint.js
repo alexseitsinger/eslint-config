@@ -303,7 +303,7 @@ const rules = {
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
    */
   "@typescript-eslint/no-explicit-any": [
-    "warn",
+    "off",
     {
       fixToUnknown: true,
       ignoreRestArgs: true,

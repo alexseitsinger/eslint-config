@@ -1,3 +1,3 @@
-const factory = require("../lib/factory")
+const factory = require("../factory")
 
 module.exports = factory(["common", "react", "typescript"])

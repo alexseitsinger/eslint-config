@@ -36,6 +36,10 @@ const groupNameMap = {
   "@typescript-eslint": "typescript",
 }
 
+/**
+ * @example
+ * @param n
+ */
 function getPluginName(n) {
   if (n in pluginNameMap) {
     return pluginNameMap[n]
@@ -43,6 +47,10 @@ function getPluginName(n) {
   return n
 }
 
+/**
+ * @example
+ * @param n
+ */
 function getGroupName(n) {
   if (n in groupNameMap) {
     return groupNameMap[n]
@@ -56,14 +64,29 @@ function getGroupName(n) {
  * @param order
  */
 
+/**
+ * @example
+ * @param a
+ * @param b
+ * @param order
+ */
 function sortFunc(a, b, order) {
   return order.indexOf(a[1]) - order.indexOf(b[1])
 }
 
+/**
+ * @example
+ * @param targets
+ * @param order
+ */
 function sortArray(targets, order) {
   return targets.sort((a, b) => sortFunc(a, b, order))
 }
 
+/**
+ * @example
+ * @param rules
+ */
 function sortRules(rules) {
   let sortedRules = {}
   let pluginRules = {}
