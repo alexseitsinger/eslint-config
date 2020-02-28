@@ -1,3 +1,10 @@
+<a name="v4.0.0"></a>
+## [v4.0.0](https://github.com/alexseitsinger/eslint-config/compare/v3.0.0...v4.0.0) (2020-02-28)
+
+### Code Refactoring
+- Moves files. ([05c9038](https://github.com/alexseitsinger/eslint-config/commit/05c9038a4b742a7eb368e9c76c125f2426c7e5e0))
+
+
 <a name="v3.0.0"></a>
 ## [v3.0.0](https://github.com/alexseitsinger/eslint-config/compare/v2.20.0...v3.0.0) (2020-02-27)
 
