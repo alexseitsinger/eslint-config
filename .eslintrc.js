@@ -2,7 +2,6 @@ const eslintRules = require("./rules/eslint")
 const eslintCommentsRules = require("./rules/eslint-comments")
 const nodeRules = require("./rules/node")
 const importRules = require("./rules/import")
-const prettierRules = require("./rules/prettier")
 const packageRules = require("./rules/package-json")
 const markdownRules = require("./rules/markdown")
 
@@ -10,51 +9,55 @@ const parserOptions = {
   ecmaVersion: 2020,
   sourceType: "module",
 }
-
-const plugins = ["eslint-comments", "node", "import", "prettier"]
-const extended = ["prettier", "prettier/babel"]
-
-const enabled = {
-  ...eslintRules.enabled,
-  ...eslintCommentsRules.enabled,
-  ...nodeRules.enabled,
-  ...importRules.enabled,
-  ...prettierRules.enabled,
+const plugins = ["eslint-comments", "node", "import"]
+const rules = {
+  enabled: {
+    // Enabled rules...
+    ...eslintRules.enabled,
+    ...eslintCommentsRules.enabled,
+    ...nodeRules.enabled,
+    ...importRules.enabled,
+  },
+  disabled: {
+    // Disabled rules...
+    ...eslintRules.disabled,
+    ...eslintCommentsRules.disabled,
+    ...nodeRules.disabled,
+    ...importRules.disabled,
+  },
 }
-
-const disabled = {
-  ...eslintRules.disabled,
-  ...eslintCommentsRules.disabled,
-  ...nodeRules.disabled,
-  ...importRules.disabled,
-  ...prettierRules.disabled,
+const env = {
+  node: true,
 }
 
 module.exports = {
   overrides: [
     {
       files: ["*.js"],
+      env,
       parserOptions,
       plugins,
       rules: {
-        ...enabled,
-        ...disabled,
+        ...rules.enabled,
+        ...rules.disabled,
       },
-      extends: [...extended],
     },
     {
       files: ["*.md"],
+      env,
+      parserOptions,
       plugins: [...plugins, "markdown"],
       rules: {
-        ...enabled,
+        ...rules.enabled,
         ...markdownRules.enabled,
-        ...disabled,
+        ...rules.disabled,
         ...markdownRules.disabled,
       },
-      extends: [...extended],
     },
     {
       files: ["package.json"],
+      parserOptions,
+      env,
       plugins: ["package-json"],
       rules: {
         ...packageRules.enabled,
