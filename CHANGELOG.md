@@ -1,3 +1,20 @@
+<a name="v5.2.0"></a>
+## [v5.2.0](https://github.com/alexseitsinger/eslint-config/compare/v5.1.1...v5.2.0) (2020-02-29)
+
+### Bug Fixes
+- Fixes order. ([4e5a835](https://github.com/alexseitsinger/eslint-config/commit/4e5a83579c69e4e2920244d619e1e8ea90cd764f))
+- Fixes pluginName -> ruleName. ([de4cb8d](https://github.com/alexseitsinger/eslint-config/commit/de4cb8dbf2e157d49b787c403f02d6bc1ed8fc39))
+- Removes deleted group name. ([3d71824](https://github.com/alexseitsinger/eslint-config/commit/3d71824d26b15b6c4fa26aba5381b3bf5ec64ebf))
+
+### Code Refactoring
+- Adds indentation rules. ([f6ed6d2](https://github.com/alexseitsinger/eslint-config/commit/f6ed6d2da936c64d5131a5f1fbc682e879ccbc15))
+- Changes configs for groups. ([41d0630](https://github.com/alexseitsinger/eslint-config/commit/41d0630bf6d59188e7af8718ebb8957036b5ddb5))
+- Disables per eslint-config-prettier. ([b3ad743](https://github.com/alexseitsinger/eslint-config/commit/b3ad74310b72b593fba45abfee85bb4c8915176e))
+- Removes prettier from configs. ([be6b59d](https://github.com/alexseitsinger/eslint-config/commit/be6b59dafcb42724332c87d8baf01dfd102d1d6d))
+- Specifies plugin names for disabled. ([dd311f9](https://github.com/alexseitsinger/eslint-config/commit/dd311f9fe5406959ff6753339368f22053de5fa3))
+- Update merge process. ([624fa11](https://github.com/alexseitsinger/eslint-config/commit/624fa11f5fb378a1760d93e824d555eb79f241a0))
+
+
 <a name="v5.1.1"></a>
 ## [v5.1.1](https://github.com/alexseitsinger/eslint-config/compare/v5.1.0...v5.1.1) (2020-02-29)
 
