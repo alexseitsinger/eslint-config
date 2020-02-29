@@ -92,7 +92,9 @@ module.exports = function factory(groups = []) {
   let parserOptions = { ...defaults.parserOptions }
   const env = { ...defaults.env }
 
-  // Sort the group names in the same order as the plugins.
+  /**
+   * Load the groups in the order that the plugins are listed.
+   */
   sortArray(groups, groupOrder).forEach(groupName => {
     const m = require(`./groups/${groupName}`)
     parser = m.parser ? m.parser : parser
@@ -104,26 +106,48 @@ module.exports = function factory(groups = []) {
     plugins = sortArray([...plugins, ...m.plugins], pluginOrder)
   })
 
-  // For each plugin, load its rules into its own object.
-  const rulesPer = {}
+  /**
+   * Create a new config for each plugins enabled and disabled rules.
+   */
+  const pluginRules = {}
 
+  const getRulePatches = pluginName => {
+    let patches = {}
+    Object.keys(pluginRules)
+      .filter(n => n !== pluginName)
+      .forEach(key => {
+        const obj = pluginRules[key]
+        if (pluginName in obj.disabled) {
+          patches = { ...patches, ...obj.disabled[pluginName] }
+        }
+      })
+    return patches
+  }
+
+  /**
+   * Save a rules config for each plugin we're using so we can merge them
+   * correctly next.
+   */
   sortArray(plugins, pluginOrder).forEach(pluginName => {
     const ruleName = getRuleName(pluginName)
     const { enabled, disabled } = require(`./rules/${ruleName}`)
-    rulesPer[pluginName] = { enabled, disabled }
+    pluginRules[pluginName] = { enabled, disabled }
   })
 
-  // Then, in the order that plugins are listed...
-  const pluginNames = sortArray(Object.keys(rulesPer), pluginOrder)
+  /**
+   * Update the initial rules (plain eslint) with any eslint patches specified
+   * in the rule configs for each plugin.
+   */
+  rules = deepMerge(rules, getRulePatches("eslint"))
 
-  // Merge the enabled rules into the rules object.
-  pluginNames.forEach(pluginName => {
-    rules = deepMerge(rules, rulesPer[pluginName].enabled)
-  })
-
-  // Then merge disabled rules for each.
-  pluginNames.forEach(pluginName => {
-    rules = deepMerge(rules, rulesPer[pluginName].disabled)
+  /**
+   * Then, for each plugin, in order, load the enabled rules, then patch them
+   * with any patches in other rule sets from the other plugins.
+   */
+  sortArray(Object.keys(pluginRules), pluginOrder).forEach(pluginName => {
+    const obj = pluginRules[pluginName]
+    const patchedRules = deepMerge(obj.enabled, getRulePatches(pluginName))
+    deepMerge(rules, patchedRules)
   })
 
   return {
