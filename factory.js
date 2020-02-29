@@ -2,13 +2,6 @@ const deepMerge = require("deepmerge")
 
 const eslintRules = require("./rules/eslint")
 
-const extendsOrder = [
-  "prettier",
-  "prettier/babel",
-  "prettier/react",
-  "prettier/@typescript-eslint",
-]
-
 const groupOrder = [
   "javascript",
   "react",
@@ -38,7 +31,6 @@ const pluginOrder = [
   "markdown",
   "tsdoc",
   "package-json",
-  "prettier",
 ]
 
 const ruleNameMap = {
@@ -74,9 +66,7 @@ const defaults = {
     "import",
     "simple-import-sort",
     "sort-destructure-keys",
-    "prettier",
   ],
-  extended: ["prettier", "prettier/babel"],
   settings: {
     "import/core-modules": ["fs", "path", "child_process"],
     "import/ignore": ["node_modules", ".yalc"],
@@ -98,10 +88,9 @@ module.exports = function factory(groups = []) {
   let plugins = [...defaults.plugins]
   let settings = { ...defaults.settings }
   let rules = { ...defaults.rules }
-  let parser = defaults.parser
+  let { parser } = defaults
   let parserOptions = { ...defaults.parserOptions }
-  let extended = [...defaults.extended]
-  let env = { ...defaults.env }
+  const env = { ...defaults.env }
 
   // Sort the group names in the same order as the plugins.
   sortArray(groups, groupOrder).forEach(groupName => {
@@ -113,10 +102,6 @@ module.exports = function factory(groups = []) {
     )
     settings = deepMerge(settings, m.settings ? m.settings : {})
     plugins = sortArray([...plugins, ...m.plugins], pluginOrder)
-    extended = sortArray(
-      [...extended, ...(m.extends ? m.extends : [])],
-      extendsOrder
-    )
   })
 
   // For each plugin, load its rules into its own object.
@@ -148,6 +133,5 @@ module.exports = function factory(groups = []) {
     settings,
     plugins,
     rules,
-    extends: sortArray(extended, extendsOrder),
   }
 }
