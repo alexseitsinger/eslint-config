@@ -1,3 +1,11 @@
+<a name="v5.1.1"></a>
+## [v5.1.1](https://github.com/alexseitsinger/eslint-config/compare/v5.1.0...v5.1.1) (2020-02-29)
+
+### Code Refactoring
+- Changes factory. ([b52917a](https://github.com/alexseitsinger/eslint-config/commit/b52917a13b324c5dd5805be2eb9bba8cc00f76fb))
+- Changes settings for groups. ([5801198](https://github.com/alexseitsinger/eslint-config/commit/58011983a4161b6555dc8c1240e883b356ae1251))
+
+
 <a name="v5.1.0"></a>
 ## [v5.1.0](https://github.com/alexseitsinger/eslint-config/compare/v5.0.0...v5.1.0) (2020-02-29)
 
