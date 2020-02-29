@@ -1,7 +1,7 @@
 {
   "name": "@alexseitsinger/eslint-config",
   "version": "5.0.0",
-  "description": "Eslint config for various plugins",
+  "description": "Preset eslint configs for various plugins",
   "main": "index.js",
   "files": [
     "groups/*",
@@ -29,9 +29,12 @@
   },
   "homepage": "https://github.com/alexseitsinger/eslint-config",
   "dependencies": {
+    "confusing-browser-globals": "^1.0.7"
+  },
+  "peerDependencies": {
     "@emotion/eslint-plugin": "^11.0.0-next.10",
     "@getify/eslint-plugin-proper-ternary": "^3.0.1",
-    "confusing-browser-globals": "^1.0.7",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-import-resolver-jest": "^3",
     "eslint-import-resolver-typescript": "^2",
@@ -57,7 +60,13 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "prettier": "^1.19.1"
-  },
-  "peerDependencies": {}
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsdoc": "*",
+    "eslint-plugin-markdown": "^1.0.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-package-json": "^0.1.4",
+    "eslint-plugin-prettier": "^3.1.2"
+  }
 }
