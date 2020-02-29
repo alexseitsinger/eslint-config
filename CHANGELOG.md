@@ -1,3 +1,12 @@
+<a name="v5.0.0"></a>
+## [v5.0.0](https://github.com/alexseitsinger/eslint-config/compare/v4.0.0...v5.0.0) (2020-02-29)
+
+### Code Refactoring
+- Adds factory configs to entry point. ([062fc6e](https://github.com/alexseitsinger/eslint-config/commit/062fc6e35a9a587f329e243d9f3d504313c5d208))
+- Moves files up a level. ([a0f6634](https://github.com/alexseitsinger/eslint-config/commit/a0f66344b18fed4efe77b6a2d58ca976746ad1f6))
+- Moves markdown plugin lower. ([6b530c4](https://github.com/alexseitsinger/eslint-config/commit/6b530c41984504e63816a2260b44a298aac6c1fe))
+
+
 <a name="v4.0.0"></a>
 ## [v4.0.0](https://github.com/alexseitsinger/eslint-config/compare/v3.0.0...v4.0.0) (2020-02-28)
 
