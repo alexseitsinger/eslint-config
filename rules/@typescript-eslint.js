@@ -326,7 +326,7 @@ const rules = {
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
    */
-  "@typescript-eslint/no-extra-parens": "error",
+  "@typescript-eslint/no-extra-parens": "off",
 
   /**
    * Disallow unnecessary semicolons
