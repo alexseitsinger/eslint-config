@@ -1,9 +1,9 @@
 const factory = require("./factory")
 
-const javascript = ["common", "javascript"]
+const javascript = ["javascript"]
 const javascriptReact = [...javascript, "react"]
 const javascriptReactRedux = [...javascriptReact, "redux"]
-const typescript = ["common", "typescript"]
+const typescript = ["typescript"]
 const typescriptReact = [...typescript, "react"]
 const typescriptReactRedux = [...typescriptReact, "redux"]
 const markdownTypescript = [...typescript, "markdown"]
