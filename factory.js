@@ -1,14 +1,21 @@
-const eslintRules = require("./rules/eslint")
-const eslintCommentsRules = require("./rules/eslint-comments")
-const nodeRules = require("./rules/node")
-const importRules = require("./rules/import")
-const prettierRules = require("./rules/prettier")
+const deepMerge = require("deepmerge")
 
-const extendedOrder = [
+const eslintRules = require("./rules/eslint")
+
+const extendsOrder = [
   "prettier",
   "prettier/babel",
   "prettier/react",
   "prettier/@typescript-eslint",
+]
+
+const groupOrder = [
+  "javascript",
+  "react",
+  "redux",
+  "typescript",
+  "markdown",
+  "package-json",
 ]
 
 const pluginOrder = [
@@ -27,103 +34,54 @@ const pluginOrder = [
   "react-redux",
   "redux-saga",
   "jsdoc",
-  "@typescript-eslint",
+  "@typescript-eslint/eslint-plugin",
   "markdown",
   "tsdoc",
   "package-json",
   "prettier",
 ]
 
-const pluginNameMap = {
-  typescript: "@typescript-eslint",
+const ruleNameMap = {
+  "@typescript-eslint/eslint-plugin": "@typescript-eslint",
 }
 
-const groupNameMap = {
-  "@typescript-eslint": "typescript",
-}
-
-function getPluginName(n) {
-  if (n in pluginNameMap) {
-    return pluginNameMap[n]
+function getRuleName(pn) {
+  if (pn in ruleNameMap) {
+    return ruleNameMap[pn]
   }
-  return n
-}
-
-function getGroupName(n) {
-  if (n in groupNameMap) {
-    return groupNameMap[n]
-  }
-  return n
-}
-
-function sortFunc(a, b, order) {
-  return order.indexOf(a[1]) - order.indexOf(b[1])
+  return pn
 }
 
 function sortArray(targets, order) {
-  return targets.sort((a, b) => sortFunc(a, b, order))
-}
-
-function sortRules(rules) {
-  let sortedRules = {}
-  let pluginRules = {}
-
-  Object.keys(rules).forEach(ruleName => {
-    const ruleValue = rules[ruleName]
-
-    const pluginName = ruleName.split("/").shift()
-
-    if (!(pluginName in pluginRules)) {
-      pluginRules[pluginName] = {}
-    }
-
-    pluginRules = {
-      ...pluginRules,
-      [pluginName]: {
-        ...pluginRules[pluginName],
-        [ruleName]: ruleValue,
-      },
-    }
+  return targets.sort((a, b) => {
+    return order.indexOf(a[1]) - order.indexOf(b[1])
   })
-
-  const pluginNames = Object.keys(pluginRules)
-  const sortedPluginNames = sortArray(pluginNames, pluginOrder)
-
-  sortedPluginNames.forEach(pluginName => {
-    sortedRules = {
-      ...sortedRules,
-      ...pluginRules[pluginName],
-    }
-  })
-
-  return sortedRules
 }
 
 const defaults = {
+  parser: "espree",
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
+    ecmaFeatures: {},
   },
-  plugins: ["eslint-comments", "node", "import", "prettier"],
-  enabledRules: {
-    ...eslintRules.enabled,
-    ...eslintCommentsRules.enabled,
-    ...nodeRules.enabled,
-    ...importRules.enabled,
-    ...prettierRules.enabled,
-  },
-  disabledRules: {
-    ...eslintRules.disabled,
-    ...eslintCommentsRules.disabled,
-    ...nodeRules.disabled,
-    ...importRules.disabled,
-    ...prettierRules.disabled,
-  },
-  extends: ["prettier", "prettier/babel"],
+  plugins: [
+    "eslint-comments",
+    "node",
+    "import",
+    "simple-import-sort",
+    "sort-destructure-keys",
+    "prettier",
+  ],
+  extended: ["prettier", "prettier/babel"],
   settings: {
     "import/core-modules": ["fs", "path", "child_process"],
     "import/ignore": ["node_modules", ".yalc"],
     "import/external-module-folders": ["node_modules", ".yalc"],
+  },
+  rules: {
+    ...eslintRules.enabled,
+    ...eslintRules.disabled,
   },
   env: {
     node: true,
@@ -136,85 +94,57 @@ const defaults = {
 module.exports = function factory(groups = []) {
   let plugins = [...defaults.plugins]
   let settings = { ...defaults.settings }
-  let disabledRules = { ...defaults.disabledRules }
-  let enabledRules = { ...defaults.enabledRules }
-  let parser = "espree"
+  let rules = { ...defaults.rules }
+  let parser = defaults.parser
   let parserOptions = { ...defaults.parserOptions }
-  let ecmaFeatures = {}
-  let extending = [...defaults.extends]
+  let extended = [...defaults.extended]
   let env = { ...defaults.env }
 
-  sortArray(groups, pluginOrder).forEach(g => {
-    const groupName = getGroupName(g)
+  // Sort the group names in the same order as the plugins.
+  sortArray(groups, groupOrder).forEach(groupName => {
     const m = require(`./groups/${groupName}`)
+    parser = m.parser ? m.parser : parser
+    parserOptions = deepMerge(
+      parserOptions,
+      m.parserOptions ? m.parserOptions : {}
+    )
+    settings = deepMerge(settings, m.settings ? m.settings : {})
+    plugins = sortArray([...plugins, ...m.plugins], pluginOrder)
+    extended = sortArray(
+      [...extended, ...(m.extends ? m.extends : [])],
+      extendsOrder
+    )
+  })
 
-    if (m.parser) {
-      parser = m.parser
-    }
+  // For each plugin, load its rules into its own object.
+  const rulesPer = {}
 
-    if (m.parserOptions) {
-      parserOptions = {
-        ...parserOptions,
-        ...m.parserOptions,
-      }
-    }
+  sortArray(plugins, pluginOrder).forEach(pluginName => {
+    const ruleName = getRuleName(pluginName)
+    const { enabled, disabled } = require(`./rules/${ruleName}`)
+    rulesPer[pluginName] = { enabled, disabled }
+  })
 
-    if (m.ecmaFeatures) {
-      ecmaFeatures = {
-        ...ecmaFeatures,
-        ...m.ecmaFeatures,
-      }
-    }
+  // Then, in the order that plugins are listed...
+  const pluginNames = sortArray(Object.keys(rulesPer), pluginOrder)
 
-    if (m.settings) {
-      Object.keys(m.settings).forEach(key => {
-        settings = {
-          ...settings,
-          [key]: {
-            ...(settings[key] ? settings[key] : {}),
-            ...m.settings[key],
-          },
-        }
-      })
-    }
+  // Merge the enabled rules into the rules object.
+  pluginNames.forEach(pluginName => {
+    rules = deepMerge(rules, rulesPer[pluginName].enabled)
+  })
 
-    if (m.extending) {
-      extending = [...extending, ...m.extending]
-    }
-
-    const remainingPlugins = m.plugins.filter(n => !plugins.includes(n))
-    sortArray(remainingPlugins, pluginOrder).forEach(n => {
-      const pluginName = getPluginName(n)
-      // Add each plugin in correct order.
-      plugins = sortArray([...plugins, pluginName], pluginOrder)
-
-      // save the disabled to apply after all rules have been added.
-      const pluginRules = require(`./rules/${pluginName}`)
-      disabledRules = { ...disabledRules, ...pluginRules.disabled }
-      enabledRules = { ...enabledRules, ...pluginRules.enabled }
-    })
-
-    // Apply the disabled rules to the enabled rules.
-    Object.keys(disabledRules).forEach(ruleName => {
-      enabledRules = {
-        ...enabledRules,
-        [ruleName]: disabledRules[ruleName],
-      }
-    })
+  // Then merge disabled rules for each.
+  pluginNames.forEach(pluginName => {
+    rules = deepMerge(rules, rulesPer[pluginName].disabled)
   })
 
   return {
     parser,
-    parserOptions: {
-      ...parserOptions,
-      ecmaFeatures: {
-        ...ecmaFeatures,
-      },
-    },
+    parserOptions,
     env,
     settings,
     plugins,
-    rules: sortRules(enabledRules),
-    extends: sortArray(extending, extendedOrder),
+    rules,
+    extends: sortArray(extended, extendsOrder),
   }
 }
