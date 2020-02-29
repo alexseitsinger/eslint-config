@@ -1,6 +1,8 @@
 module.exports = {
-  ecmaFeatures: {
-    impliedStrict: true,
+  parserOptions: {
+    ecmaFeatures: {
+      impliedStrict: true,
+    },
   },
   plugins: ["markdown"],
 }

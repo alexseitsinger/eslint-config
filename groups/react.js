@@ -1,6 +1,8 @@
 module.exports = {
-  ecmaFeatures: {
-    jsx: true,
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   settings: {
     react: {
@@ -27,5 +29,5 @@ module.exports = {
     "jest",
     "jest-formatting",
   ],
-  extending: ["prettier/react"],
+  extends: ["prettier/react"],
 }
