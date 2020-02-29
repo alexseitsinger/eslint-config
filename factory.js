@@ -120,6 +120,17 @@ const defaults = {
     ...prettierRules.disabled,
   },
   extends: ["prettier", "prettier/babel"],
+  settings: {
+    "import/core-modules": ["fs", "path", "child_process"],
+    "import/ignore": ["node_modules", ".yalc"],
+    "import/external-module-folders": ["node_modules", ".yalc"],
+  },
+  env: {
+    node: true,
+    browser: true,
+    es6: true,
+    jest: true,
+  },
 }
 
 module.exports = function factory(groups = []) {
@@ -131,6 +142,7 @@ module.exports = function factory(groups = []) {
   let parserOptions = { ...defaults.parserOptions }
   let ecmaFeatures = {}
   let extending = [...defaults.extends]
+  let env = { ...defaults.env }
 
   sortArray(groups, pluginOrder).forEach(g => {
     const groupName = getGroupName(g)
@@ -155,10 +167,15 @@ module.exports = function factory(groups = []) {
     }
 
     if (m.settings) {
-      settings = {
-        ...settings,
-        ...m.settings,
-      }
+      Object.keys(m.settings).forEach(key => {
+        settings = {
+          ...settings,
+          [key]: {
+            ...(settings[key] ? settings[key] : {}),
+            ...m.settings[key],
+          },
+        }
+      })
     }
 
     if (m.extending) {
@@ -174,7 +191,7 @@ module.exports = function factory(groups = []) {
       // save the disabled to apply after all rules have been added.
       const pluginRules = require(`./rules/${pluginName}`)
       disabledRules = { ...disabledRules, ...pluginRules.disabled }
-      enabledRules = { ...rules, ...pluginRules.enabled }
+      enabledRules = { ...enabledRules, ...pluginRules.enabled }
     })
 
     // Apply the disabled rules to the enabled rules.
@@ -194,15 +211,10 @@ module.exports = function factory(groups = []) {
         ...ecmaFeatures,
       },
     },
-    env: {
-      node: true,
-      browser: true,
-      es6: true,
-      jest: true,
-    },
+    env,
     settings,
     plugins,
-    rules: sortRules(rules),
+    rules: sortRules(enabledRules),
     extends: sortArray(extending, extendedOrder),
   }
 }
