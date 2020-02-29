@@ -7,33 +7,36 @@
 // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
 
 const disabled = {
-  /** Disabled rules for other plugins */
-  "import/first": "off",
-  "import/newline-after-import": "off",
-  "import/no-unresolved": "off",
-  "import/named": "off",
-  "import/default": "off",
-  "import/namespace": "off",
-  "import/no-cycle": "off",
-  "import/no-named-as-default": "off",
-  "import/no-named-as-default-member": "off",
-  "import/no-deprecated": "off",
-  "import/no-unused-modules": "off",
-  "brace-style": "off",
-  camelcase: "off",
-  "func-call-spacing": "off",
-  "no-empty-function": "off",
-  "no-extra-parens": "off",
-  "no-extra-semi": "off",
-  "no-magic-numbers": "off",
-  "no-unused-expressions": "off",
-  "no-unused-vars": "off",
-  "no-use-before-define": "off",
-  quotes: "off",
-  "require-await": "off",
-  semi: "off",
-  "space-before-function-paren": "off",
-  indent: "off",
+  import: {
+    "import/first": "off",
+    "import/newline-after-import": "off",
+    "import/no-unresolved": "off",
+    "import/named": "off",
+    "import/default": "off",
+    "import/namespace": "off",
+    "import/no-cycle": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-deprecated": "off",
+    "import/no-unused-modules": "off",
+  },
+  eslint: {
+    "brace-style": "off",
+    camelcase: "off",
+    "func-call-spacing": "off",
+    "no-empty-function": "off",
+    "no-extra-parens": "off",
+    "no-extra-semi": "off",
+    "no-magic-numbers": "off",
+    "no-unused-expressions": "off",
+    "no-unused-vars": "off",
+    "no-use-before-define": "off",
+    quotes: "off",
+    "require-await": "off",
+    semi: "off",
+    "space-before-function-paren": "off",
+    indent: "off",
+  },
 }
 
 const enabled = {
@@ -96,9 +99,10 @@ const enabled = {
    *
    * - Requires disabling the original eslint config rule.
    * - Disabled because we use eslint.
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
    */
   //
-  "@typescript-eslint/brace-style": "error",
+  "@typescript-eslint/brace-style": "off",
 
   /**
    * Enforce camelCase naming convention
@@ -185,8 +189,10 @@ const enabled = {
    * Require or disallow spacing between function identifiers and their
    * invocations
    * (Fixable)
+   *
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
    */
-  "@typescript-eslint/func-call-spacing": ["error", "never"],
+  "@typescript-eslint/func-call-spacing": ["off", "never"],
 
   /**
    * Enforces naming of generic type variables
@@ -197,10 +203,12 @@ const enabled = {
    * Enforce consistent indentation
    * (Fixable)
    *
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
+   *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
    */
   "@typescript-eslint/indent": [
-    "error",
+    "off",
     2,
     {
       SwitchCase: 1,
@@ -244,10 +252,12 @@ const enabled = {
 
   /**
    * Require a specific member delimiter style for interfaces and type
-   * literals
+   * literals.
+   *
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/member-delimiter-style": [
-    "error",
+    "off",
     {
       multiline: {
         delimiter: "comma",
@@ -355,6 +365,8 @@ const enabled = {
    * NOTE: We might want to disable this because sometimes, using parens makes
    * code easier to read.
    *
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
+   *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
    */
   "@typescript-eslint/no-extra-parens": "off",
@@ -363,9 +375,11 @@ const enabled = {
    * Disallow unnecessary semicolons
    * (Fixable)
    *
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
+   *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.md
    */
-  "@typescript-eslint/no-extra-semi": "error",
+  "@typescript-eslint/no-extra-semi": "off",
 
   /**
    * Forbids the use of classes as namespaces
@@ -713,9 +727,10 @@ const enabled = {
    *
    * - This rule extends the original eslint rule, so disable that one for
    *   this.
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/quotes": [
-    "error",
+    "off",
     "double",
     {
       avoidEscape: true,
@@ -774,7 +789,7 @@ const enabled = {
    * enforce consistent spacing before function definition opening parenthesis
    * (Fixable)
    *
-   * Disabled bncause this is annoying.
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/space-before-function-paren": "off",
 
@@ -807,9 +822,11 @@ const enabled = {
   /**
    * Require consistent spacing around type annotations
    * (Fixable)
+   *
+   * - Disabled according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/type-annotation-spacing": [
-    "error",
+    "off",
     {
       before: false,
       after: true,

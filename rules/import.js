@@ -6,13 +6,12 @@
  */
 
 const disabled = {
-  /**
-   * Disabled rules for other plugins.
-   */
-  "node/no-extraneous-import": "off",
-  "node/no-extraneous-require": "off",
-  "node/no-missing-import": "off",
-  "node/no-missing-require": "off",
+  node: {
+    "node/no-extraneous-import": "off",
+    "node/no-extraneous-require": "off",
+    "node/no-missing-import": "off",
+    "node/no-missing-require": "off",
+  },
 }
 
 const enabled = {

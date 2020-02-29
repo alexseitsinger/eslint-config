@@ -5,11 +5,10 @@
  */
 
 const disabled = {
-  /**
-   * Disabled rules for other plugins.
-   */
-  semi: "off",
-  "eol-last": "off",
+  eslint: {
+    semi: "off",
+    "eol-last": "off",
+  },
 }
 
 const enabled = {

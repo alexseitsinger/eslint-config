@@ -1,6 +1,4 @@
-const disabled = {
-  indent: "off",
-}
+const disabled = {}
 
 const enabled = {
   /**

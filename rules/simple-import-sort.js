@@ -49,11 +49,12 @@ const builtins = [
 ]
 
 const disabled = {
-  /**
-   * Disabled rules for other plugins.
-   */
-  "sort-imports": "off",
-  "import/order": "off",
+  eslint: {
+    "sort-imports": "off",
+  },
+  import: {
+    "import/order": "off",
+  },
 }
 
 const enabled = {
