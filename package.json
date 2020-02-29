@@ -4,7 +4,6 @@
   "description": "Eslint config for various plugins",
   "main": "index.js",
   "files": [
-    "configs/*",
     "groups/*",
     "rules/*",
     "factory.js",
