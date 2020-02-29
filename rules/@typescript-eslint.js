@@ -33,6 +33,7 @@ const disabled = {
   "require-await": "off",
   semi: "off",
   "space-before-function-paren": "off",
+  indent: "off",
 }
 
 const enabled = {
@@ -198,7 +199,37 @@ const enabled = {
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
    */
-  "@typescript-eslint/indent": ["error", 2],
+  "@typescript-eslint/indent": [
+    "error",
+    2,
+    {
+      SwitchCase: 1,
+      VariableDeclarator: {
+        var: 2,
+        let: 2,
+        const: 3,
+      },
+      outerIIFEBody: 1,
+      MemberExpression: 1,
+      FunctionDeclaration: {
+        parameters: "first",
+        body: 1,
+      },
+      FunctionExpression: {
+        parameters: "first",
+        body: 1,
+      },
+      CallExpression: {
+        arguments: "first",
+      },
+      ArrayExpression: 1,
+      ObjectExpression: 1,
+      ImportDeclaration: 1,
+      flatTernaryExpressions: true,
+      ignoredNodes: [],
+      ignoreComments: false,
+    },
+  ],
 
   /**
    * Require that interface names should or should not prefixed with I
@@ -224,7 +255,7 @@ const enabled = {
       },
       singleline: {
         delimiter: "comma",
-        requireLast: true,
+        requireLast: false,
       },
       overrides: {
         interface: {
