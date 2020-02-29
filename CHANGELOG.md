@@ -1,3 +1,11 @@
+<a name="v5.1.0"></a>
+## [v5.1.0](https://github.com/alexseitsinger/eslint-config/compare/v5.0.0...v5.1.0) (2020-02-29)
+
+### Code Refactoring
+- Cleans up factory method. ([369c37e](https://github.com/alexseitsinger/eslint-config/commit/369c37e0973c59660df2ed186a16fa351fe2bdd6))
+- Renames variable in rules. ([bc6b471](https://github.com/alexseitsinger/eslint-config/commit/bc6b471522f08b7bf9d69a736520a25f9887b9e4))
+
+
 <a name="v5.0.0"></a>
 ## [v5.0.0](https://github.com/alexseitsinger/eslint-config/compare/v4.0.0...v5.0.0) (2020-02-29)
 
