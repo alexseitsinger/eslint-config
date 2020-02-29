@@ -54,7 +54,10 @@ function getRuleName(pn) {
 
 function sortArray(targets, order) {
   return targets.sort((a, b) => {
-    return order.indexOf(a[1]) - order.indexOf(b[1])
+    if (order.indexOf(a) > order.indexOf(b)) {
+      return -1
+    }
+    return 1
   })
 }
 
