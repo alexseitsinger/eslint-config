@@ -1,3 +1,9 @@
+const eslintRules = require("./rules/eslint")
+const eslintCommentsRules = require("./rules/eslint-comments")
+const nodeRules = require("./rules/node")
+const importRules = require("./rules/import")
+const prettierRules = require("./rules/prettier")
+
 const extendedOrder = [
   "prettier",
   "prettier/babel",
@@ -36,10 +42,6 @@ const groupNameMap = {
   "@typescript-eslint": "typescript",
 }
 
-/**
- * @example
- * @param n
- */
 function getPluginName(n) {
   if (n in pluginNameMap) {
     return pluginNameMap[n]
@@ -47,10 +49,6 @@ function getPluginName(n) {
   return n
 }
 
-/**
- * @example
- * @param n
- */
 function getGroupName(n) {
   if (n in groupNameMap) {
     return groupNameMap[n]
@@ -58,35 +56,14 @@ function getGroupName(n) {
   return n
 }
 
-/**
- * @example
- * @param targets
- * @param order
- */
-
-/**
- * @example
- * @param a
- * @param b
- * @param order
- */
 function sortFunc(a, b, order) {
   return order.indexOf(a[1]) - order.indexOf(b[1])
 }
 
-/**
- * @example
- * @param targets
- * @param order
- */
 function sortArray(targets, order) {
   return targets.sort((a, b) => sortFunc(a, b, order))
 }
 
-/**
- * @example
- * @param rules
- */
 function sortRules(rules) {
   let sortedRules = {}
   let pluginRules = {}
@@ -122,59 +99,46 @@ function sortRules(rules) {
   return sortedRules
 }
 
-module.exports = function factory(groups = []) {
-  let settings = {}
-  let plugins = ["eslint-comments", "node"]
-  let rules = {
-    ...require("./rules/eslint").rules,
-    ...require("./rules/eslint-comments").rules,
-    ...require("./rules/node").rules,
-  }
-  let parser = "espree"
-  let parserOptions = {
+const defaults = {
+  parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
-  }
+  },
+  plugins: ["eslint-comments", "node", "import", "prettier"],
+  enabledRules: {
+    ...eslintRules.enabled,
+    ...eslintCommentsRules.enabled,
+    ...nodeRules.enabled,
+    ...importRules.enabled,
+    ...prettierRules.enabled,
+  },
+  disabledRules: {
+    ...eslintRules.disabled,
+    ...eslintCommentsRules.disabled,
+    ...nodeRules.disabled,
+    ...importRules.disabled,
+    ...prettierRules.disabled,
+  },
+  extends: ["prettier", "prettier/babel"],
+}
+
+module.exports = function factory(groups = []) {
+  let plugins = [...defaults.plugins]
+  let settings = { ...defaults.settings }
+  let disabledRules = { ...defaults.disabledRules }
+  let enabledRules = { ...defaults.enabledRules }
+  let parser = "espree"
+  let parserOptions = { ...defaults.parserOptions }
   let ecmaFeatures = {}
-  let extending = ["prettier", "prettier/babel"]
+  let extending = [...defaults.extends]
 
-  let disabledRules = []
-
-  const sortedGroups = sortArray(groups, pluginOrder)
-  sortedGroups.forEach(g => {
+  sortArray(groups, pluginOrder).forEach(g => {
     const groupName = getGroupName(g)
     const m = require(`./groups/${groupName}`)
 
-    if (m.extending) {
-      extending = [...extending, ...m.extending]
+    if (m.parser) {
+      parser = m.parser
     }
-
-    settings = {
-      ...settings,
-      ...m.settings,
-    }
-
-    const sortedPlugins = sortArray(m.plugins, pluginOrder)
-    sortedPlugins.forEach(n => {
-      const pluginName = getPluginName(n)
-      // Add each plugin in correct order.
-      plugins = sortArray([...plugins, pluginName], pluginOrder)
-
-      const pluginRules = require(`./rules/${pluginName}`)
-
-      // save the disabled to apply after all rules have been added.
-      disabledRules = { ...disabledRules, ...pluginRules.disabled }
-
-      rules = { ...rules, ...pluginRules.rules }
-    })
-
-    // Apply the disabled.
-    Object.keys(disabledRules).forEach(ruleName => {
-      rules = {
-        ...rules,
-        [ruleName]: disabledRules[ruleName],
-      }
-    })
 
     if (m.parserOptions) {
       parserOptions = {
@@ -190,9 +154,36 @@ module.exports = function factory(groups = []) {
       }
     }
 
-    if (m.parser) {
-      parser = m.parser
+    if (m.settings) {
+      settings = {
+        ...settings,
+        ...m.settings,
+      }
     }
+
+    if (m.extending) {
+      extending = [...extending, ...m.extending]
+    }
+
+    const remainingPlugins = m.plugins.filter(n => !plugins.includes(n))
+    sortArray(remainingPlugins, pluginOrder).forEach(n => {
+      const pluginName = getPluginName(n)
+      // Add each plugin in correct order.
+      plugins = sortArray([...plugins, pluginName], pluginOrder)
+
+      // save the disabled to apply after all rules have been added.
+      const pluginRules = require(`./rules/${pluginName}`)
+      disabledRules = { ...disabledRules, ...pluginRules.disabled }
+      enabledRules = { ...rules, ...pluginRules.enabled }
+    })
+
+    // Apply the disabled rules to the enabled rules.
+    Object.keys(disabledRules).forEach(ruleName => {
+      enabledRules = {
+        ...enabledRules,
+        [ruleName]: disabledRules[ruleName],
+      }
+    })
   })
 
   return {
