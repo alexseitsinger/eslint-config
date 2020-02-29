@@ -558,6 +558,8 @@ const enabled = {
   /**
    * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
    */
   "react/jsx-child-element-spacing": "off",
@@ -565,10 +567,12 @@ const enabled = {
   /**
    * Validate closing bracket location in JSX. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
    */
   "react/jsx-closing-bracket-location": [
-    "error",
+    "off",
     {
       nonEmpty: "after-props",
       selfClosing: "tag-aligned",
@@ -578,17 +582,21 @@ const enabled = {
   /**
    * Validate closing tag location in JSX. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
    */
-  "react/jsx-closing-tag-location": "error",
+  "react/jsx-closing-tag-location": "off",
 
   /**
    * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
    */
   "react/jsx-curly-spacing": [
-    "error",
+    "off",
     {
       // might want to change this
       when: "never",
@@ -599,9 +607,11 @@ const enabled = {
   /**
    * Enforce or disallow spaces around equal signs in JSX attributes. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
    */
-  "react/jsx-equals-spacing": ["error", "never"],
+  "react/jsx-equals-spacing": ["off", "never"],
 
   /**
    * Restrict file extensions that may contain JSX.
@@ -618,9 +628,11 @@ const enabled = {
   /**
    * Enforce position of the first prop in JSX. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
    */
-  "react/jsx-first-prop-new-line": ["error", "multiline"],
+  "react/jsx-first-prop-new-line": ["off", "multiline"],
 
   /**
    * Enforce event handler naming conventions in JSX.
@@ -638,10 +650,12 @@ const enabled = {
   /**
    * Validate JSX indentation. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
    */
   "react/jsx-indent": [
-    "error",
+    "off",
     2,
     {
       checkAttributes: true,
@@ -652,9 +666,11 @@ const enabled = {
   /**
    * Validate props indentation in JSX. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
    */
-  "react/jsx-indent-props": ["error", "first"],
+  "react/jsx-indent-props": ["off", "first"],
 
   /**
    * Validate JSX has key prop when in array or iterator.
@@ -680,10 +696,12 @@ const enabled = {
   /**
    * Limit maximum of props on a single line in JSX. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
    */
   "react/jsx-max-props-per-line": [
-    "error",
+    "off",
     {
       //maxmimum: 1,
       when: "multiline",
@@ -775,6 +793,8 @@ const enabled = {
   /**
    * Limit to one expression per line in JSX.
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
    */
   "react/jsx-one-expression-per-line": [
@@ -823,9 +843,11 @@ const enabled = {
   /**
    * Disallow multiple spaces between inline JSX props. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-multi-spaces.md
    */
-  "react/jsx-props-no-multi-spaces": "error",
+  "react/jsx-props-no-multi-spaces": "off",
 
   /**
    * Disallow JSX props spreading.
@@ -866,10 +888,12 @@ const enabled = {
   /**
    * Validate whitespace in and around the JSX opening and closing brackets.
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
    */
   "react/jsx-tag-spacing": [
-    "error",
+    "off",
     {
       closingSlash: "never",
       beforeSelfClosing: "always",
@@ -899,10 +923,12 @@ const enabled = {
   /**
    * Prevent missing parentheses around multilines JSX. (fixable)
    *
+   * - Disabled according to eslint-config-prettier/react
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
    */
   "react/jsx-wrap-multilines": [
-    "error",
+    "off",
     {
       declaration: "parens-new-line",
       assignment: "parens-new-line",
