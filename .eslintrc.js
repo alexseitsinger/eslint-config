@@ -1,15 +1,18 @@
-const pkgConfig = require("./configs/package-json")
-const jsConfig = require("./configs/javascript")
+const configs = require(".")
 
 module.exports = {
   overrides: [
     {
-      files: ["*.js", "*.md"],
-      ...jsConfig,
+      files: ["*.js"],
+      ...configs.javascript,
+    },
+    {
+      files: ["*.md"],
+      ...configs.markdownJavascript,
     },
     {
       files: ["package.json"],
-      ...pkgConfig,
+      ...configs.packageJson,
     },
   ],
 }
