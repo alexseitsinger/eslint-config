@@ -2,7 +2,7 @@
 
 const disabled = {}
 
-const rules = {
+const enabled = {
   /**
    * Enforce consistent test or it keyword
    */
@@ -237,6 +237,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

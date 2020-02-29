@@ -56,7 +56,7 @@ const disabled = {
   "import/order": "off",
 }
 
-const rules = {
+const enabled = {
   "simple-import-sort/sort": [
     "error",
     {
@@ -93,6 +93,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

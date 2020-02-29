@@ -1,6 +1,6 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   /**
    * The proper-ternary/nested rule controls the nesting of ? : ternary
    * expressions.
@@ -132,6 +132,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

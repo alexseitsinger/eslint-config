@@ -15,7 +15,7 @@ const disabled = {
   "node/no-missing-require": "off",
 }
 
-const rules = {
+const enabled = {
   /**
    * Ensure all imports appear before other statements.
    *
@@ -562,6 +562,6 @@ const rules = {
 }
 
 module.exports = {
+  enabled,
   disabled,
-  rules,
 }

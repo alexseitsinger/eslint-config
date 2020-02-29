@@ -1,6 +1,6 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   "eslint-comments/disable-enable-pair": "error",
   "eslint-comments/no-aggregating-enable": "error",
   "eslint-comments/no-duplicate-disable": "error",
@@ -14,6 +14,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

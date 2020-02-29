@@ -2,7 +2,7 @@
 
 const disabled = {}
 
-const rules = {
+const enabled = {
   /**
    * Ensure effects are yielded.
    * (Fixable)
@@ -22,6 +22,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

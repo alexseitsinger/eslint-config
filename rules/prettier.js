@@ -1,6 +1,8 @@
-const disabled = {}
+const disabled = {
+  indent: "off",
+}
 
-const rules = {
+const enabled = {
   /**
    * Set prettier rules to warnings since they're primarily style-oriented,
    * and not functionality.
@@ -12,6 +14,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

@@ -2,7 +2,7 @@ const confusingBrowserGlobals = require("confusing-browser-globals")
 
 const disabled = {}
 
-const rules = {
+const enabled = {
   /**
    * Enforce linebreaks after opening and before closing array brackets.
    *
@@ -2969,6 +2969,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

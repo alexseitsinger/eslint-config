@@ -1,10 +1,10 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   "better-styled-components/sort-declarations-alphabetically": "error",
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

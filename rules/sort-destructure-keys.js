@@ -1,6 +1,6 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   "sort-destructure-keys/sort-destructure-keys": [
     "error",
     { caseSensitive: false },
@@ -8,6 +8,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

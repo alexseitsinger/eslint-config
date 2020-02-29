@@ -1,11 +1,12 @@
 // react-hooks plugin
 const disabled = {}
-const rules = {
+
+const enabled = {
   "react-hooks/rules-of-hooks": "error",
   "react-hooks/exhaustive-deps": "warn",
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

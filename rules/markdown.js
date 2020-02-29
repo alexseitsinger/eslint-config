@@ -14,9 +14,9 @@ const disabled = {
   "import/no-unresolved": "off",
 }
 
-const rules = {}
+const enabled = {}
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

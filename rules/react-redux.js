@@ -2,7 +2,7 @@
 
 const disabled = {}
 
-const rules = {
+const enabled = {
   //"react-redux/connect-prefer-minimum-two-arguments": "error",
 
   /**
@@ -68,6 +68,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

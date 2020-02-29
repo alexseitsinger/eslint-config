@@ -35,7 +35,7 @@ const disabled = {
   "space-before-function-paren": "off",
 }
 
-const rules = {
+const enabled = {
   /**
    * Require that member overloads be consecutive
    * (Recommended)
@@ -825,6 +825,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

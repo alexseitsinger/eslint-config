@@ -1,6 +1,6 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   /**
    * A rule to enforce a certain file naming convention using a regular
    * expression.
@@ -56,6 +56,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

@@ -2,7 +2,7 @@
 
 const disabled = {}
 
-const rules = {
+const enabled = {
   /**
    * Enforces consistent naming for boolean props.
    *
@@ -916,6 +916,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

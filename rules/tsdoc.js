@@ -1,10 +1,10 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   "tsdoc/syntax": "warn",
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

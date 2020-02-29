@@ -1,6 +1,6 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   "spellcheck/spell-checker": [
     "error",
     {
@@ -24,6 +24,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

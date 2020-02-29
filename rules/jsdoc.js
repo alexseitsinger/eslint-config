@@ -4,7 +4,7 @@
 
 const disabled = {}
 
-const rules = {
+const enabled = {
   "jsdoc/check-alignment": "warn",
   "jsdoc/check-examples": "warn",
   "jsdoc/check-indentation": "warn",
@@ -34,6 +34,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

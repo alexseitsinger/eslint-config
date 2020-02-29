@@ -12,7 +12,7 @@ const disabled = {
   "eol-last": "off",
 }
 
-const rules = {
+const enabled = {
   /**
    * Require top-level properties to be in a conventional order ("name"first, etc.).
    *
@@ -84,6 +84,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

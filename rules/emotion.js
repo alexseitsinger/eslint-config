@@ -1,6 +1,6 @@
 const disabled = {}
 
-const rules = {
+const enabled = {
   // The Emotion 10 codemods are contained in this package. To use them,
   // enable the rule shown below.
   "@emotion/pkg-renaming": "error",
@@ -19,6 +19,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }

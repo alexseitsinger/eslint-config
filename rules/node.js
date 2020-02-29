@@ -9,7 +9,7 @@
 
 const disabled = {}
 
-const rules = {
+const enabled = {
   /**
    * ensure Node.js-style error-first callback pattern is followed
    * https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-callback-literal.md
@@ -254,6 +254,6 @@ const rules = {
 }
 
 module.exports = {
-  rules,
+  enabled,
   disabled,
 }
