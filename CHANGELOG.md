@@ -1,3 +1,24 @@
+<a name="v5.3.0"></a>
+## [v5.3.0](https://github.com/alexseitsinger/eslint-config/compare/v5.2.0...v5.3.0) (2020-03-03)
+
+### Bug Fixes
+- Fixes typo from regex replace. ([c61fe39](https://github.com/alexseitsinger/eslint-config/commit/c61fe3918d448babf688650d0273093c755c1ad6))
+- Sets jest/globals in env. ([ced10af](https://github.com/alexseitsinger/eslint-config/commit/ced10afec8fbf48c0a1cf76cccbede1488b83bdc))
+
+### Code Refactoring
+- Adjusts files list. ([d121ebb](https://github.com/alexseitsinger/eslint-config/commit/d121ebbebf37432bf18d727f42374166034ba182))
+- Deletes usused groups dir. ([578c9cc](https://github.com/alexseitsinger/eslint-config/commit/578c9cc72a28f6cd0c3715da5a2007bb51747c09))
+- Refactors rule modules, changes factory. ([14e5672](https://github.com/alexseitsinger/eslint-config/commit/14e56729531cc3f3135b30b232dd47b16fcaa697))
+- Removes useless env. ([47e5546](https://github.com/alexseitsinger/eslint-config/commit/47e5546bfe73aceb4857d7c56124c55e37cf1cbf))
+- Renames directory. ([0162a17](https://github.com/alexseitsinger/eslint-config/commit/0162a174be83b2bd41da00659e680c46879ed1f8))
+- Updates directory name & adds plugins. ([436fc0d](https://github.com/alexseitsinger/eslint-config/commit/436fc0d73aaaa0948ee8df69f66e767e76f751e4))
+- Updates local eslint config. ([5f2ba6e](https://github.com/alexseitsinger/eslint-config/commit/5f2ba6e1ce9bc621e44a922316a0ec21b80307ca))
+
+### Features
+- Adds export for createConfig. ([e383076](https://github.com/alexseitsinger/eslint-config/commit/e3830762924c5b3ee99ac4c3911e9eccb790a0be))
+- Adds settings. ([58807ff](https://github.com/alexseitsinger/eslint-config/commit/58807ff0ff7376e996107e810c4e6d8bffc8e706))
+
+
 <a name="v5.2.0"></a>
 ## [v5.2.0](https://github.com/alexseitsinger/eslint-config/compare/v5.1.1...v5.2.0) (2020-02-29)
 
