@@ -1,8 +1,6 @@
 module.exports = {
   env: {
-    jest: true,
-  },
-  globals: {
+    "jest": true,
     "jest/globals": true,
   },
   settings: {
