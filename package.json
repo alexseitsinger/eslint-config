@@ -4,9 +4,8 @@
   "description": "Preset eslint configs for various plugins",
   "main": "index.js",
   "files": [
-    "groups/*",
     "rules/*",
-    "factory.js",
+    "createConfig.js",
     "index.js",
     "README.md",
     "LICENSE"
