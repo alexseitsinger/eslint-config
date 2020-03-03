@@ -1,7 +1,8 @@
 # Eslint Config
 
-Preset configs for eslint environments. Each config can be used as a top-level
-configuration (no extending needed).
+Preset configurations for various environments. Presets can be loaded directly
+instead of extending, or a new config can be created using the exported
+`create` method.
 
 ## Installation
 
@@ -9,23 +10,36 @@ configuration (no extending needed).
 yarn add @alexseitsinger/eslint-config
 ```
 
-## Presets
+## Plugin Groups
 
-Name                         | Plugins Configured
+Name       | Plugins Included
+---        | ---
+default    | eslint, eslint-comments, node, import, simple-import-sort, sort-destructure-keys
+javascript | jsdoc
+testing    | jest, jest-formatting
+react      | react, react-hooks
+redux      | react-redux, redux-saga
+typescript | tsdoc, @typescript-eslint/eslint-plugin
+markdown   | markdown
+package    | package-json
+
+## Preset Configurations
+
+Name                         | Plugin Groups Included
 ---                          | ---
-javascript                   | eslint, eslint-comments, node, jsdoc
-javascriptReact              | (javascript), react, react-hooks
-javascriptReactRedux         | (javascriptReact), react-redux, redux-saga
-typescript                   | eslint, eslint-comments, node, @typescript-eslint, tsdoc
-typescriptReact              | (typescript), react, react-hooks
-typescriptReactRedux         | (typescriptReact), react-redux, redux-saga
-markdownJavascript           | (javascript), markdown
-markdownJavascriptReact      | (javascriptReact), markdown
-markdownJavascriptReactRedux | (javascriptReactRedux), markdown
-markdownTypescript           | (typescript), markdown
-markdownTypescriptReact      | (typescriptReact), markdown
-markdownTypescriptReactRedux | (typescriptReactRedux), markdown
-packageJson                  | package-json
+javascript                   | default, javascript
+javascriptReact              | default, javascript, react
+javascriptReactRedux         | default, javascript, react, redux
+typescript                   | default, typescript
+typescriptReact              | default, typescript, react,
+typescriptReactRedux         | default, typescript, react, redux
+markdownJavascript           | default, javascript, markdown
+markdownJavascriptReact      | default, javascript, react, markdown
+markdownJavascriptReactRedux | default, javascript, react, redux, markdown
+markdownTypescript           | default, typescript, markdown
+markdownTypescriptReact      | default, typescript, react, markdown
+markdownTypescriptReactRedux | default, typescript, react, redux, markdown
+package                      | default, package
 
 ## Example
 
