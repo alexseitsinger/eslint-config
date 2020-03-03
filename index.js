@@ -7,6 +7,7 @@ const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin"]
 const redux = ["react-redux", "redux-saga"]
 
 module.exports = {
+  create: createConfig,
   javascript: createConfig([...javascript]),
   javascriptReact: createConfig([...javascript, ...testing, ...react]),
   javascriptReactRedux: createConfig([
