@@ -5,4 +5,11 @@ module.exports = {
   globals: {
     "jest/globals": true,
   },
+  settings: {
+    "import/resolver": {
+      jest: {
+        jestConfigFile: "./jest.config.js",
+      },
+    },
+  },
 }
