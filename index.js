@@ -1,31 +1,43 @@
-const factory = require("./factory")
+const createConfig = require("./createConfig")
 
-const javascript = ["javascript"]
-const javascriptReact = [...javascript, "react"]
-const javascriptReactRedux = [...javascriptReact, "redux"]
-const typescript = ["typescript"]
-const typescriptReact = [...typescript, "react"]
-const typescriptReactRedux = [...typescriptReact, "redux"]
-const markdownTypescript = [...typescript, "markdown"]
-const markdownTypescriptReact = [...typescriptReact, "markdown"]
-const markdownTypescriptReactRedux = [...typescriptReactRedux, "markdown"]
-const markdownJavascript = [...javascript, "markdown"]
-const markdownJavascriptReact = [...javascriptReact, "markdown"]
-const markdownJavascriptReactRedux = [...javascriptReactRedux, "markdown"]
-const packageJson = ["package-json"]
+const testing = ["jest", "jest-formatting"]
+const javascript = ["jsdoc"]
+const react = ["react", "react-hooks", "better-styled-components"]
+const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin"]
+const redux = ["react-redux", "redux-saga"]
 
 module.exports = {
-  javascript: factory(javascript),
-  javascriptReact: factory(javascriptReact),
-  javascriptReactRedux: factory(javascriptReactRedux),
-  typescript: factory(typescript),
-  typescriptReact: factory(typescriptReact),
-  typescriptReactRedux: factory(typescriptReactRedux),
-  markdownTypescript: factory(markdownTypescript),
-  markdownTypescriptReact: factory(markdownTypescriptReact),
-  markdownTypescriptReactRedux: factory(markdownTypescriptReactRedux),
-  markdownJavascript: factory(markdownJavascript),
-  markdownJavascriptReact: factory(markdownJavascriptReact),
-  markdownJavascriptReactRedux: factory(markdownJavascriptReactRedux),
-  packageJson: factory(packageJson),
+  javascript: createConfig([...javascript]),
+  javascriptReact: createConfig([...javascript, ...testing, ...react]),
+  javascriptReactRedux: createConfig([
+    ...javascript,
+    ...testing,
+    ...react,
+    ...redux,
+  ]),
+  typescript: createConfig([...typescript]),
+  typescriptReact: createConfig([...typescript, ...testing, ...react]),
+  typescriptReactRedux: createConfig([
+    ...typescript,
+    ...testing,
+    ...react,
+    ...redux,
+  ]),
+  markdownJavacript: createConfig([...javascript, "markdown"]),
+  markdownJavascriptReact: createConfig([...javascript, ...react, "markdown"]),
+  markdownJavascriptReactRedux: createConfig([
+    ...javascript,
+    ...react,
+    ...redux,
+    "markdown",
+  ]),
+  markdownTypescript: createConfig([...typescript, "markdown"]),
+  markdownTypescriptReact: createConfig([...typescript, ...react, "markdown"]),
+  markdownTypescriptReactRedux: createConfig([
+    ...typescript,
+    ...react,
+    ...redux,
+    "markdown",
+  ]),
+  package: createConfig(["package-json"]),
 }

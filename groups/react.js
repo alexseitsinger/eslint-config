@@ -1,27 +1,4 @@
 module.exports = {
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  settings: {
-    react: {
-      pragma: "React",
-      version: "detect",
-    },
-    linkComponents: [
-      { name: "Link", linkAttribute: "to" },
-      { name: "Anchor", linkAttribute: "href" },
-    ],
-    "import/resolver": {
-      jest: {
-        jestConfigFile: "./jest.config.js",
-      },
-      webpack: {
-        config: "./webpack.config.development.js",
-      },
-    },
-  },
   plugins: [
     "react",
     "react-hooks",
@@ -29,5 +6,4 @@ module.exports = {
     "jest",
     "jest-formatting",
   ],
-  extends: ["prettier/react"],
 }
