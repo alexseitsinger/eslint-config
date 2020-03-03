@@ -10,6 +10,9 @@ const pluginOrder = [
   "sort-destructure-keys",
   "better-styled-components",
   "prefer-ternary",
+  "filenames",
+  "emotion",
+  "prettier",
   "jest",
   "jest-formatting",
   "react",
@@ -20,6 +23,7 @@ const pluginOrder = [
   "@typescript-eslint/eslint-plugin",
   "tsdoc",
   "markdown",
+  "spellcheck",
   "package-json",
 ]
 
@@ -77,7 +81,7 @@ function sortArray(targets, order) {
  */
 function getPatches(pluginName) {
   const target = getDirectoryName(pluginName)
-  return require(`./rules/${target}/patches.js`)
+  return require(`./plugins/${target}/patches.js`)
 }
 
 /**
@@ -86,7 +90,7 @@ function getPatches(pluginName) {
  */
 function getRules(pluginName) {
   const target = getDirectoryName(pluginName)
-  return require(`./rules/${target}/rules.js`)
+  return require(`./plugins/${target}/rules.js`)
 }
 
 /**
@@ -95,7 +99,7 @@ function getRules(pluginName) {
  */
 function getOptions(pluginName) {
   const target = getDirectoryName(pluginName)
-  return require(`./rules/${target}/options.js`)
+  return require(`./plugins/${target}/options.js`)
 }
 
 module.exports = function createConfig(pluginNames) {
