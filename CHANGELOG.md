@@ -1,3 +1,14 @@
+<a name="v5.4.0"></a>
+## [v5.4.0](https://github.com/alexseitsinger/eslint-config/compare/v5.3.0...v5.4.0) (2020-03-04)
+
+### Bug Fixes
+- Removes webpack resolver to avoid errors. ([52cf4fa](https://github.com/alexseitsinger/eslint-config/commit/52cf4fa8309c8210945c589c8238c889dc7f2419))
+
+### Code Refactoring
+- Adds import resolvers. ([2e80e12](https://github.com/alexseitsinger/eslint-config/commit/2e80e12fab85d429dc349289fe9cf67ff8451cb1))
+- De-duplicates settings. ([521ac35](https://github.com/alexseitsinger/eslint-config/commit/521ac3537c5c9a45404128c856a32c5666ef70a0))
+
+
 <a name="v5.3.0"></a>
 ## [v5.3.0](https://github.com/alexseitsinger/eslint-config/compare/v5.2.0...v5.3.0) (2020-03-03)
 
