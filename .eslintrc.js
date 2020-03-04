@@ -4,15 +4,15 @@ module.exports = {
   overrides: [
     {
       files: ["*.js"],
-      ...configs.javascript,
+      ...configs.javascript
     },
     {
       files: ["*.md"],
-      ...configs.markdownJavascript,
+      ...configs.markdownJavascript
     },
     {
       files: ["package.json"],
-      ...configs.package,
-    },
-  ],
+      ...configs.package
+    }
+  ]
 }
