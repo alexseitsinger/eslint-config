@@ -1012,7 +1012,7 @@ module.exports = {
    */
   "quote-props": [
     "error",
-    "consistent",
+    "as-needed",
     {
       keywords: false,
       unnecessary: true,

@@ -62,8 +62,8 @@ module.exports = {
       jpg: "always",
       gif: "always",
       ttf: "always",
-      otf: "always",
-    },
+      otf: "always"
+    }
   ],
 
   /**
@@ -79,10 +79,10 @@ module.exports = {
       groups: [
         ["builtin"],
         ["external"],
-        ["internal", "parent", "sibling", "index", "unknown"],
+        ["internal", "parent", "sibling", "index", "unknown"]
       ],
-      "newlines-between": "always-and-inside-groups",
-    },
+      "newlines-between": "always-and-inside-groups"
+    }
   ],
 
   /**
@@ -96,8 +96,8 @@ module.exports = {
   "import/newline-after-import": [
     "error",
     {
-      count: 1,
-    },
+      count: 1
+    }
   ],
 
   /**
@@ -124,8 +124,8 @@ module.exports = {
   "import/max-dependencies": [
     "error",
     {
-      max: 40,
-    },
+      max: 40
+    }
   ],
 
   /**
@@ -142,8 +142,8 @@ module.exports = {
   "import/no-unassigned-import": [
     "off",
     {
-      allow: ["core-js/stable", "url-search-params-polyfill"],
-    },
+      allow: ["core-js/stable", "url-search-params-polyfill"]
+    }
   ],
 
   /**
@@ -183,8 +183,8 @@ module.exports = {
       allowAnonymousClass: false,
       allowAnonymousFunction: false,
       allowLiteral: false,
-      allowObject: true,
-    },
+      allowObject: true
+    }
   ],
 
   /**
@@ -208,8 +208,8 @@ module.exports = {
     "error",
     {
       importFunctions: [],
-      webpackChunknameFormat: "[a-zA-Z0-9-/_]+",
-    },
+      webpackChunknameFormat: "[a-zA-Z0-9-/_]+"
+    }
   ],
 
   /**
@@ -226,8 +226,8 @@ module.exports = {
     "error",
     {
       commonjs: true,
-      amd: false,
-    },
+      amd: false
+    }
   ],
 
   /**
@@ -266,8 +266,8 @@ module.exports = {
     "error",
     {
       // Change to true according to XO plugin.
-      allowComputed: true,
-    },
+      allowComputed: true
+    }
   ],
 
   /**
@@ -282,8 +282,8 @@ module.exports = {
   "import/no-restricted-paths": [
     "off",
     {
-      zones: [],
-    },
+      zones: []
+    }
   ],
 
   /**
@@ -296,8 +296,8 @@ module.exports = {
     {
       esmodule: true,
       commonjs: true,
-      amd: true,
-    },
+      amd: true
+    }
   ],
 
   /**
@@ -321,8 +321,8 @@ module.exports = {
   "import/no-internal-modules": [
     "off",
     {
-      allow: [],
-    },
+      allow: []
+    }
   ],
 
   /**
@@ -354,8 +354,8 @@ module.exports = {
   "import/no-cycle": [
     "error",
     {
-      maxDepth: Infinity,
-    },
+      maxDepth: Infinity
+    }
   ],
 
   /**
@@ -366,8 +366,8 @@ module.exports = {
   "import/no-useless-path-segments": [
     "error",
     {
-      noUselessIndex: true,
-    },
+      noUselessIndex: true
+    }
   ],
 
   /**
@@ -402,8 +402,8 @@ module.exports = {
     "off",
     {
       allowRequire: true,
-      allowPrimitiveModules: true,
-    },
+      allowPrimitiveModules: true
+    }
   ],
 
   /**
@@ -425,8 +425,8 @@ module.exports = {
   "import/no-nodejs-modules": [
     "error",
     {
-      allow: ["fs", "path", "child_process"],
-    },
+      allow: ["fs", "path", "child_process"]
+    }
   ],
 
   /**
@@ -508,9 +508,9 @@ module.exports = {
         "tests/**/*.ts",
         "tests/**/*.tsx",
         "tests/**/*.js",
-        "tests/**/*.jsx",
-      ],
-    },
+        "tests/**/*.jsx"
+      ]
+    }
   ],
 
   /**
@@ -537,7 +537,7 @@ module.exports = {
       unusedExports: true,
       // patches because will throw annoyiung errors in entry points and config
       // files and there isn't an option to ignore those files here..
-      missingExports: false,
+      missingExports: false
       //src: [],
       // ignoreExports: [
       // "webpack.config.js",
@@ -547,6 +547,6 @@ module.exports = {
       // "babel.config.js"
       // ]
       //
-    },
-  ],
+    }
+  ]
 }

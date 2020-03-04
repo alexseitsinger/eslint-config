@@ -1,17 +1,17 @@
 module.exports = {
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   settings: {
     react: {
       pragma: "React",
-      version: "detect",
+      version: "detect"
     },
     linkComponents: [
       { name: "Link", linkAttribute: "to" },
-      { name: "Anchor", linkAttribute: "href" },
-    ],
-  },
+      { name: "Anchor", linkAttribute: "href" }
+    ]
+  }
 }
