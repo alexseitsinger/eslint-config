@@ -1,7 +1,7 @@
 const createConfig = require("./createConfig")
 
 const testing = ["jest", "jest-formatting"]
-const javascript = ["jsdoc"]
+const javascript = []
 const react = ["react", "react-hooks", "better-styled-components"]
 const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin"]
 const redux = ["react-redux", "redux-saga"]
@@ -14,7 +14,7 @@ module.exports = {
     ...javascript,
     ...testing,
     ...react,
-    ...redux,
+    ...redux
   ]),
   typescript: createConfig([...typescript]),
   typescriptReact: createConfig([...typescript, ...testing, ...react]),
@@ -22,7 +22,7 @@ module.exports = {
     ...typescript,
     ...testing,
     ...react,
-    ...redux,
+    ...redux
   ]),
   markdownJavacript: createConfig([...javascript, "markdown"]),
   markdownJavascriptReact: createConfig([...javascript, ...react, "markdown"]),
@@ -30,7 +30,7 @@ module.exports = {
     ...javascript,
     ...react,
     ...redux,
-    "markdown",
+    "markdown"
   ]),
   markdownTypescript: createConfig([...typescript, "markdown"]),
   markdownTypescriptReact: createConfig([...typescript, ...react, "markdown"]),
@@ -38,7 +38,7 @@ module.exports = {
     ...typescript,
     ...react,
     ...redux,
-    "markdown",
+    "markdown"
   ]),
-  package: createConfig(["package-json"]),
+  package: createConfig(["package-json"])
 }
