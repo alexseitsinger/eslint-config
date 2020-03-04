@@ -24,17 +24,13 @@ const pluginOrder = [
   "tsdoc",
   "markdown",
   "spellcheck",
-  "package-json",
+  "package-json"
 ]
 
 const pluginNameMap = {
-  "@typescript-eslint": "@typescript-eslint/eslint-plugin",
+  "@typescript-eslint": "@typescript-eslint/eslint-plugin"
 }
 
-/**
- * @example
- * @param ruleFileName
- */
 function getPluginName(ruleFileName) {
   if (ruleFileName in pluginNameMap) {
     return pluginNameMap[ruleFileName]
@@ -43,13 +39,9 @@ function getPluginName(ruleFileName) {
 }
 
 const directoryNameMap = {
-  "@typescript-eslint/eslint-plugin": "@typescript-eslint",
+  "@typescript-eslint/eslint-plugin": "@typescript-eslint"
 }
 
-/**
- * @example
- * @param pluginName
- */
 function getDirectoryName(pluginName) {
   if (pluginName in directoryNameMap) {
     return directoryNameMap[pluginName]
@@ -57,15 +49,6 @@ function getDirectoryName(pluginName) {
   return pluginName
 }
 
-/**
- * @description
- * Returns an array in the order specified.
- * @example
- * sortArray([a, b, c], [c, b, a])
- * @param targets
- * @param order
- * @returns [].
- */
 function sortArray(targets, order) {
   return targets.sort((a, b) => {
     if (order.indexOf(a) > order.indexOf(b)) {
@@ -75,66 +58,60 @@ function sortArray(targets, order) {
   })
 }
 
-/**
- * @example
- * @param pluginName
- */
 function getPatches(pluginName) {
   const target = getDirectoryName(pluginName)
   return require(`./plugins/${target}/patches.js`)
 }
 
-/**
- * @example
- * @param pluginName
- */
 function getRules(pluginName) {
   const target = getDirectoryName(pluginName)
   return require(`./plugins/${target}/rules.js`)
 }
 
-/**
- * @example
- * @param pluginName
- */
 function getOptions(pluginName) {
   const target = getDirectoryName(pluginName)
   return require(`./plugins/${target}/options.js`)
 }
 
-module.exports = function createConfig(pluginNames) {
+const defaultPlugins = [
+  "eslint",
+  "eslint-comments",
+  "node",
+  "import",
+  "simple-import-sort",
+  "sort-destructure-keys"
+]
+
+function createConfig(pluginNames) {
   let config = {
     parserOptions: {
       ecmaVersion: 2020,
-      sourceType: "module",
+      sourceType: "module"
     },
     plugins: sortArray(
-      _.uniq([
-        "eslint-comments",
-        "node",
-        "import",
-        "simple-import-sort",
-        "sort-destructure-keys",
-        ...pluginNames.filter(n => n !== "eslint").map(n => getPluginName(n)),
-      ]),
+      _.uniq(
+        [...defaultPlugins, ...pluginNames]
+          .filter(n => n !== "eslint")
+          .map(n => getPluginName(n))
+      ),
       pluginOrder
     ),
-    rules: {
-      ...getRules("eslint"),
-    },
+    rules: getRules("eslint"),
+    settings: {},
     env: {
       browser: true,
       node: true,
-      es6: true,
-    },
+      es6: true
+    }
   }
+
+  // Load default settings.
+  defaultPlugins.forEach(n => {
+    config = deepMerge(config, getOptions(n))
+  })
 
   let ruleSets = {}
 
-  /**
-   * @example
-   * @param forPlugin
-   */
   function getPatchesForPlugin(forPlugin) {
     let patches = {}
     Object.keys(ruleSets)
@@ -144,7 +121,7 @@ module.exports = function createConfig(pluginNames) {
         if (forPlugin in newPatches) {
           patches = {
             ...patches,
-            ...newPatches[forPlugin],
+            ...newPatches[forPlugin]
           }
         }
       })
@@ -160,8 +137,8 @@ module.exports = function createConfig(pluginNames) {
       [pluginName]: {
         rules: getRules(pluginName),
         patches: getPatches(pluginName),
-        options: getOptions(pluginName),
-      },
+        options: getOptions(pluginName)
+      }
     }
   })
 
@@ -170,7 +147,7 @@ module.exports = function createConfig(pluginNames) {
    */
   config.rules = {
     ...config.rules,
-    ...getPatchesForPlugin("eslint"),
+    ...getPatchesForPlugin("eslint")
   }
 
   /**
@@ -182,9 +159,20 @@ module.exports = function createConfig(pluginNames) {
     config.rules = {
       ...config.rules,
       ...ruleSet.rules,
-      ...getPatchesForPlugin(pluginName),
+      ...getPatchesForPlugin(pluginName)
+    }
+  })
+
+  /**
+   * Remove duplicate settings.
+   */
+  Object.keys(config.settings).forEach(key => {
+    if (Array.isArray(config.settings[key])) {
+      config.settings[key] = _.uniq(config.settings[key])
     }
   })
 
   return config
 }
+
+module.exports = createConfig
