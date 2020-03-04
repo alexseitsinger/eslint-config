@@ -15,7 +15,7 @@ yarn add @alexseitsinger/eslint-config
 Name       | Plugins Included
 ---        | ---
 default    | eslint, eslint-comments, node, import, simple-import-sort, sort-destructure-keys
-javascript | jsdoc
+javascript | none
 testing    | jest, jest-formatting
 react      | react, react-hooks
 redux      | react-redux, redux-saga
