@@ -5,6 +5,7 @@ const javascript = []
 const react = ["react", "react-hooks", "better-styled-components"]
 const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin"]
 const redux = ["react-redux", "redux-saga"]
+const json = ["json"]
 
 module.exports = {
   create: createConfig,
@@ -14,7 +15,7 @@ module.exports = {
     ...javascript,
     ...testing,
     ...react,
-    ...redux
+    ...redux,
   ]),
   typescript: createConfig([...typescript]),
   typescriptReact: createConfig([...typescript, ...testing, ...react]),
@@ -22,23 +23,25 @@ module.exports = {
     ...typescript,
     ...testing,
     ...react,
-    ...redux
-  ]),
-  markdownJavacript: createConfig([...javascript, "markdown"]),
-  markdownJavascriptReact: createConfig([...javascript, ...react, "markdown"]),
-  markdownJavascriptReactRedux: createConfig([
-    ...javascript,
-    ...react,
     ...redux,
-    "markdown"
   ]),
+  markdown: createConfig(["markdown"]),
   markdownTypescript: createConfig([...typescript, "markdown"]),
   markdownTypescriptReact: createConfig([...typescript, ...react, "markdown"]),
   markdownTypescriptReactRedux: createConfig([
     ...typescript,
     ...react,
     ...redux,
-    "markdown"
+    "markdown",
   ]),
-  package: createConfig(["package-json"])
+  markdownJavascript: createConfig([...javascript, "markdown"]),
+  markdownJavascriptReact: createConfig([...javascript, ...react, "markdown"]),
+  markdownJavascriptReactRedux: createConfig([
+    ...javascript,
+    ...react,
+    ...redux,
+    "markdown",
+  ]),
+  json: createConfig([...json], false),
+  jsonPackage: createConfig(["package-json"], false),
 }
