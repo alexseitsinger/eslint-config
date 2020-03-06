@@ -24,6 +24,7 @@ const pluginOrder = [
   "tsdoc",
   "markdown",
   "spellcheck",
+  "json",
   "package-json"
 ]
 
@@ -73,6 +74,15 @@ function getOptions(pluginName) {
   return require(`./plugins/${target}/options.js`)
 }
 
+function sortPlugins(arr) {
+  return sortArray(
+    _.uniq(arr)
+      .filter(n => n !== "eslint")
+      .map(n => getPluginName(n)),
+    pluginOrder
+  )
+}
+
 const defaultPlugins = [
   "eslint",
   "eslint-comments",
@@ -82,36 +92,30 @@ const defaultPlugins = [
   "sort-destructure-keys"
 ]
 
-function createConfig(pluginNames) {
+function createConfig(pluginNames, useDefaults = true) {
   let config = {
     parserOptions: {
       ecmaVersion: 2020,
       sourceType: "module"
     },
-    plugins: sortArray(
-      _.uniq(
-        [...defaultPlugins, ...pluginNames]
-          .filter(n => n !== "eslint")
-          .map(n => getPluginName(n))
-      ),
-      pluginOrder
-    ),
-    rules: getRules("eslint"),
+    plugins: sortPlugins([
+      ...(useDefaults ? defaultPlugins : []),
+      ...pluginNames
+    ]),
+    rules: useDefaults ? getRules("eslint") : {},
     settings: {},
-    env: {
-      browser: true,
-      node: true,
-      es6: true
-    }
+    ...(useDefaults
+      ? {
+        env: {
+          browser: true,
+          node: true,
+          es6: true
+        }
+      }
+      : {})
   }
 
-  // Load default settings.
-  defaultPlugins.forEach(n => {
-    config = deepMerge(config, getOptions(n))
-  })
-
   let ruleSets = {}
-
   function getPatchesForPlugin(forPlugin) {
     let patches = {}
     Object.keys(ruleSets)
@@ -143,15 +147,18 @@ function createConfig(pluginNames) {
   })
 
   /**
-   * Load patches for eslint from the ruleset first.
+   * After rulesets are populated, load options and patches for eslint, first.
    */
-  config.rules = {
-    ...config.rules,
-    ...getPatchesForPlugin("eslint")
+  if (useDefaults) {
+    config = deepMerge(config, getOptions("eslint"))
+    config.rules = {
+      ...config.rules,
+      ...getPatchesForPlugin("eslint")
+    }
   }
 
   /**
-   * Apply each ruleset in order.
+   * Then load each ruleset in order.
    */
   sortArray(Object.keys(ruleSets), pluginOrder).forEach(pluginName => {
     const ruleSet = ruleSets[pluginName]
@@ -164,7 +171,7 @@ function createConfig(pluginNames) {
   })
 
   /**
-   * Remove duplicate settings.
+   * Finall,y remove duplicate settings.
    */
   Object.keys(config.settings).forEach(key => {
     if (Array.isArray(config.settings[key])) {
