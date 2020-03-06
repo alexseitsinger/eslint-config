@@ -6,7 +6,7 @@
 
 module.exports = {
   eslint: {
-    "semi": "off",
+    semi: "off",
     "eol-last": "off",
   },
 }
