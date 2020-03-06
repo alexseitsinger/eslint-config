@@ -17,5 +17,5 @@ module.exports = {
   "json/duplicate-key": "error",
   "json/comment-not-permitted": "error",
   "json/schema-resolve-error": "error",
-  "json/unknown": "error',"
+  "json/unknown": "error",
 }
