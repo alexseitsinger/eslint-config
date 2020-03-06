@@ -7,6 +7,7 @@ const pluginOrder = [
   "node",
   "import",
   "simple-import-sort",
+  "promise",
   "sort-destructure-keys",
   "better-styled-components",
   "prefer-ternary",
@@ -25,11 +26,11 @@ const pluginOrder = [
   "markdown",
   "spellcheck",
   "json",
-  "package-json"
+  "package-json",
 ]
 
 const pluginNameMap = {
-  "@typescript-eslint": "@typescript-eslint/eslint-plugin"
+  "@typescript-eslint": "@typescript-eslint/eslint-plugin",
 }
 
 function getPluginName(ruleFileName) {
@@ -40,7 +41,7 @@ function getPluginName(ruleFileName) {
 }
 
 const directoryNameMap = {
-  "@typescript-eslint/eslint-plugin": "@typescript-eslint"
+  "@typescript-eslint/eslint-plugin": "@typescript-eslint",
 }
 
 function getDirectoryName(pluginName) {
@@ -89,18 +90,19 @@ const defaultPlugins = [
   "node",
   "import",
   "simple-import-sort",
-  "sort-destructure-keys"
+  "promise",
+  "sort-destructure-keys",
 ]
 
 function createConfig(pluginNames, useDefaults = true) {
   let config = {
     parserOptions: {
       ecmaVersion: 2020,
-      sourceType: "module"
+      sourceType: "module",
     },
     plugins: sortPlugins([
       ...(useDefaults ? defaultPlugins : []),
-      ...pluginNames
+      ...pluginNames,
     ]),
     rules: useDefaults ? getRules("eslint") : {},
     settings: {},
@@ -109,10 +111,10 @@ function createConfig(pluginNames, useDefaults = true) {
         env: {
           browser: true,
           node: true,
-          es6: true
-        }
+          es6: true,
+        },
       }
-      : {})
+      : {}),
   }
 
   let ruleSets = {}
@@ -125,7 +127,7 @@ function createConfig(pluginNames, useDefaults = true) {
         if (forPlugin in newPatches) {
           patches = {
             ...patches,
-            ...newPatches[forPlugin]
+            ...newPatches[forPlugin],
           }
         }
       })
@@ -141,8 +143,8 @@ function createConfig(pluginNames, useDefaults = true) {
       [pluginName]: {
         rules: getRules(pluginName),
         patches: getPatches(pluginName),
-        options: getOptions(pluginName)
-      }
+        options: getOptions(pluginName),
+      },
     }
   })
 
@@ -153,7 +155,7 @@ function createConfig(pluginNames, useDefaults = true) {
     config = deepMerge(config, getOptions("eslint"))
     config.rules = {
       ...config.rules,
-      ...getPatchesForPlugin("eslint")
+      ...getPatchesForPlugin("eslint"),
     }
   }
 
@@ -166,7 +168,7 @@ function createConfig(pluginNames, useDefaults = true) {
     config.rules = {
       ...config.rules,
       ...ruleSet.rules,
-      ...getPatchesForPlugin(pluginName)
+      ...getPatchesForPlugin(pluginName),
     }
   })
 
