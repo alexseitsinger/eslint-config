@@ -8,6 +8,8 @@ const pluginOrder = [
   "import",
   "simple-import-sort",
   "promise",
+  "unicorn",
+  "security",
   "sort-destructure-keys",
   "better-styled-components",
   "prefer-ternary",
@@ -27,8 +29,6 @@ const pluginOrder = [
   "spellcheck",
   "json",
   "package-json",
-  "unicorn",
-  "security",
 ]
 
 const pluginNameMap = {
@@ -64,17 +64,23 @@ function sortArray(targets, order) {
 
 function getPatches(pluginName) {
   const target = getDirectoryName(pluginName)
+  /* eslint-disable security/detect-non-literal-require */
   return require(`./plugins/${target}/patches.js`)
+  /* eslint-enable security/detect-non-literal-require */
 }
 
 function getRules(pluginName) {
   const target = getDirectoryName(pluginName)
+  /* eslint-disable security/detect-non-literal-require */
   return require(`./plugins/${target}/rules.js`)
+  /* eslint-enable security/detect-non-literal-require */
 }
 
 function getOptions(pluginName) {
   const target = getDirectoryName(pluginName)
+  /* eslint-disable security/detect-non-literal-require */
   return require(`./plugins/${target}/options.js`)
+  /* eslint-enable security/detect-non-literal-require */
 }
 
 function sortPlugins(array) {
