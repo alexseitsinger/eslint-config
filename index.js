@@ -1,4 +1,4 @@
-const createConfig = require("./createConfig")
+const createConfig = require("./create-config")
 
 const testing = ["jest", "jest-formatting"]
 const javascript = []

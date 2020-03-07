@@ -37,7 +37,7 @@ const pluginNameMap = {
 
 function getPluginName(ruleFileName) {
   if (ruleFileName in pluginNameMap) {
-    return pluginNameMap[ruleFileName]
+    return pluginNameMap[String(ruleFileName)]
   }
   return ruleFileName
 }
@@ -48,7 +48,7 @@ const directoryNameMap = {
 
 function getDirectoryName(pluginName) {
   if (pluginName in directoryNameMap) {
-    return directoryNameMap[pluginName]
+    return directoryNameMap[String(pluginName)]
   }
   return pluginName
 }
@@ -77,9 +77,9 @@ function getOptions(pluginName) {
   return require(`./plugins/${target}/options.js`)
 }
 
-function sortPlugins(arr) {
+function sortPlugins(array) {
   return sortArray(
-    _.uniq(arr)
+    _.uniq(array)
       .filter(n => n !== "eslint")
       .map(n => getPluginName(n)),
     pluginOrder
@@ -92,10 +92,10 @@ const defaultPlugins = [
   "node",
   "import",
   "simple-import-sort",
-  "promise",
-  "unicorn",
-  "security",
   "sort-destructure-keys",
+  //"promise",
+  //"unicorn",
+  //"security",
 ]
 
 function createConfig(pluginNames, useDefaults = true) {
@@ -110,15 +110,7 @@ function createConfig(pluginNames, useDefaults = true) {
     ]),
     rules: useDefaults ? getRules("eslint") : {},
     settings: {},
-    ...(useDefaults
-      ? {
-        env: {
-          browser: true,
-          node: true,
-          es6: true,
-        },
-      }
-      : {}),
+    env: {},
   }
 
   let ruleSets = {}
@@ -131,7 +123,7 @@ function createConfig(pluginNames, useDefaults = true) {
         if (forPlugin in newPatches) {
           patches = {
             ...patches,
-            ...newPatches[forPlugin],
+            ...newPatches[String(forPlugin)],
           }
         }
       })
@@ -157,6 +149,12 @@ function createConfig(pluginNames, useDefaults = true) {
    */
   if (useDefaults) {
     config = deepMerge(config, getOptions("eslint"))
+    config.env = {
+      ...config.env,
+      browser: true,
+      node: true,
+      es6: true,
+    }
     config.rules = {
       ...config.rules,
       ...getPatchesForPlugin("eslint"),
@@ -167,7 +165,7 @@ function createConfig(pluginNames, useDefaults = true) {
    * Then load each ruleset in order.
    */
   sortArray(Object.keys(ruleSets), pluginOrder).forEach(pluginName => {
-    const ruleSet = ruleSets[pluginName]
+    const ruleSet = ruleSets[String(pluginName)]
     config = deepMerge(config, ruleSet.options)
     config.rules = {
       ...config.rules,
@@ -180,8 +178,8 @@ function createConfig(pluginNames, useDefaults = true) {
    * Finall,y remove duplicate settings.
    */
   Object.keys(config.settings).forEach(key => {
-    if (Array.isArray(config.settings[key])) {
-      config.settings[key] = _.uniq(config.settings[key])
+    if (Array.isArray(config.settings[String(key)])) {
+      config.settings[String(key)] = _.uniq(config.settings[String(key)])
     }
   })
 
