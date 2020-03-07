@@ -2437,10 +2437,12 @@ module.exports = {
    *
    * NOTES:
    * - patches this according to AirBNB eslint.
+   * - If an async function doens't contain await, it is executed synchronously,
+   *   so when we use it, we should enforce await.
    *
    * Https://eslint.org/docs/rules/require-await.
    */
-  "require-await": "off",
+  "require-await": "error",
 
   /**
    * Enforce the use of u flag on RegExp.
