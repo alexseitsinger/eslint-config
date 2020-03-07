@@ -55,7 +55,7 @@ module.exports = {
    *
    * (Fixable)
    *
-   * "off" according to recommended
+   * "off" according to plugin:recommended
    */
   "unicorn/custom-error-definition": "off",
 
@@ -141,12 +141,16 @@ module.exports = {
    * Enforces all linted files to have their names in a certain case style. The
    * default is kebabCase.
    *
-   * kebabCase
-   * camelCase
-   * snakeCase
-   * pascalCase
+   * Possible values are:
+   * 1. kebabCase
+   * 2. camelCase
+   * 3. snakeCase
+   * 4. pascalCase
    *
    * Characters in the filename except a-z, A-Z, 0-9, -, _ and $ are ignored.
+   *
+   * NOTE: This rule is preferred to the naming rules in
+   *       'eslint-plugin-react-redux'.
    */
   "unicorn/filename-case": [
     "error",
