@@ -2,9 +2,12 @@ module.exports = {
   /**
    * Improve regexes by making them shorter, consistent, and safer
    * (Fixable)
+   *
+   * Disabled because we're getting "no definition" error each time we try to
+   * lint
    */
   "unicorn/better-regex": [
-    "error",
+    "off",
     {
       /**
        * Disables optimizations that affect the sorting of character classes.
@@ -427,7 +430,7 @@ module.exports = {
   "unicorn/prevent-abbreviations": [
     "error",
     {
-      replacements: [],
+      replacements: {},
       extendDefaultReplacements: true,
       // Unlike the replacements option, whitelist matches full identifier names
       // case-sensitively.
@@ -467,5 +470,5 @@ module.exports = {
    * Require new when throwing an error
    * (Fixable)
    */
-  "unicorn/thrown-new-error": "error",
+  "unicorn/throw-new-error": "error",
 }
