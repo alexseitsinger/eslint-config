@@ -16,8 +16,7 @@ module.exports = {
     // since we need to add types to arguments, we should always use parens in
     // arrow functions with typescript.
     "arrow-parens": ["error", "always"],
-    // This plugin has its own updated copy of this rule, so we disable the
-    // original eslint one.
+    // This plugin has its own copy of these rules.
     "brace-style": "off",
     camelcase: "off",
     "func-call-spacing": "off",
