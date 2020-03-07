@@ -20,11 +20,9 @@ module.exports = {
    * This rule enforces that all of the provided parameters should follow the
    * above naming conventions.
    *
-   * NOTE: Disabled because we enforce dash-case names via unicorn.
-   * NOTE: Disabled because we sometimes use 'eslint-plugin-filenames' to
-   *       enforece correct filenames.
+   * NOTE: This rule gets disabled when this plugin is used with unicorn.
    */
-  "react-redux/connect-prefer-named-arguments": "off",
+  "react-redux/connect-prefer-named-arguments": "error",
 
   /**
    * Enforces that the mapDispatchToProps is an object or a function returning

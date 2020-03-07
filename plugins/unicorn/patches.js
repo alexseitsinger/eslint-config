@@ -9,4 +9,10 @@ module.exports = {
       },
     ],
   },
+  "react-redux": {
+    /**
+     * We prefer to use 'unicorn/filename-case' over this rule.
+     */
+    "react-redux/connect-prefer-named-arguments": "off",
+  },
 }
