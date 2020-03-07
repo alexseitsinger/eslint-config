@@ -174,12 +174,15 @@ module.exports = {
    * Enforce consistent indentation
    * (Fixable)
    *
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * This is disabled according to plugin:recommended.
+   *
+   * However, without enabling this, the indentation of stroustrup blocks
+   * is misaligned when formatted.
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
    */
   "@typescript-eslint/indent": [
-    "off",
+    "error",
     2,
     {
       SwitchCase: 1,

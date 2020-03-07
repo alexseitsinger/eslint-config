@@ -308,6 +308,8 @@ module.exports = {
    *
    * (fixable).
    *
+   * Enabled to ensure the stroustrup blocks are formatted correctly.
+   *
    * Https://eslint.org/docs/rules/indent.
    */
   indent: [
