@@ -1,3 +1,32 @@
+<a name="v6.0.0"></a>
+## [v6.0.0](https://github.com/alexseitsinger/eslint-config/compare/v5.4.0...v6.0.0) (2020-03-07)
+
+### Bug Fixes
+- Adjust some rules so prettier works. ([08a80eb](https://github.com/alexseitsinger/eslint-config/commit/08a80eb88efdd7808c457c27e9b45c43572edab7))
+- Enables indent rules for stroustrup blocks. ([2cc1632](https://github.com/alexseitsinger/eslint-config/commit/2cc1632c9b1c6116c6f9f3eb263edc5f3317dc56))
+- Fixes rules. ([d40ca2f](https://github.com/alexseitsinger/eslint-config/commit/d40ca2f2adce4998577b87505196f9395d5b9895))
+- Fixes typo. ([d75bf98](https://github.com/alexseitsinger/eslint-config/commit/d75bf98428e122a4f55c14821246ad7d65f0f078))
+- Removes globals for jest. ([25125ed](https://github.com/alexseitsinger/eslint-config/commit/25125ede427d5dec35715aaf10cca3d77144848e))
+
+### Code Refactoring
+- Adds missing brace-style rule. ([b0f754b](https://github.com/alexseitsinger/eslint-config/commit/b0f754b1f8ca281e91adceef2905f57340198370))
+- Disabled rule according to XO. ([7ff8b2f](https://github.com/alexseitsinger/eslint-config/commit/7ff8b2f9c4b2d1341ddbf55da0d7fd4562c48eaf))
+- Disables eslint on lines. ([c65a315](https://github.com/alexseitsinger/eslint-config/commit/c65a315534d700686e4a82ad2053b66cb7011110))
+- renames module ([8e58584](https://github.com/alexseitsinger/eslint-config/commit/8e58584b26955be9b1157dc7e4bbddf884e50138))
+- Updates createConfig ([1fe879f](https://github.com/alexseitsinger/eslint-config/commit/1fe879f14debed83e894cc00da61f4c0cbd5e593))
+- Updates method & add promise to default. ([c8f163d](https://github.com/alexseitsinger/eslint-config/commit/c8f163dfae82e57c7efc5a256279c64ef2b57725))
+
+### Features
+- Adds json plugin config. ([1bf4104](https://github.com/alexseitsinger/eslint-config/commit/1bf410445b956f96e296f57b10897597aa23e68c))
+- Adds rules for promise ([62a96cb](https://github.com/alexseitsinger/eslint-config/commit/62a96cbffc7c0614df90b128b070627f315b3004))
+- Adds security & unicorn to defaults. ([f029e3e](https://github.com/alexseitsinger/eslint-config/commit/f029e3e11188995237c4cd1be3372effe37a9d06))
+- Adds security rules. ([a8758a7](https://github.com/alexseitsinger/eslint-config/commit/a8758a74c02ed2d935d21bd58d7c4edcdaaafb6f))
+- Adds some explicit overrides for prettier. ([3ac2b1b](https://github.com/alexseitsinger/eslint-config/commit/3ac2b1bde4c9d7c885449bcff658a4ed5b16bdde))
+- Adds unicorn rules. ([7739919](https://github.com/alexseitsinger/eslint-config/commit/7739919476b353b1e2576dd648cd044eaad5bc6a))
+- Adds/updates json & package-json. ([a2170e6](https://github.com/alexseitsinger/eslint-config/commit/a2170e6309ac9e7d1d48c88fbcd6f0dedd8e65b6))
+- Enables require-await. ([c38c8c3](https://github.com/alexseitsinger/eslint-config/commit/c38c8c346cc8cd780b1df8102c634adb276e8bef))
+
+
 <a name="v5.4.0"></a>
 ## [v5.4.0](https://github.com/alexseitsinger/eslint-config/compare/v5.3.0...v5.4.0) (2020-03-04)
 
