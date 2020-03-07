@@ -27,6 +27,8 @@ const pluginOrder = [
   "spellcheck",
   "json",
   "package-json",
+  "unicorn",
+  "security",
 ]
 
 const pluginNameMap = {
@@ -91,6 +93,8 @@ const defaultPlugins = [
   "import",
   "simple-import-sort",
   "promise",
+  "unicorn",
+  "security",
   "sort-destructure-keys",
 ]
 
