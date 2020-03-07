@@ -93,9 +93,9 @@ const defaultPlugins = [
   "import",
   "simple-import-sort",
   "sort-destructure-keys",
-  //"promise",
-  //"unicorn",
-  //"security",
+  "promise",
+  "unicorn",
+  "security",
 ]
 
 function createConfig(pluginNames, useDefaults = true) {
