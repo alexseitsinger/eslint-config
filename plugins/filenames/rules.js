@@ -49,6 +49,10 @@ module.exports = {
    * Having a bunch of index.js files can have negative influence on developer
    * experience, eg: when opening files by name. When enabling this rule,
    * index.js files will always be considered a problem.
+   *
+   * NOTE: We often organize our modules within directories, and reference them
+   *       by the directory name. This means the contained index file get
+   *       automatically used as the import target. Therefore, disable this rule.
    */
-  //"filenames/no-index": "error",
+  "filenames/no-index": "off",
 }
