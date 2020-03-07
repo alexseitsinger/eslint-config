@@ -42,8 +42,10 @@ module.exports = {
    * functions.
    *
    * It also ignores functions that contain JSXElement references.
+   *
+   * Disabled
    */
-  "unicorn/consistent-function-scoping": "error",
+  "unicorn/consistent-function-scoping": "off",
 
   /**
    * Enforce correct Error subclassing
