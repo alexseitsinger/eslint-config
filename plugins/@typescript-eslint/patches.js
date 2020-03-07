@@ -17,7 +17,7 @@ module.exports = {
     // arrow functions with typescript.
     "arrow-parens": ["error", "always"],
     "brace-style": "off",
-    "camelcase": "off",
+    camelcase: "off",
     "func-call-spacing": "off",
     "no-empty-function": "off",
     "no-extra-parens": "off",
@@ -26,10 +26,10 @@ module.exports = {
     "no-unused-expressions": "off",
     "no-unused-vars": "off",
     "no-use-before-define": "off",
-    "quotes": "off",
+    quotes: "off",
     "require-await": "off",
-    "semi": "off",
+    semi: "off",
     "space-before-function-paren": "off",
-    "indent": "off",
+    indent: "off",
   },
 }
