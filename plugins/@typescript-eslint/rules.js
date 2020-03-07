@@ -65,11 +65,15 @@ module.exports = {
    * (Fixable)
    *
    * - Requires disabling the original eslint config rule.
-   * - patches because we use eslint.
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * - This rule is disabled entirely in plugin:recommended.
    */
-  //
-  "@typescript-eslint/brace-style": "off",
+  "@typescript-eslint/brace-style": [
+    "error",
+    "stroustrup",
+    {
+      allowSingleLine: false,
+    },
+  ],
 
   /**
    * Enforce camelCase naming convention
