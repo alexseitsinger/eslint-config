@@ -1,1 +1,24 @@
-module.exports = {}
+module.exports = {
+  eslint: {
+    /**
+     * Typically, (unless using prettier-eslint) prettier will format the file
+     * first, then eslint formats the file.
+     *
+     * If the value of max-len is not the same as the printWidth value for
+     * prettier, this will fuck up formatting.
+     */
+    "max-len": "off",
+    /**
+     * If we are using implicit arrow funcs, and we have linebreaks forbidden,
+     * the arrow functions will exceed beyond the value of 'printWidth' that we
+     * specifiy. To prevent this, disable the rule entirely so we can still use
+     * single-line arrow functions manually.
+     */
+    "implicit-arrow-linebreak": "off",
+    /**
+     * Just to make sure we can use single line arrow funcs when we need to,
+     * make sure this is set to as-needed instead of 'always' or 'never'.
+     */
+    "arrow-body-style": ["error", "as-needed"],
+  },
+}
