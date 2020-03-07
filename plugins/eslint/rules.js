@@ -294,11 +294,14 @@ module.exports = {
   /**
    * Enforce the location of arrow function bodies.
    *
+   * NOTE: This wil force the line to exceed the max-len (or printWidth with
+   * prettier, so either disable this rule or use 'below'.
+   *
    * (fixable).
    *
    * Https://eslint.org/docs/rules/implicit-arrow-linebreak.
    */
-  "implicit-arrow-linebreak": ["error", "beside"],
+  "implicit-arrow-linebreak": ["off", "below"],
 
   /**
    * Enforce consistent indentation.
@@ -445,6 +448,9 @@ module.exports = {
 
   /**
    * Enforce a maximum line length.
+   *
+   * If our lines are somehow exceeding the max-len from prettier, see the rule:
+   * 'implicit-arrow-linebreak' rule (if the offending lines are arrow functions)
    *
    * Https://eslint.org/docs/rules/max-len.
    */
@@ -2477,6 +2483,7 @@ module.exports = {
 
   /**
    * Require braces around arrow function bodies.
+   * (See also implict-arrow-linebreak rule)
    *
    * (fixable).
    *
