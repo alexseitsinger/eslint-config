@@ -1,3 +1,29 @@
+<a name="v7.0.0"></a>
+## [v7.0.0](https://github.com/alexseitsinger/eslint-config/compare/v6.0.0...v7.0.0) (2020-03-08)
+
+### Bug Fixes
+- Changes max-len for comments. ([5b209a2](https://github.com/alexseitsinger/eslint-config/commit/5b209a2d844755cf0b548dc136aaf0f83854b8a9))
+- Fixes patch rule. ([3534b2b](https://github.com/alexseitsinger/eslint-config/commit/3534b2b06c284d6637f56d859e3bef048348dbac))
+
+### Code Refactoring
+- Adds language checker. ([982c11e](https://github.com/alexseitsinger/eslint-config/commit/982c11e627d43c4267ceebfc8fa7e3a82f12063f))
+- Disable no-index. ([affdca6](https://github.com/alexseitsinger/eslint-config/commit/affdca6d60ebc98bc9deebac9f93d6207dcbb67d))
+- Disabled for unicorn rules instead. ([ed21862](https://github.com/alexseitsinger/eslint-config/commit/ed218624c061e692ce9c8c6d7f6ff642a88aa4a6))
+- Disables redux rule via unicorn patches. ([b1efc28](https://github.com/alexseitsinger/eslint-config/commit/b1efc2877a5e4e67584aab8dd62aec7c1139e26c))
+- Increase max lines per func. ([10c08ed](https://github.com/alexseitsinger/eslint-config/commit/10c08eda7c90ef2d8185aa19b592cc8dab6ba45d))
+- Limit regex to dash-case only. ([dfcb050](https://github.com/alexseitsinger/eslint-config/commit/dfcb0509b72a2ddca41c59ca0991fcac3e0fc198))
+- Updates module. ([e20197b](https://github.com/alexseitsinger/eslint-config/commit/e20197bd99f31a2edff190665019bb43c5353d35))
+- Updates patches. ([8300057](https://github.com/alexseitsinger/eslint-config/commit/83000573d961282a268579176fd523b7e22ce3fc))
+
+### Features
+- Adds getRules export. ([5388ce8](https://github.com/alexseitsinger/eslint-config/commit/5388ce88d85c765875fcd17600f28e711f3bc0ca))
+- Adds new rulesets. ([7994ab6](https://github.com/alexseitsinger/eslint-config/commit/7994ab61477f9101d02dfe0f49445d48b95baadc))
+- Adds patch for node plugin. ([edc01fa](https://github.com/alexseitsinger/eslint-config/commit/edc01fa3e6134a7ec4de69ea2f86b99dfdc09b90))
+- Disable rules in unicorn & react-redux. ([e88094e](https://github.com/alexseitsinger/eslint-config/commit/e88094ed59476631edbaf0693e48e3e5fc12f2f1))
+- Updates abbreviations rule. ([a8a4a8e](https://github.com/alexseitsinger/eslint-config/commit/a8a4a8ea28fc76ca51e8b42d083257ef3f9ec91e))
+- Updates presets ([eb6d825](https://github.com/alexseitsinger/eslint-config/commit/eb6d825e11555acfb705c87eaf7c21dc741c9799))
+
+
 <a name="v6.0.0"></a>
 ## [v6.0.0](https://github.com/alexseitsinger/eslint-config/compare/v5.4.0...v6.0.0) (2020-03-07)
 
