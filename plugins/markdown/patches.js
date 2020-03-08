@@ -50,4 +50,11 @@ module.exports = {
      */
     "import/no-unresolved": "off",
   },
+  node: {
+    /**
+     * Imports and requires are fucked up with markdown since its not an actual
+     * module, so just disable this.
+     */
+    "node/no-missing-require": "off",
+  },
 }
