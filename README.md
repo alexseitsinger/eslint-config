@@ -12,16 +12,19 @@ yarn add @alexseitsinger/eslint-config
 
 ## Plugin Groups
 
-Name       | Plugins Included
----        | ---
-default    | eslint, eslint-comments, node, import, simple-import-sort, sort-destructure-keys
-javascript | none
-testing    | jest, jest-formatting
-react      | react, react-hooks
-redux      | react-redux, redux-saga
-typescript | tsdoc, @typescript-eslint/eslint-plugin
-markdown   | markdown
-package    | package-json
+
+
+Name        | Plugins Used
+---         | ---
+default     | eslint, eslint-comments, node, sort-requires, promise, unicorn, security, sort-destructure-keys, no-loops, return-early-dont-assign,
+javascript  | none
+testing     | jest, jest-formatting
+react       | react, react-hooks, react-perf
+redux       | react-redux, redux-saga
+typescript  | tsdoc, @typescript-eslint/eslint-plugin, jsx-falsy
+markdown    | markdown
+jsonPackage | package-json
+json        | json
 
 ## Preset Configurations
 
@@ -39,7 +42,8 @@ markdownJavascriptReactRedux | default, javascript, react, redux, markdown
 markdownTypescript           | default, typescript, markdown
 markdownTypescriptReact      | default, typescript, react, markdown
 markdownTypescriptReactRedux | default, typescript, react, redux, markdown
-package                      | default, package
+jsonPackage                  | package-json
+json                         | json
 
 ## Example
 
