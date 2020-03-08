@@ -1,73 +1,61 @@
 const { createConfig, getRules } = require("./create-config")
 
-const javascript = []
-const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin", "jsx-falsy"]
 const imports = ["import", "simple-import-sort", "unused-imports"]
 const testing = ["jest", "jest-formatting"]
-const react = ["react", "react-hooks", "better-styled-components", "react-perf"]
+const react = [
+  "react",
+  "react-hooks",
+  "better-styled-components",
+  "react-perf",
+  ...testing,
+]
 const redux = ["react-redux", "redux-saga"]
-const json = ["json"]
+
+const base = []
+const javascriptBase = [...base, ...imports]
+const typescriptBase = [
+  ...base,
+  ...imports,
+  "tsdoc",
+  "@typescript-eslint/eslint-plugin",
+  "jsx-falsy",
+]
 
 module.exports = {
   createConfig,
   getRules,
-  javascript: createConfig([...javascript]),
-  javascriptReact: createConfig([
-    ...javascript,
-    ...imports,
-    ...testing,
-    ...react,
-  ]),
-  javascriptReactRedux: createConfig([
-    ...javascript,
-    ...imports,
-    ...testing,
-    ...react,
-    ...redux,
-  ]),
-  typescript: createConfig([...typescript, ...imports]),
-  typescriptReact: createConfig([
-    ...typescript,
-    ...imports,
-    ...testing,
-    ...react,
-  ]),
-  typescriptReactRedux: createConfig([
-    ...typescript,
-    ...imports,
-    ...testing,
-    ...react,
-    ...redux,
-  ]),
+  defaultsOnly: createConfig(base),
+  javascript: createConfig(javascriptBase),
+  javascriptReact: createConfig([...javascriptBase, ...react]),
+  javascriptReactRedux: createConfig([...javascriptBase, ...react, ...redux]),
+  typescript: createConfig(typescriptBase),
+  typescriptReact: createConfig([...typescriptBase, ...react]),
+  typescriptReactRedux: createConfig([...typescriptBase, ...react, ...redux]),
   markdown: createConfig(["markdown"]),
-  markdownTypescript: createConfig([...typescript, ...imports, "markdown"]),
+  markdownTypescript: createConfig([...typescriptBase, "markdown"]),
   markdownTypescriptReact: createConfig([
-    ...typescript,
-    ...imports,
+    ...typescriptBase,
     ...react,
     "markdown",
   ]),
   markdownTypescriptReactRedux: createConfig([
-    ...typescript,
-    ...imports,
+    ...typescriptBase,
     ...react,
     ...redux,
     "markdown",
   ]),
-  markdownJavascript: createConfig([...javascript, "markdown"]),
+  markdownJavascript: createConfig([...javascriptBase, "markdown"]),
   markdownJavascriptReact: createConfig([
-    ...javascript,
-    ...imports,
+    ...javascriptBase,
     ...react,
     "markdown",
   ]),
   markdownJavascriptReactRedux: createConfig([
-    ...javascript,
-    ...imports,
+    ...javascriptBase,
     ...react,
     ...redux,
     "markdown",
   ]),
-  json: createConfig([...json], false),
+  json: createConfig(["json"], false),
   jsonPackage: createConfig(["package-json"], false),
 }
