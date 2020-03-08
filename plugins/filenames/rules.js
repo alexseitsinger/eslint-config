@@ -7,7 +7,7 @@ module.exports = {
    * default is camelCase.js). Additionally, exporting files can be ignored
    * with a second configuratoin parameter.
    */
-  "filenames/match-regex": ["error", "^[a-z-_.]+$", true],
+  "filenames/match-regex": ["error", "^[a-z-]+$", true],
 
   /**
    * Match the filename against the default exported value in the module.
