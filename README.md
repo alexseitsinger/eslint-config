@@ -14,7 +14,7 @@ yarn add @alexseitsinger/eslint-config
 
 #### createConfig
 
-Returns a complete eslint config using the rules for the specified plugins. All configs come with certain plugins automatically, so no need to specify them.
+Returns a complete eslint config using the rules for the specified plugins. All configs come with certain plugins automatically, so no need to specify them. Second argument is useDefaults. If false, the config will not include the default plugins.
 
 Plugins Included:
 1. eslint
