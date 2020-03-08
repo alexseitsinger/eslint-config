@@ -45,6 +45,8 @@ module.exports = {
 }
 ```
 
+===
+
 #### getRules
 
 Returns the ruleset for a plugin (patches, options, rules). The second arguments specifies if its a typescript plugin, or not (default: false).
@@ -54,6 +56,8 @@ Returns the ruleset for a plugin (patches, options, rules). The second arguments
 ```javascript
 const reactRules = getRules("react", false)
 ```
+
+===
 
 #### Preset Configurations
 
