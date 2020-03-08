@@ -1,24 +1,47 @@
 const _ = require("underscore")
 const deepMerge = require("deepmerge")
 
-const pluginOrder = [
+const defaultPlugins = [
   "eslint",
   "eslint-comments",
   "node",
-  "import",
-  "simple-import-sort",
+  "sort-requires",
   "promise",
   "unicorn",
   "security",
   "sort-destructure-keys",
+  "no-loops",
+  "return-early-dont-assign",
+  //"sort-class-members",
+]
+
+const pluginOrder = [
+  "eslint",
+  "eslint-comments",
+  "babel",
+  "node",
+  "sort-requires",
+  "import",
+  "simple-import-sort",
+  "unused-imports",
+  "promise",
+  "unicorn",
+  "security",
+  // Plugin is broken
+  //"align-assignments",
+  "sort-destructure-keys",
+  "sort-class-members",
   "better-styled-components",
+  "no-loops",
   "prefer-ternary",
+  "return-early-dont-assign",
   "filenames",
   "emotion",
   "prettier",
   "jest",
   "jest-formatting",
   "react",
+  "react-perf",
   "react-hooks",
   "react-redux",
   "redux-saga",
@@ -30,6 +53,8 @@ const pluginOrder = [
   "json",
   "package-json",
 ]
+
+const typescriptPluginNames = ["@typescript-eslint/eslint-plugin"]
 
 const pluginNameMap = {
   "@typescript-eslint": "@typescript-eslint/eslint-plugin",
@@ -62,25 +87,64 @@ function sortArray(targets, order) {
   })
 }
 
-function getPatches(pluginName) {
+function getPatches(pluginName, isTypescript = false) {
   const target = getDirectoryName(pluginName)
   /* eslint-disable security/detect-non-literal-require */
-  return require(`./plugins/${target}/patches.js`)
+  const module_ = require(`./plugins/${target}/patches.js`)
   /* eslint-enable security/detect-non-literal-require */
+  if (shouldUseLanguage(module_)) {
+    if (isTypescript) {
+      return module_.typescript
+    }
+    return module_.javascript
+  }
+  return module_
 }
 
-function getRules(pluginName) {
-  const target = getDirectoryName(pluginName)
-  /* eslint-disable security/detect-non-literal-require */
-  return require(`./plugins/${target}/rules.js`)
-  /* eslint-enable security/detect-non-literal-require */
+function shouldUseLanguage(module_) {
+  const keys = Object.keys(module_)
+  return (
+    keys.length === 2
+    && keys.includes("javascript")
+    && keys.includes("typescript")
+  )
 }
 
-function getOptions(pluginName) {
+function usesTypescript(pluginNames) {
+  return pluginNames
+    .map(pluginName => {
+      const target = getPluginName(pluginName)
+      return typescriptPluginNames.includes(target)
+    })
+    .includes(true)
+}
+
+function getRules(pluginName, isTypescript = false) {
   const target = getDirectoryName(pluginName)
   /* eslint-disable security/detect-non-literal-require */
-  return require(`./plugins/${target}/options.js`)
+  const module_ = require(`./plugins/${target}/rules.js`)
   /* eslint-enable security/detect-non-literal-require */
+  if (shouldUseLanguage(module_)) {
+    if (isTypescript) {
+      return module_.typescript
+    }
+    return module_.javascript
+  }
+  return module_
+}
+
+function getOptions(pluginName, isTypescript = false) {
+  const target = getDirectoryName(pluginName)
+  /* eslint-disable security/detect-non-literal-require */
+  const module_ = require(`./plugins/${target}/options.js`)
+  /* eslint-enable security/detect-non-literal-require */
+  if (shouldUseLanguage(module_)) {
+    if (isTypescript) {
+      return module_.typescript
+    }
+    return module_.javascript
+  }
+  return module_
 }
 
 function sortPlugins(array) {
@@ -92,29 +156,21 @@ function sortPlugins(array) {
   )
 }
 
-const defaultPlugins = [
-  "eslint",
-  "eslint-comments",
-  "node",
-  "import",
-  "simple-import-sort",
-  "sort-destructure-keys",
-  "promise",
-  "unicorn",
-  "security",
-]
-
 function createConfig(pluginNames, useDefaults = true) {
+  const plugins = sortPlugins([
+    ...(useDefaults ? defaultPlugins : []),
+    ...pluginNames,
+  ])
+
+  const isTypescript = usesTypescript(plugins)
+
   let config = {
     parserOptions: {
       ecmaVersion: 2020,
       sourceType: "module",
     },
-    plugins: sortPlugins([
-      ...(useDefaults ? defaultPlugins : []),
-      ...pluginNames,
-    ]),
-    rules: useDefaults ? getRules("eslint") : {},
+    plugins,
+    rules: useDefaults ? getRules("eslint", isTypescript) : {},
     settings: {},
     env: {},
   }
@@ -125,7 +181,7 @@ function createConfig(pluginNames, useDefaults = true) {
     Object.keys(ruleSets)
       .filter(n => n !== forPlugin)
       .forEach(fromPlugin => {
-        const newPatches = getPatches(fromPlugin)
+        const newPatches = getPatches(fromPlugin, isTypescript)
         if (forPlugin in newPatches) {
           patches = {
             ...patches,
@@ -143,9 +199,9 @@ function createConfig(pluginNames, useDefaults = true) {
     ruleSets = {
       ...ruleSets,
       [pluginName]: {
-        rules: getRules(pluginName),
-        patches: getPatches(pluginName),
-        options: getOptions(pluginName),
+        rules: getRules(pluginName, isTypescript),
+        patches: getPatches(pluginName, isTypescript),
+        options: getOptions(pluginName, isTypescript),
       },
     }
   })
@@ -154,7 +210,7 @@ function createConfig(pluginNames, useDefaults = true) {
    * After rulesets are populated, load options and patches for eslint, first.
    */
   if (useDefaults) {
-    config = deepMerge(config, getOptions("eslint"))
+    config = deepMerge(config, getOptions("eslint", isTypescript))
     config.env = {
       ...config.env,
       browser: true,
