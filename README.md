@@ -28,6 +28,8 @@ Plugins Included:
 9. no-loops
 10. return-early-no-assign
 
+###### Example
+
 ```javascript
 const reactConfig = createConfig([
   "react", "react-hooks",
@@ -47,25 +49,15 @@ module.exports = {
 
 Returns the ruleset for a plugin (patches, options, rules). The second arguments specifies if its a typescript plugin, or not (default: false).
 
+###### Example
+
 ```javascript
 const reactRules = getRules("react", false)
 ```
 
-## Plugin Groups
+#### Preset Configurations
 
-Name        | Plugins Used
----         | ---
-default     | eslint, eslint-comments, node, sort-requires, promise, unicorn, security, sort-destructure-keys, no-loops, return-early-dont-assign,
-javascript  | none
-testing     | jest, jest-formatting
-react       | react, react-hooks, react-perf
-redux       | react-redux, redux-saga
-typescript  | tsdoc, @typescript-eslint/eslint-plugin, jsx-falsy
-markdown    | markdown
-jsonPackage | package-json
-json        | json
-
-## Preset Configurations
+Each of these is exported from the package along with the two methods above.
 
 Name                         | Plugin Groups Included
 ---                          | ---
@@ -84,7 +76,21 @@ markdownTypescriptReactRedux | default, typescript, react, redux, markdown
 jsonPackage                  | package-json
 json                         | json
 
-## Example
+###### Plugin Groups
+
+Name        | Plugins Used
+---         | ---
+default     | eslint, eslint-comments, node, sort-requires, promise, unicorn, security, sort-destructure-keys, no-loops, return-early-dont-assign,
+javascript  | none
+testing     | jest, jest-formatting
+react       | react, react-hooks, react-perf
+redux       | react-redux, redux-saga
+typescript  | tsdoc, @typescript-eslint/eslint-plugin, jsx-falsy
+markdown    | markdown
+jsonPackage | package-json
+json        | json
+
+###### Example
 
 ```javascript
 // .eslintrc.js
