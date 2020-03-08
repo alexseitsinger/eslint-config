@@ -1,45 +1,74 @@
 const createConfig = require("./create-config")
 
-const testing = ["jest", "jest-formatting"]
 const javascript = []
-const react = ["react", "react-hooks", "better-styled-components"]
-const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin"]
+const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin", "jsx-falsy"]
+const imports = ["import", "simple-import-sort", "unused-imports"]
+const testing = ["jest", "jest-formatting"]
+const react = ["react", "react-hooks", "better-styled-components", "react-perf"]
 const redux = ["react-redux", "redux-saga"]
 const json = ["json"]
 
 module.exports = {
   create: createConfig,
   javascript: createConfig([...javascript]),
-  javascriptReact: createConfig([...javascript, ...testing, ...react]),
+  javascriptReact: createConfig([
+    ...javascript,
+    ...imports,
+    ...testing,
+    ...react,
+    "babel",
+  ]),
   javascriptReactRedux: createConfig([
     ...javascript,
+    ...imports,
     ...testing,
     ...react,
     ...redux,
+    "babel",
   ]),
-  typescript: createConfig([...typescript]),
-  typescriptReact: createConfig([...typescript, ...testing, ...react]),
+  typescript: createConfig([...typescript, ...imports]),
+  typescriptReact: createConfig([
+    ...typescript,
+    ...imports,
+    ...testing,
+    ...react,
+  ]),
   typescriptReactRedux: createConfig([
     ...typescript,
+    ...imports,
     ...testing,
     ...react,
     ...redux,
   ]),
   markdown: createConfig(["markdown"]),
-  markdownTypescript: createConfig([...typescript, "markdown"]),
-  markdownTypescriptReact: createConfig([...typescript, ...react, "markdown"]),
+  markdownTypescript: createConfig([...typescript, ...imports, "markdown"]),
+  markdownTypescriptReact: createConfig([
+    ...typescript,
+    ...imports,
+    ...react,
+    "markdown",
+  ]),
   markdownTypescriptReactRedux: createConfig([
     ...typescript,
+    ...imports,
     ...react,
     ...redux,
     "markdown",
   ]),
-  markdownJavascript: createConfig([...javascript, "markdown"]),
-  markdownJavascriptReact: createConfig([...javascript, ...react, "markdown"]),
+  markdownJavascript: createConfig([...javascript, "babel", "markdown"]),
+  markdownJavascriptReact: createConfig([
+    ...javascript,
+    ...imports,
+    ...react,
+    "babel",
+    "markdown",
+  ]),
   markdownJavascriptReactRedux: createConfig([
     ...javascript,
+    ...imports,
     ...react,
     ...redux,
+    "babel",
     "markdown",
   ]),
   json: createConfig([...json], false),
