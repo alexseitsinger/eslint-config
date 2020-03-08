@@ -10,9 +10,48 @@ instead of extending, or a new config can be created using the exported
 yarn add @alexseitsinger/eslint-config
 ```
 
+## Exports
+
+#### createConfig
+
+Returns a complete eslint config using the rules for the specified plugins. All configs come with certain plugins automatically, so no need to specify them.
+
+Plugins Included:
+1. eslint
+2. eslint-comments
+3. node
+4. sort-requires
+5. sort-destructure-keys
+6. promise
+7. unicorn
+8. security
+9. no-loops
+10. return-early-no-assign
+
+```javascript
+const reactConfig = createConfig([
+  "react", "react-hooks",
+])
+
+module.exports = {
+  overrides: [
+    {
+      files: ["*.js", "*.jsx"],
+      ...reactConfig,
+    },
+  ]
+}
+```
+
+#### getRules
+
+Returns the ruleset for a plugin (patches, options, rules). The second arguments specifies if its a typescript plugin, or not (default: false).
+
+```javascript
+const reactRules = getRules("react", false)
+```
+
 ## Plugin Groups
-
-
 
 Name        | Plugins Used
 ---         | ---
