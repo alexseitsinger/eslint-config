@@ -45,7 +45,7 @@ module.exports = {
 }
 ```
 
-===
+---
 
 #### getRules
 
@@ -57,7 +57,7 @@ Returns the ruleset for a plugin (patches, options, rules). The second arguments
 const reactRules = getRules("react", false)
 ```
 
-===
+---
 
 #### Preset Configurations
 
