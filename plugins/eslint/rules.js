@@ -439,6 +439,9 @@ module.exports = {
   /**
    * Enforce a maximum depth that blocks can be nested.
    *
+   * In order to adhere to the unix philosophy, we should limit the maximum
+   * depth level of any one block to reduc complexity and improve readability.
+   *
    * Https://eslint.org/docs/rules/max-depth.
    */
   "max-depth": [
@@ -451,19 +454,30 @@ module.exports = {
   /**
    * Enforce a maximum line length.
    *
-   * If our lines are somehow exceeding the max-len from prettier, see the rule:
-   * 'implicit-arrow-linebreak' rule (if the offending lines are arrow functions)
+   * In order to adhere to the unix philosophy, we should limit the maximum
+   * column size used for our code to maximize readability and reduce
+   * complexity.
+   *
+   * We enable this rule even though we also use prettier to format our lines
+   * just to make sure we end up with the correct formatting.
+   *
+   * NOTE:
+   * If our lines somehow still exceed the max-len value, even after prettier,
+   * see the 'implicit-arrow-linebreak' rule to make sure it's not forcing arrow
+   * functions to appear on the same line.
    *
    * Https://eslint.org/docs/rules/max-len.
    */
   "max-len": [
-    "off",
+    "error",
     {
       code: 80,
       tabWidth: 2,
-      comments: 80,
+      // Since comments may required '/*' plus a space, we need to reduce the
+      // max line length.
+      comments: 77,
       ignorePattern: "",
-      ignoreTrailingComments: false,
+      ignoreTrailingComments: true,
       ignoreUrls: true,
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
@@ -474,16 +488,34 @@ module.exports = {
   /**
    * Enforce a maximum number of lines per file.
    *
-   * NOTES:
-   * - Have have packages that use modules longer than 300, so just disable
-   *   this rule completely.
+   * In an attempt to adhere to the unix philosophy, we should try to keep
+   * modules small by limiting the number of lines we use in any one of them.
+   *
+   * NOTE:
+   * When considering this, remember that some modules may have dozen(s) of
+   * lines used for imports, especially when { name, name, Name } imports are
+   * split 1x per line.
+   *
+   * Additionally, consider that imports are split into groups, with each of
+   * these groups separated by a blank line, based on the folder their imported
+   * 'from'.
+   *
+   * eg: import {
+   *    NameOne,
+   *    NameTwo,
+   * } from "./module-a"
+   *
+   * NOTE:
+   * When this rule is used for linting THIS package (a collection of eslint
+   * rulesets) we should disable it, since each of the modules often exceeds
+   * this limit.
    *
    * Https://eslint.org/docs/rules/max-lines.
    */
   "max-lines": [
-    "off",
+    "error",
     {
-      max: 300,
+      max: 400,
       skipBlankLines: true,
       skipComments: true,
     },
@@ -492,32 +524,44 @@ module.exports = {
   /**
    * Enforce a maximum number of line of code in a function.
    *
+   * In an attempt to adhere to the unix philosophy, we should try to keep
+   * modules small and readable by limting the size of any one function. This
+   * will force us organize the logic of our processes rationally.
+   *
    * Https://eslint.org/docs/rules/max-lines-per-function.
    */
   "max-lines-per-function": [
-    "off",
+    "error",
     {
       max: 150,
       skipBlankLines: true,
       skipComments: true,
-      IIFEs: true,
+      IIFEs: false,
     },
   ],
 
   /**
    * Enforce a maximum depth that callbacks can be nested,.
    *
+   * In an attempt to adhere to the unix philosophy, we should try to keep
+   * the number of layers we nest callbacks to a minimum to improve readability
+   * and reduce complexity.
+   *
    * Https://eslint.org/docs/rules/max-nested-callbacks.
    */
   "max-nested-callbacks": [
     "error",
     {
-      max: 6,
+      max: 4,
     },
   ],
 
   /**
    * Enforce a maximum number of parameters in function definitions.
+   *
+   * In an attempt to adhere to the unix philosophy, we should try to keep the
+   * number of parameters that any one function expects to a minimum. This
+   * forces us to organize and structure the logic of our processes better.
    *
    * Https://eslint.org/docs/rules/max-params.
    */
@@ -531,20 +575,25 @@ module.exports = {
   /**
    * Enforce a maximum number of statements allowed in function blocks.
    *
-   * NOTES:
-   * - We sometimes need long functions, without reason, so disable this rule.
+   * In an attempt to adhere to the unix philosophy, we should try to limit the
+   * number of statements any one function can have to reduce complexity and
+   * improve readability.
    *
    * Https://eslint.org/docs/rules/max-statements.
    */
   "max-statements": [
-    "off",
+    "error",
     {
-      max: 17,
+      max: 35,
     },
   ],
 
   /**
    * Enforce a maximum number of statements allowed per line.
+   *
+   * In an attempt to adhere to the unix philosophy, we should try to limit the
+   * number of statements any one function line can have to reduce complexity
+   * and improve readability.
    *
    * Https://eslint.org/docs/rules/max-statements-per-line.
    */
