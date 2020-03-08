@@ -3,6 +3,10 @@ const configs = require(".")
 module.exports = {
   overrides: [
     {
+      files: ["package.json"],
+      ...configs.jsonPackage,
+    },
+    {
       files: ["*.js"],
       ...configs.javascript,
       rules: {
@@ -13,10 +17,6 @@ module.exports = {
     {
       files: ["*.md"],
       ...configs.markdownJavascript,
-    },
-    {
-      files: ["package.json"],
-      ...configs.jsonPackage,
     },
   ],
 }
