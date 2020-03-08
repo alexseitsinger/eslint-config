@@ -475,7 +475,7 @@ module.exports = {
       tabWidth: 2,
       // Since comments may required '/*' plus a space, we need to reduce the
       // max line length.
-      comments: 77,
+      comments: 80,
       ignorePattern: "",
       ignoreTrailingComments: true,
       ignoreUrls: true,
