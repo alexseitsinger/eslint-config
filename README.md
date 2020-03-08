@@ -66,11 +66,11 @@ Each of these is exported from the package along with the two methods above.
 Name                         | Plugin Groups Included
 ---                          | ---
 javascript                   | default, javascript
-javascriptReact              | default, javascript, react
-javascriptReactRedux         | default, javascript, react, redux
+javascriptReact              | default, javascript, testing, react
+javascriptReactRedux         | default, javascript, testing, react, redux
 typescript                   | default, typescript
-typescriptReact              | default, typescript, react,
-typescriptReactRedux         | default, typescript, react, redux
+typescriptReact              | default, typescript, testing, react,
+typescriptReactRedux         | default, typescript, testing, react, redux
 markdownJavascript           | default, javascript, markdown
 markdownJavascriptReact      | default, javascript, react, markdown
 markdownJavascriptReactRedux | default, javascript, react, redux, markdown
