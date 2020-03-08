@@ -1,27 +1,28 @@
 module.exports = {
   eslint: {
     /**
+     * These rules are already automatically surpressed by the plugin, but for
+     * the sake of completeness, they are included in here.
+     */
+    "eol-last": "off",
+    "unicode-bom": "off",
+    /**
      * We use eslint's parser option 'impliedStrict'
      */
     strict: "off",
     /**
-     * Sometimes, we use variables in examples just to provide context to the
-     * usage samples.
+     * According to this plugin's README, certain eslint rules can be disabled by
+     * default since code examples may be exempt from their restrictions.
      */
     "no-undef": "off",
     "no-unused-vars": "off",
-    /**
-     * Sometimes our examples includes console statements.
-     */
     "no-console": "off",
+    "padded-blocks": "off",
     /**
-     * We always expect ASI to be used.
+     * These rules have been found to be annoying from our usage, so we have
+     * disabled them.
      */
     semi: "off",
-    /**
-     * Since our examples aren't actually used within the scope of the modules,
-     * we don't need to report on shadowed variables.
-     */
     "no-shadow": "off",
   },
   react: {
