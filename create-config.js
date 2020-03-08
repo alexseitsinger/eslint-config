@@ -248,4 +248,7 @@ function createConfig(pluginNames, useDefaults = true) {
   return config
 }
 
-module.exports = createConfig
+module.exports = {
+  createConfig,
+  getRules,
+}

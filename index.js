@@ -1,4 +1,4 @@
-const createConfig = require("./create-config")
+const { createConfig, getRules } = require("./create-config")
 
 const javascript = []
 const typescript = ["tsdoc", "@typescript-eslint/eslint-plugin", "jsx-falsy"]
@@ -9,14 +9,14 @@ const redux = ["react-redux", "redux-saga"]
 const json = ["json"]
 
 module.exports = {
-  create: createConfig,
+  createConfig,
+  getRules,
   javascript: createConfig([...javascript]),
   javascriptReact: createConfig([
     ...javascript,
     ...imports,
     ...testing,
     ...react,
-    "babel",
   ]),
   javascriptReactRedux: createConfig([
     ...javascript,
@@ -24,7 +24,6 @@ module.exports = {
     ...testing,
     ...react,
     ...redux,
-    "babel",
   ]),
   typescript: createConfig([...typescript, ...imports]),
   typescriptReact: createConfig([
@@ -55,12 +54,11 @@ module.exports = {
     ...redux,
     "markdown",
   ]),
-  markdownJavascript: createConfig([...javascript, "babel", "markdown"]),
+  markdownJavascript: createConfig([...javascript, "markdown"]),
   markdownJavascriptReact: createConfig([
     ...javascript,
     ...imports,
     ...react,
-    "babel",
     "markdown",
   ]),
   markdownJavascriptReactRedux: createConfig([
@@ -68,7 +66,6 @@ module.exports = {
     ...imports,
     ...react,
     ...redux,
-    "babel",
     "markdown",
   ]),
   json: createConfig([...json], false),
