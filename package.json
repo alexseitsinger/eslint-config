@@ -1,6 +1,6 @@
 {
   "name": "@alexseitsinger/eslint-config",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Preset eslint configs for various plugins",
   "main": "index.js",
   "files": [
