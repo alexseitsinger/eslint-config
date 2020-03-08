@@ -430,44 +430,122 @@ module.exports = {
   "unicorn/prefer-type-error": "error",
 
   /**
-   *  Prevent abbreviations.
+   * Prevent abbreviations.
+   *
+   * Using complete words results in more readable code. Not everyone knows all
+   * your abbreviations. Code is written only once, but read many times.
+   *
+   * This rule can also be used to replace terms, disallow words, etc. See the
+   * replacements and extendDefaultReplacements options.
+   *
    * (Partially fixable)
    */
   "unicorn/prevent-abbreviations": [
     "error",
     {
-      replacements: {},
+      /**
+       * Lowercase replacements will match both camelcase and pascalcase
+       * identifiers.
+       * eg: err -> err, Err
+       * eg: errCb -> errCb, ErrCb
+       *
+       * Lowercase replacements will match both complete identifiers and
+       * separate words inside identifiers.
+       * eg: cmd -> cmd, createCmd, CmdFactory
+       *
+       * Camelcase replacements will only match complete identifiers.
+       * eg: errCb -> errCb, ErrCb (but NOT fooErrCb or errCbFoo)
+       */
+      replacements: {
+        /**
+         * Disable some replacements for React.
+         */
+        prop: false,
+        props: false,
+        ref: false,
+        refs: false,
+      },
+
+      /**
+       * Exact matches with the whitelist override applying replacements.
+       *
+       * Unlike the replacements option, whitelist matches full identifier names
+       * case-sensitively.
+       */
+      whitelist: {
+        // class method (+ React)
+        constructor: true,
+        // React
+        props: true,
+        ref: true,
+        componentDidMount: true,
+        componentDidUpdate: true,
+        shouldComponentUpdate: true,
+        componentWillUnmount: true,
+        propTypes: true,
+        defaultProps: true,
+        getDerivedStateFromProps: true,
+        // Package.json
+        devDependencies: true,
+        peerDependencies: true,
+        optionalDependencies: true,
+        // Jest
+        setupFilesAfterEnv: true,
+      },
+
+      /**
+       * Set to false to replace the default whitelist/replacements completely.
+       */
       extendDefaultReplacements: true,
-      // Unlike the replacements option, whitelist matches full identifier names
-      // case-sensitively.
-      whitelist: {},
-      // Pass "extendDefaultWhitelist": false to override the default whitelist
-      // completely.
       extendDefaultWhitelist: true,
-      // internal - Check variables declared in default or namespace import, but
-      //            only for internal modules.
-      // true - check variables declared in default or namespace import
-      // false - dont check variables declared in default or namespace import
-      // default: 'interal'
+
+      /**
+       * internal - Check varaibles decalred in default or namespace import,
+       *            but only for internal modules.
+       * true - Check variables declared in default or namespace import.
+       * false - Don't check variables decalre in default or namespace import.
+       * ---
+       * Default: 'internal'
+       */
       checkDefaultAndNamespaceImports: "internal",
-      // 'internal' - Check variables declared in shorthand import, but only for
-      //              internal modules.
-      // true - Check variables declared in shorthand import.
-      // false - Don't check variables declared in default shorthand import.
-      // default: 'internal'
+
+      /**
+       * internal - Check variables declared in shorthand import, but only for
+       *            internal modules.
+       * true - Check variables declared in shorthand import.
+       * false - Don't check variables declared in default shorthand import.
+       * --
+       * Default: 'internal'
+       */
       checkShorthandImports: "internal",
-      // Pass "checkShorthandProperties": true to check variables declared as
-      // shorhand properties in object destructuring.
-      // default: false
+
+      /**
+       * Check variables declared as shorhand properties in object
+       * destructuring.
+       * --
+       * Default: false
+       */
       checkShorthandProperties: false,
-      // Enable checking property names,
-      // default: false
+
+      /**
+       * Check property names
+       * --
+       * Default: false
+       */
       checkProperties: false,
-      // Check variable names.
-      // default: true
+
+      /**
+       * Check variable names
+       * --
+       * Default: true
+       */
       checkVariables: true,
-      // Check filenames
-      // default: true
+
+      /**
+       * Check file names
+       * --
+       * Default: true
+       */
       checkFilenames: true,
     },
   ],
