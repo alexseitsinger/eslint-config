@@ -5,6 +5,10 @@ module.exports = {
     {
       files: ["*.js"],
       ...configs.javascript,
+      rules: {
+        ...configs.javascript.rules,
+        "max-lines": "off",
+      },
     },
     {
       files: ["*.md"],
